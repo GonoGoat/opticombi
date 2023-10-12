@@ -5,7 +5,7 @@ import numpy as np  # Importez la bibliothèque NumPy sous l'alias np
 matrice = np.empty((16, 16), dtype=object)  # dtype=object pour stocker des chaînes de caractères
 
 # Attention de bien remplacer le paramètre par le nom du fichier
-nom_fichier = "Beginner-I.lt4"
+nom_fichier = "Beginner-II.lt4"
 
 try:
     with open(nom_fichier, 'r') as fichier:
