@@ -1,11 +1,10 @@
 #include "Parseur.h"
 
-void parsage(std::string nom_fichier) {
+void parsage(std::string nom_fichier, std::string matrice[16][16]) {
 
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-    start = std::chrono::system_clock::now();
+    /*std::chrono::time_point<std::chrono::system_clock> start, end;
+    start = std::chrono::system_clock::now();*/
     // Crée un tableau à 2D pour stocker la matrice
-    std::string matrice[16][16];
 
     try {
         std::ifstream fichier(nom_fichier);
@@ -54,7 +53,7 @@ void parsage(std::string nom_fichier) {
                 }
             }
 
-            end = std::chrono::system_clock::now();
+            //end = std::chrono::system_clock::now();
 
             // Affiche la matrice
             for (int i = 0; i < 16; i++) {
@@ -64,8 +63,8 @@ void parsage(std::string nom_fichier) {
                 std::cout << std::endl;
             }
 
-            long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-            std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;
+            /*long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+            std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/
 
         }
         else {

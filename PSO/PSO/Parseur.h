@@ -4,4 +4,4 @@
 #include <string>
 #include <chrono>
 
-void parsage(std::string nom_fichier);
+void parsage(std::string nom_fichier, std::string matrice[16][16]);
