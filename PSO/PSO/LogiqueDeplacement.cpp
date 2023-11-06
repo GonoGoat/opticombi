@@ -1,49 +1,49 @@
 #include "LogiqueDeplacement.h"
 
-void Deplacement(int posOriginX, int posOriginY, int posFinishX, int posFinishY, char tankDir, std::string* Output) {
+void Deplacement(int *posOriginX, int *posOriginY, int *posFinishX, int *posFinishY, char *tankDir, std::string* Output, int* selection) {
 
 	int left = 0;
 	int right = 0;
 	int up = 0;
 	int down = 0;
-	int disX = posFinishX - posOriginX;
-	int disY = posFinishY - posOriginY;
+	int disX = posFinishX[*selection] - *posOriginX;
+	int disY = posFinishY[*selection] - *posOriginY;
 	*Output = "";
 
 	if (disX > 0) {
 		right = disX;
-		if (tankDir != 'R') {
+		if (*tankDir != 'R') {
 			*Output += 'R';
-			tankDir = 'R';
+			*tankDir = 'R';
 		}
 		*Output += std::string(right, 'R');
 	}
 	else {
 		left = std::abs(disX);
-		if (tankDir != 'L') {
+		if (*tankDir != 'L') {
 			*Output += 'L';
-			tankDir = 'L';
+			*tankDir = 'L';
 		}
 		*Output += std::string(left, 'L');
 	}
 
 	if (disY > 0) {
 		up = disY;
-		if (tankDir != 'U') {
+		if (*tankDir != 'U') {
 			*Output += 'U';
-			tankDir = 'U';
+			*tankDir = 'U';
 		}
 		*Output += std::string(up, 'U');
 	}
 	else {
 		down = std::abs(disY);
-		if (tankDir != 'D') {
+		if (*tankDir != 'D') {
 			*Output += 'D';
-			tankDir = 'D';
+			*tankDir = 'D';
 		}
 		*Output += std::string(down, 'D');
 	}
 
-	std::cout << *Output << std::endl;
+	//std::cout << *Output << std::endl;
 
 }
