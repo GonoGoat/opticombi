@@ -1,11 +1,16 @@
 #include "../Libs/Parseur.h"
 
-void parsage(std::string nom_fichier) {
+/**
+ * @brief Transforme un fichier .ltr en matrice utilisable
+ * 
+ * @param nom_fichier Chemin vers le fichier .lt4
+ * @param matrice RES - Matrice à initialiser qui contiendra la matrice finale
+ */
+void parsage(std::string nom_fichier, std::string matrice[16][16]) {
 
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-    start = std::chrono::system_clock::now();
-    // Crée un tableau à 2D pour stocker la matrice
-    std::string matrice[16][16];
+    /*std::chrono::time_point<std::chrono::system_clock> start, end;
+    start = std::chrono::system_clock::now();*/
+    // Crée un tableau 2D pour stocker la matrice
 
     try {
         std::ifstream fichier(nom_fichier);
@@ -20,7 +25,7 @@ void parsage(std::string nom_fichier) {
 
             int index_saut_ligne = 0;
 
-            // Détecte le saut de ligne vide avant la matrice
+            // D�tecte le saut de ligne vide avant la matrice
             for (int index = 0; index < lignes.size(); index++) {
                 if (lignes[index].empty()) {
                     index_saut_ligne = index + 1; // Stocke l'index du saut de ligne
@@ -30,7 +35,7 @@ void parsage(std::string nom_fichier) {
 
             for (int i = 0; i < 16; i++) {
                 ligne = lignes[index_saut_ligne + i];
-                // Supprime les espaces et les caractères de nouvelle ligne éventuels
+                // Supprime les espaces et les caractères éventuels de nouvelle ligne
                 while (!ligne.empty() && (ligne.back() == ' ' || ligne.back() == '\n')) {
                     ligne.pop_back();
                 }
@@ -54,7 +59,7 @@ void parsage(std::string nom_fichier) {
                 }
             }
 
-            end = std::chrono::system_clock::now();
+            //end = std::chrono::system_clock::now();
 
             // Affiche la matrice
             for (int i = 0; i < 16; i++) {
@@ -64,8 +69,8 @@ void parsage(std::string nom_fichier) {
                 std::cout << std::endl;
             }
 
-            long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-            std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;
+            /*long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+            std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/
 
         }
         else {

@@ -1,3 +1,5 @@
 PSO/.vs
 PSO/x64
 .vscode
+bin/*
+Output/*
