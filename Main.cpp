@@ -33,7 +33,7 @@ int main()
     std::string name = "One block into the water";
     std::string solver = "PSO";
     std::string sequence;
-    std::string output_file = "./Output/5_arrive.ltr";
+    std::string output_file = "./Output/51_arrive.svg";
     //Paramètres instanciations
     int nbr_particule;
     int nbr_instance;
