@@ -1,0 +1,10 @@
+﻿  Algo_PSO.cpp
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(28,25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(29,25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(33,27): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(34,27): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(40,29): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(46,39): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(72,34): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\PSO\Algo_PSO.cpp(73,34): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+  PSO.vcxproj -> C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\Code Thomas\PSO\x64\Debug\PSO.exe
