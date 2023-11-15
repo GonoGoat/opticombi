@@ -2,6 +2,7 @@
 #include "LogiqueDeplacement.h"
 #include "LTRcreator.h"
 #include "Detection_Start_End.h"
+#include "Logique_Jeu.h"
 #include <thread>
 
 int main()
@@ -12,7 +13,7 @@ int main()
     std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "Beginner-I.lt4";
+    std::string nom_fichier = "Murs_limite_portail.lt4";
     int matrice[16][16];
     int nbr_arrive = 0;
     //Paramètres Deplacement
@@ -24,12 +25,14 @@ int main()
     //Paramètres LTR
     std::string name = "One block into the water";
     std::string solver = "PSO";
-    std::string sequence;
+    std::string sequence = "DDRRRRRRUURRRUUULLLUULLLLLLLUUULLLLLUUUUULLLLRRRLLRRRUUULLL";
     std::string output_file = "5_arrive.ltr";
     //Paramètres instanciations
     int nbr_particule;
     int nbr_instance;
     int nbr_thread;
+    //paramètres engine
+    bool success = false;
 
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
@@ -64,6 +67,8 @@ int main()
     for (int i = 0; i < nbr_arrive; i++) {
         std::cout << "Position : " << i << " x =" << Finish_x[i] << " | y =" << Finish_y[i] << std::endl;
     }
+
+    Engine(matrice, sequence, &Origine_x, &Origine_y, &Direction_tank, &success);
 
     /*for (int i = 0; i < nbr_instance; i++) {
         delete[] instanciation_particule[i];
