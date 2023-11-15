@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Detection_Start_End.cpp" />
     <ClCompile Include="LogiqueDeplacement.cpp" />
+    <ClCompile Include="Logique_Jeu.cpp" />
     <ClCompile Include="LTRcreator.cpp" />
     <ClCompile Include="Parseur.cpp" />
     <ClCompile Include="PSO.cpp" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Detection_Start_End.h" />
     <ClInclude Include="LogiqueDeplacement.h" />
+    <ClInclude Include="Logique_Jeu.h" />
     <ClInclude Include="LTRcreator.h" />
     <ClInclude Include="Parseur.h" />
   </ItemGroup>

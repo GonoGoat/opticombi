@@ -12,8 +12,8 @@ int main()
     std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "5_arrive.lt4";
-    std::string matrice[16][16];
+    std::string nom_fichier = "Beginner-I.lt4";
+    int matrice[16][16];
     int nbr_arrive = 0;
     //Paramètres Deplacement
     int Origine_x;
@@ -31,17 +31,17 @@ int main()
     int nbr_instance;
     int nbr_thread;
 
-    std::cout << "Combien d'instance voulez-vous generer ? : ";
-    std::cin >> nbr_instance;
+    /*std::cout << "Combien d'instance voulez-vous generer ? : ";
+    std::cin >> nbr_instance;*/
 
     parsage("..\\..\\"+nom_fichier,matrice);
     detection(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive);
 
-    nbr_particule = nbr_instance/nbr_arrive;
+    /*nbr_particule = nbr_instance/nbr_arrive;
     std::cout << "Nombre de particule : " << nbr_particule << std::endl;
-    nbr_thread = nbr_particule * nbr_arrive;
+    nbr_thread = nbr_particule * nbr_arrive;*/
 
-    instanciation_particule = new std::thread* [nbr_thread-1];
+    /*instanciation_particule = new std::thread* [nbr_thread-1];
 
     for (int j = 0; j < nbr_particule; j++) {
         for (int i = 0; i < nbr_arrive; i++) {
@@ -52,12 +52,12 @@ int main()
     
     for (int i = 0; i < nbr_thread; i++) {
         instanciation_particule[i] -> join();
-    }
+    }*/
 
-    create_ltr_file(name, solver, sequence, output_file);
-    end = std::chrono::system_clock::now();
+    //create_ltr_file(name, solver, sequence, output_file);
+    /*end = std::chrono::system_clock::now();
     long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-    std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;
+    std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;*/
 
     std::cout << "Depart x : " << Origine_x << "   Depart y : " << Origine_y << std::endl;
 
@@ -65,11 +65,11 @@ int main()
         std::cout << "Position : " << i << " x =" << Finish_x[i] << " | y =" << Finish_y[i] << std::endl;
     }
 
-    for (int i = 0; i < nbr_instance; i++) {
+    /*for (int i = 0; i < nbr_instance; i++) {
         delete[] instanciation_particule[i];
     }
     delete[] instanciation_particule;
 
-    std::cin >> nbr_instance;
+    std::cin >> nbr_instance;*/
     return 0;
 }
