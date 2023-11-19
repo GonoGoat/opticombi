@@ -1,10 +1,10 @@
 #include "Parseur.h"
 
-void parsage(std::string nom_fichier, std::string matrice[16][16]) {
+void parsage(std::string nom_fichier, int matrice[16][16]) {
 
     /*std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();*/
-    // Cr�e un tableau � 2D pour stocker la matrice
+    // Crée un tableau à 2D pour stocker la matrice
 
     try {
         std::ifstream fichier(nom_fichier);
@@ -19,42 +19,47 @@ void parsage(std::string nom_fichier, std::string matrice[16][16]) {
 
             int index_saut_ligne = 0;
 
-            // D�tecte le saut de ligne vide avant la matrice
+            // Détecte le saut de ligne vide avant la matrice
             for (int index = 0; index < lignes.size(); index++) {
                 if (lignes[index].empty()) {
                     index_saut_ligne = index + 1; // Stocke l'index du saut de ligne
-                    //std::cout << "Ligne vide d�tect�e � la ligne " << index + 1 << ": '" << lignes[index] << "'" << std::endl;
+                    //std::cout << "Ligne vide détectée à la ligne " << index + 1 << ": '" << lignes[index] << "'" << std::endl;
                 }
             }
 
             for (int i = 0; i < 16; i++) {
                 ligne = lignes[index_saut_ligne + i];
-                // Supprime les espaces et les caract�res de nouvelle ligne �ventuels
+                // Supprime les espaces et les caractères de nouvelle ligne éventuels
                 while (!ligne.empty() && (ligne.back() == ' ' || ligne.back() == '\n')) {
                     ligne.pop_back();
                 }
 
-                // Divise la ligne en �l�ments
+                // Divise la ligne en éléments
                 std::string motActuel = "";
                 int j = 0;
+
+                int type_case = 0;
+
                 for (char caractere : ligne) {
-                    if (caractere == ' ') {
-                        if (motActuel.empty())
-                        {
-                            motActuel = motActuel + caractere;
-                        }
+                    if (caractere != ' ') {
+                        motActuel += caractere; 
+                    }
+                    else if (!motActuel.empty()) {
+                        type_case = conversion(motActuel);
+                        matrice[i][j] = type_case;
+                        motActuel.clear();
                         j++;
                     }
-                    matrice[i][j] += caractere;
                 }
-                if (!motActuel.empty()) {
 
-                    matrice[i][j] += motActuel;
+                if (!motActuel.empty()) {
+                    type_case = conversion(motActuel);
+                    matrice[i][j] = type_case;
                 }
             }
 
             //end = std::chrono::system_clock::now();
-
+            
             // Affiche la matrice
             for (int i = 0; i < 16; i++) {
                 for (int j = 0; j < 16; j++) {
@@ -74,4 +79,12 @@ void parsage(std::string nom_fichier, std::string matrice[16][16]) {
     catch (const std::exception& e) {
         std::cerr << "Erreur : " << e.what() << std::endl;
     }
+}
+
+Matrice conversion(const std::string& caractere)
+{
+    if (conversionToEnum.find(caractere) != conversionToEnum.end()) {
+        return conversionToEnum[caractere];
+    }
+    return Matrice(-1);
 }
