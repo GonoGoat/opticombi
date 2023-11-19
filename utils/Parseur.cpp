@@ -1,4 +1,4 @@
-#include "Parseur.h"
+#include "../Libs/Parseur.h"
 
 void parsage(std::string nom_fichier, int matrice[16][16]) {
 

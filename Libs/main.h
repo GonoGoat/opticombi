@@ -1,6 +1,6 @@
-#include "Parseur.h"
-#include "LogiqueDeplacement.h"
-#include "LTRcreator.h"
-#include "Detection_Start_End.h"
-#include "Logique_Jeu.h"
+#include "../utils/Parseur.cpp"
+#include "../utils/LogiqueDeplacement.cpp"
+#include "../utils/LTRcreator.cpp"
+#include "../utils/Detection_Start_End.cpp"
+#include "../utils/Logique_Jeu.cpp"
 #include <thread>

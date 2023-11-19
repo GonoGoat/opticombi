@@ -8,7 +8,7 @@ int main()
     std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "Murs_limite_portail.lt4";
+    std::string nom_fichier = "./Maps/Murs_limite_portail.lt4";
     int matrice[16][16];
     int nbr_arrive = 0;
     //Paramètres Deplacement
@@ -32,7 +32,7 @@ int main()
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
 
-    parsage("..\\..\\"+nom_fichier,matrice);
+    parsage(nom_fichier,matrice);
     detection(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive);
 
     /*nbr_particule = nbr_instance/nbr_arrive;

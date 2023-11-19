@@ -1,5 +1,4 @@
 #include "../Libs/Detection_Start_End.h"
-
 /**
  * @brief Détecte un départ et une arrivée d'une carte
  * 

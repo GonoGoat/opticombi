@@ -1,25 +1,4 @@
-#include "Logique_Jeu.h"
-
-enum Matrice
-{
-    Dirt, //0
-    Tank, //1
-    Base, //2
-    Water, //3
-    Sollid_Block, //4
-    Movable_Block, //5
-    Bricks, //6
-    Anti_Tank_U, Anti_Tank_D, Anti_Tank_R, Anti_Tank_L,
-    Mirror_UR, Mirror_UL, Mirror_DR, Mirro_DL,
-    Way_U, Way_D, Way_R, Way_L,
-    Crystal_Block,
-    Rotative_Mirror_UR, Rotative_Mirror_UL, Rotative_Mirror_DR, Rotative_Mirror_DL,
-    Ice,
-    Thin_Ice,
-    Tunnel_Red, Tunnel_Green, Tunnel_Blue, Tunnel_Cyan, Tunnel_Yellow, Tunnel_Pink, Tunnel_White, Tunnel_Dark,
-    Bridge
-
-};
+#include "../Libs/Logique_jeu.h"
 
 //posOriginX et posOriginY position tank au début de la séquence.
 

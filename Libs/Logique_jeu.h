@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "data.h"
 
 void Engine(int matrice[16][16], const std::string& sequence, int* posX, int* posY, char *dir_previous, bool *succes);
 void Deplacement(char* dir, int* pos_x, int* pos_y);
