@@ -13,7 +13,7 @@ int main()
     std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "Murs_limite_portail.lt4";
+    std::string nom_fichier = "Anti_Tank.lt4";
     int matrice[16][16];
     int nbr_arrive = 0;
     //Paramètres Deplacement
@@ -25,14 +25,14 @@ int main()
     //Paramètres LTR
     std::string name = "One block into the water";
     std::string solver = "PSO";
-    std::string sequence = "DDRRRRRRUURRRUUULLLUULLLLLLLUUULLLLLUUUUULLLLRRRLLRRRUUULLL";
+    std::string sequence = "ULLUUURRDDDRRRRUUUURRUUDDDLLLLLLLLUUUUURRRUUUURRUUURRRUU";
     std::string output_file = "5_arrive.ltr";
     //Paramètres instanciations
     int nbr_particule;
     int nbr_instance;
     int nbr_thread;
     //paramètres engine
-    bool success = false;
+    int success = 0;
 
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
