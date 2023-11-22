@@ -1,4 +1,4 @@
-#include <ParticleInit.h>
+#include "ParticleInit.h"
 
 std::vector<Particle> generateParticles(int numParticles) {
     std::vector<Particle> particles;
