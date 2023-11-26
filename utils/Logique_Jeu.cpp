@@ -1,7 +1,7 @@
 #include "../Libs/Logique_jeu.h"
 
 //posOriginX et posOriginY position tank au début de la séquence.
-
+// TODO adaptation 16
 void Engine(int matrice[16][16], const std::string& sequence, int* posX, int* posY, char *dir_previous, bool* succes) {
     int deplacement_x, deplacement_y;
 
@@ -43,7 +43,7 @@ void Deplacement(char* dir, int* pos_x, int* pos_y) {
     //std::cout << "Calcul x : " << *pos_x << " |calcul y : " << *pos_y << std::endl;
 }
 
-
+// 15  % 16 (taille de matrice => TODO)
 void Verification_deplacement(int matrice[16][16], int* depl_x, int* depl_y, int* pos_x, int* pos_y, bool* succes){
 
     if (*depl_x > 15) {

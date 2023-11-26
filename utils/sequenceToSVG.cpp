@@ -59,5 +59,10 @@ int main(int argc, char const *argv[])
     // Détection et dessin arrivées/Départ
     detection(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive);
 
+    // Etablissement du trajet
+    int seqLength = sequence.length();
+    int trajX[seqLength],trajY[seqLength];
+    
+
     drawSVG(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive, sequence,output_file);
 }
