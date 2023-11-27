@@ -1,5 +1,8 @@
-#ifndef DATA_MATRIX
-#define DATA_MATRIX
+#include <unordered_map>
+#include <string>
+
+#ifndef DATA_H
+#define DATA_H
 
 enum Matrice
 {

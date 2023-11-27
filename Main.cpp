@@ -1,21 +1,23 @@
-#include "./Libs/main.h"
+ #include "Main.h"
+// #include "Parseur.h"
 
 int main()
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
 
-    std::thread** instanciation_particule;
+    //std::thread** instanciation_particule;
 
     //Paramètres Parsage
     std::string nom_fichier = "./Maps/Murs_limite_portail.lt4";
-    int matrice[16][16];
+    std::vector<std::vector<int>> matrice;
     int nbr_arrive = 0;
+    int nombreLignes;
+    int nombreColonnes = 1;
     //Paramètres Deplacement
     int Origine_x;
     int Origine_y;
-    int Finish_x[5] = { 0,0,0,0,0 };
-    int Finish_y[5] = { 0,0,0,0,0 };
+    std::vector<int> Finish_x,Finish_y = {};
     char Direction_tank = 'U';
     //Paramètres LTR
     std::string name = "One block into the water";
@@ -27,13 +29,22 @@ int main()
     int nbr_instance;
     int nbr_thread;
     //paramètres engine
-    bool success = false;
+    int success = 0;
 
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
 
-    parsage(nom_fichier,matrice);
-    detection(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive);
+    // Import matrice
+    parsage(nom_fichier,&matrice, &nombreLignes, &nombreColonnes);
+    
+    // Détection et dessin arrivées/Départ
+    //detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
+
+    // Etablissement du trajet
+    std::vector<int> trajX = {Origine_x}; // Historique des positions X
+    std::vector<int> trajY = {Origine_y}; // Historique des positions Y
+
+    // getPositionsOfSequence(matrice, sequence, &trajX, &trajY, &Direction_tank, &success);
 
     /*nbr_particule = nbr_instance/nbr_arrive;
     std::cout << "Nombre de particule : " << nbr_particule << std::endl;
@@ -57,13 +68,13 @@ int main()
     long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;*/
 
-    std::cout << "Depart x : " << Origine_x << "   Depart y : " << Origine_y << std::endl;
+    /*std::cout << "Depart x : " << Origine_x << "   Depart y : " << Origine_y << std::endl;
 
     for (int i = 0; i < nbr_arrive; i++) {
         std::cout << "Position : " << i << " x =" << Finish_x[i] << " | y =" << Finish_y[i] << std::endl;
     }
 
-    Engine(matrice, sequence, &Origine_x, &Origine_y, &Direction_tank, &success);
+    Engine(matrice, sequence, &Origine_x, &Origine_y, &Direction_tank, &success);*/
 
     /*for (int i = 0; i < nbr_instance; i++) {
         delete[] instanciation_particule[i];

@@ -1,4 +1,4 @@
-#include "../Libs/LogiqueDeplacement.h"
+#include "LogiqueDeplacement.h"
 
 /**
  * @brief Génération d'une séquence pour arriver d'un point à un autre (plus court chemin)

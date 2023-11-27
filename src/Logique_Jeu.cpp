@@ -1,11 +1,26 @@
-#include "../Libs/Logique_jeu.h"
+
+
+void getPositionsOfSequence (std::vector<std::vector<int>> matrice, std::string& sequence, std::vector<int>* trajX, std::vector<int>* trajY, char *dir_previous, int* succes) {
+    std::cout << (*trajX)[0];
+    // Jusque dernier caractère de séquence
+    /*for(int i = 0;i<sequence.size();i++) {
+        std::string subSeq = sequence.substr(0,i);
+        //int posX = (*trajX)[i];
+        // int posY = (*trajY)[i];
+        //Engine(matrice, sequence, &(*trajX)[i], &(*trajY)[i], &(*dir_previous), &(*succes));
+    }*/
+        // Extraire séquence
+        // Jouer la séquence
+        // Enregistrer résultat
+        // Préparer le suivant si nécessaire
+}
 
 //Fonction Engine est appel� dans le main et g�re le fonctionnement de la logique du jeu.
 /*Param�tres: S�quence = chaine que l'on va traiter, 
               posX/posY = position du Tank � la foi comme entr�e de position initiale ainsi que position finale
               dir_previuous = entr� et sortie pour savoir dans quel sens est orient� le char
               succes = retourne si on a atteint l'objectif (=1) si mort (=-1) ou toujours en vie (=0)*/
-void Engine(int matrice[16][16], const std::string& sequence, int* posX, int* posY, char *dir_previous, int* succes) {
+void Engine(std::vector<std::vector<int>> matrice, const std::string& sequence, int* posX, int* posY, char *dir_previous, int* succes) {
     //Variables pour traiter le d�placement sans le ressortir directement
     int deplacement_x, deplacement_y;
 
@@ -53,7 +68,7 @@ void Deplacement(char* dir, int* pos_x, int* pos_y) {
 }
 
 //Fonction de verification de la possibilit� d'effectuer le d�placement rentr�
-void Verification_deplacement(int matrice[16][16], int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes){
+void Verification_deplacement(std::vector<std::vector<int>> matrice, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes){
 
     //V�rification des limites si d�passe pas de mouvement enregistr�
     if (*depl_x > 15) {
@@ -119,7 +134,7 @@ void Verification_deplacement(int matrice[16][16], int* depl_x, int* depl_y, int
 }
 
 //Fonction qui traite le passage au travers un portail afin de sortir le tank au bon endroit
-void Portail(int matrice[16][16], int couleur, int* depl_x, int* depl_y)
+void Portail(std::vector<std::vector<int>> matrice, int couleur, int* depl_x, int* depl_y)
 {
     bool sortie = false;
 
@@ -142,7 +157,7 @@ void Portail(int matrice[16][16], int couleur, int* depl_x, int* depl_y)
 }
 
 //Fonction permettant de v�rifier si un anti tank ne nous tue pas en effectuant le d�placement
-void Verification_Anti_Tank(int matrice[16][16], int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes)
+void Verification_Anti_Tank(std::vector<std::vector<int>> matrice, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes)
 {
     int position = matrice[*depl_y][*depl_x];
     //Verification horizontale

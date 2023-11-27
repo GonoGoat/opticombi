@@ -1,6 +1,6 @@
-#include "../Libs/Parseur.h"
+#include "Parseur.h"
 
-void parsage(std::string nom_fichier, int matrice[16][16]) {
+void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, int* nombreLignes, int* nombreColonnes) {
 
     /*std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();*/
@@ -27,7 +27,11 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
                 }
             }
 
-            for (int i = 0; i < 16; i++) {
+            // Détection des dimensions de la matrice
+            *nombreLignes = lignes.size()-index_saut_ligne;
+            for (int i = 0; i < lignes[index_saut_ligne].size(); i++) if (lignes[index_saut_ligne][i] == ' ') *nombreColonnes+=1;
+
+            for (int i = 0; i < *nombreLignes; i++) {
                 ligne = lignes[index_saut_ligne + i];
                 // Supprime les espaces et les caractères de nouvelle ligne éventuels
                 while (!ligne.empty() && (ligne.back() == ' ' || ligne.back() == '\n')) {
@@ -39,6 +43,7 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
                 int j = 0;
 
                 int type_case = 0;
+                std::vector<int> row;
 
                 for (char caractere : ligne) {
                     if (caractere != ' ') {
@@ -46,7 +51,7 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
                     }
                     else if (!motActuel.empty()) {
                         type_case = conversion(motActuel);
-                        matrice[i][j] = type_case;
+                        row.push_back(type_case);
                         motActuel.clear();
                         j++;
                     }
@@ -54,19 +59,20 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
 
                 if (!motActuel.empty()) {
                     type_case = conversion(motActuel);
-                    matrice[i][j] = type_case;
+                    row.push_back(type_case);
                 }
+                matrice->push_back(row);
             }
 
             //end = std::chrono::system_clock::now();
             
             // Affiche la matrice
-            for (int i = 0; i < 16; i++) {
-                for (int j = 0; j < 16; j++) {
+            /**for (int i = 0; i < *nombreLignes; i++) {
+                for (int j = 0; j < *nombreColonnes; j++) {
                     std::cout << matrice[i][j] << " ";
                 }
                 std::cout << std::endl;
-            }
+            }*/
 
             /*long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
             std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/

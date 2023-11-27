@@ -1,4 +1,4 @@
-#include "../Libs/LTRcreator.h"
+#include "LTRcreator.h"
 
 /**
  * @brief Généère un fichier .ltr correspondant à une solution
