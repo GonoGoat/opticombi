@@ -13,7 +13,7 @@ int main()
     std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "Anti_Tank.lt4";
+    std::string nom_fichier = "Chemin_Anti_Tank.lt4";
     int matrice[16][16];
     int nbr_arrive = 0;
     //Paramètres Deplacement
@@ -25,7 +25,7 @@ int main()
     //Paramètres LTR
     std::string name = "One block into the water";
     std::string solver = "PSO";
-    std::string sequence = "ULLUUURRDDDRRRRUUUURRUUDDDLLLLLLLLUUUUURRRUUUURRUUURRRUU";
+    std::string sequence = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDLLLDDDRRRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD";
     std::string output_file = "5_arrive.ltr";
     //Paramètres instanciations
     int nbr_particule;

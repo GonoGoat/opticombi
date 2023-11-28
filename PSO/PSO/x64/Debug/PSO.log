@@ -1,2 +1,6 @@
-﻿  Logique_Jeu.cpp
+﻿  PSO.cpp
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\PSO.cpp(13,19): warning C4101: 'instanciation_particule' : variable locale non référencée
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\PSO.cpp(32,9): warning C4101: 'nbr_instance' : variable locale non référencée
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\PSO.cpp(31,9): warning C4101: 'nbr_particule' : variable locale non référencée
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\PSO.cpp(33,9): warning C4101: 'nbr_thread' : variable locale non référencée
   PSO.vcxproj -> C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\x64\Debug\PSO.exe
