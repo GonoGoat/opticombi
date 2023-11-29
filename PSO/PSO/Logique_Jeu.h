@@ -8,4 +8,4 @@ void Portail(int matrice[16][16], int couleur, int* depl_x, int* depl_y, int* su
 void Verification_Anti_Tank(int matrice[16][16], int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
 void Verification_Anti_Tank_parcour_vertical(int matrice[16][16], int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
 void Verification_Anti_Tank_parcour_horizontal(int matrice[16][16], int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
-void Tir();
+void Tir(int matrice[16][16], int depl_x, int depl_y, char dir_laser, int* succes);

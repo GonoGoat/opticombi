@@ -46,7 +46,9 @@ void Engine(int matrice[16][16], const std::string& sequence, int* posX, int* po
         }
         //Tir gérer séparemment car une seul instance suffit pour tirer
         else if (dir_actuelle == 'F') {
-            Tir();
+            std::cout << "Feu en direction " << *dir_previous << std::endl;
+            Tir(matrice, *posX, *posY, *dir_previous, succes);
+            *succes = 0;
         }
         //Enregistre les changement de direction du tank sans le faire bouger sur la carte
         else {
@@ -387,6 +389,133 @@ void Verification_Anti_Tank_parcour_horizontal(int matrice[16][16], int* depl_x,
     }
 }
 
-void Tir()
+//Fonction de calcul de trajectoire
+void Tir(int matrice[16][16], int depl_x, int depl_y, char dir_laser, int* succes)
 {
+    bool disparaitre = false;
+    int pos_tank_x = depl_x;
+    int pos_tank_y = depl_y;
+    do
+    {
+        //Deplacement laser en fonction direction
+        switch (dir_laser)
+        {
+        case 'U':
+            depl_y -= 1;
+            break;
+        case 'D':
+            depl_y += 1;
+            break;
+        case 'R':
+            depl_x += 1;
+            break;
+        case 'L':
+            depl_x -= 1;
+            break;
+        }
+
+        //Vérification des limites si dépasse le laser disparait
+        if (depl_x > 15 || depl_x < 0 || depl_y > 15 || depl_y < 0) {
+            disparaitre = true;
+        }
+        else if (depl_x == pos_tank_x && depl_y== pos_tank_y) {
+            *succes = -1;
+            std::cout << "Auto Kill" << std::endl;
+        }
+        //Vérifie une position valide
+        else {
+            switch (matrice[depl_y][depl_x])
+            {
+            case Mirror_DR :
+            case Rotative_Mirror_DR :
+                std::cout << "Miroir DR" << std::endl;
+                if (dir_laser == 'U') {
+                    dir_laser = 'R';
+                }
+                else if (dir_laser == 'L') {
+                    dir_laser = 'D';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    disparaitre = true;
+                }
+                break;
+            case Mirro_DL:
+            case Rotative_Mirror_DL :
+                std::cout << "Miroir DL" << std::endl;
+                if (dir_laser == 'U') {
+                    dir_laser = 'L';
+                }
+                else if (dir_laser == 'R') {
+                    dir_laser = 'D';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    disparaitre = true;
+                }
+                break;
+            case Mirror_UL:
+            case Rotative_Mirror_UL :
+                std::cout << "Miroir UL" << std::endl;
+                if (dir_laser == 'D') {
+                    dir_laser = 'L';
+                }
+                else if (dir_laser == 'R') {
+                    dir_laser = 'U';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    disparaitre = true;
+                }
+                break;
+            case Mirror_UR:
+            case Rotative_Mirror_UR :
+                std::cout << "Miroir UR" << std::endl;
+                if (dir_laser == 'D') {
+                    dir_laser = 'R';
+                }
+                else if (dir_laser == 'L') {
+                    dir_laser = 'U';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    disparaitre = true;
+                }
+                break;
+            case Bricks :
+            case Sollid_Block :
+                std::cout << "Tir arrete" << std::endl;
+                disparaitre = true;
+                break;
+            case Anti_Tank_U :
+                if (dir_laser == 'D') {
+                    std::cout << "Anti tank Up mort" << std::endl;
+                }
+                disparaitre = true;
+                break;
+            case Anti_Tank_D :
+                if (dir_laser == 'U') {
+                    std::cout << "Anti tank Down mort" << std::endl;
+                }
+                disparaitre = true;
+                break;
+            case Anti_Tank_L :
+                if (dir_laser == 'R') {
+                    std::cout << "Anti tank Left mort" << std::endl;
+                }
+                disparaitre = true;
+                break;
+            case Anti_Tank_R :
+                if (dir_laser == 'L') {
+                    std::cout << "Anti tank Right mort" << std::endl;
+                }
+                disparaitre = true;
+                break;
+
+            default:
+                break;
+            }
+        }
+
+    } while (disparaitre == false);
 }
