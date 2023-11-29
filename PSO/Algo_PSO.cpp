@@ -17,6 +17,7 @@ std::string Algo_PSO(int* nbre_thread, int* nbr_iteration_max, int* Origine_x, i
 	int nbr_iteration_t = 0;
 	int n;
 	std::vector<bool> become_finish(*nbre_thread);
+	bool found_finish = false;
 	std::vector<std::string> finish_Output(*nbre_thread / *nbr_particule);
 
 	n = *nbre_thread / *nbr_particule;
@@ -30,16 +31,17 @@ std::string Algo_PSO(int* nbre_thread, int* nbr_iteration_max, int* Origine_x, i
 		if (i == n * *nbr_particule) {
 			posX[i] = *Origine_x;
 			posY[i] = *Origine_y;
+			directionTank[i] = 'U';
 			n++;
 		}
 		else {
 			posX[i] = rand() % 16;
 			posY[i] = rand() % 16;
+			directionTank[i] = '/';
 		}
 		vitX[i] = rand() % 16 - 8;
 		vitY[i] = rand() % 16 - 8;
 		score_p_best[i] = -9999;
-		directionTank[i] = 'U';
 		DeplacementVitesse(&vitX[i], &vitY[i], &directionTank[i], &Output[i]);
 		posX_final[i] = posX[i] + vitX[i];
 		posY_final[i] = posY[i] + vitY[i];
@@ -56,11 +58,22 @@ std::string Algo_PSO(int* nbre_thread, int* nbr_iteration_max, int* Origine_x, i
 			distance_finish[i] = sqrt((Finish_x[0][n] - posX_final[i]) * (Finish_x[0][n] - posX_final[i]) + (Finish_y[0][n] - posY_final[i]) * (Finish_y[0][n] - posY_final[i]));
 			//std::cout << "dist = " << distance_finish[i] << "finX = " << Finish_x[0] << "finY = " << Finish_y[0] << "posXfin = " << posX_final[i] << "posYfin = " << posY_final[i] << std::endl;
 			if (int(distance_finish[i]) == 0 && become_finish[i] == false) {
+				std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
+				std::cout << "PositionX = " << posX[i] << " PositionY = " << posY[i] << std::endl;
+				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;
+
 				*nbre_thread = *nbre_thread + *nbr_particule;
 				Finish_x->push_back(posX[i]);
 				Finish_y->push_back(posY[i]);
 				become_finish[i] = true;
+
+				std::cout << "= Finish " << finish_Output.size() << std::endl;
+				std::cout << Output[i] << " + " << finish_Output[n] << std::endl;
+				std::cout << std::endl;
+
+				if (Output[i].back() != finish_Output[n][0]) Output[i] += finish_Output[n][0];
 				finish_Output.push_back(Output[i] + finish_Output[n]);
+
 				g_bestX.push_back(0);
 				g_bestY.push_back(0);
 				score_g_best.push_back(-9999);
@@ -74,10 +87,11 @@ std::string Algo_PSO(int* nbre_thread, int* nbr_iteration_max, int* Origine_x, i
 					score_p_best.push_back(-9999);
 					distance_finish.push_back(NULL);
 					score.push_back(NULL);
-					directionTank.push_back('U');
+					directionTank.push_back('/');
 					Output.push_back("");
 					become_finish.push_back(false);
 				}
+				directionTank[*nbre_thread - *nbr_particule] = 'U';
 				posX[*nbre_thread - *nbr_particule] = *Origine_x;
 				posY[*nbre_thread - *nbr_particule] = *Origine_y;
 				for (int j = *nbr_particule; j > 0; j--) {
@@ -87,9 +101,8 @@ std::string Algo_PSO(int* nbre_thread, int* nbr_iteration_max, int* Origine_x, i
 				}
 			}
 			if (int(distance_finish[n * *nbr_particule]) == 0) {
-				std::cout << "OK1" << std::endl;
-				for (int i = 0; i < finish_Output.size(); i++) {
-				}
+				std::cout << "Chemin trouve!" << std::endl;
+				found_finish = true;
 				break;
 			}
 			if (become_finish[i] == false) {
@@ -135,5 +148,10 @@ std::string Algo_PSO(int* nbre_thread, int* nbr_iteration_max, int* Origine_x, i
 		if (omega < 0) omega = 0;
 	}
 
-	return finish_Output.back();
+	if (found_finish == true) {
+		return finish_Output.back();
+	}
+	else {
+		return "Rien trouve :(";
+	}
 }

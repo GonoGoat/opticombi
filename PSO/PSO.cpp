@@ -31,24 +31,19 @@ int main()
     std::string output_file = "Full_Dirt.ltr";
     //Paramètres instanciations
     int nbr_particule;
-    int nbr_instance;
     int nbre_thread;
     //Paramètres PSO
     int nbr_iteration_max;
     std::string Output;
 
-    std::cout << "Combien d'instance voulez-vous generer ? : \n";
-    std::cin >> nbr_instance;
+    std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
+    std::cin >> nbr_particule;
 
     std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
     std::cin >> nbr_iteration_max;
-      
 
     parsage("..\\..\\"+nom_fichier,matrice);
     detection(matrice, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
-
-    nbr_particule = nbr_instance/nbr_arrive;
-    std::cout << "Nombre de particules par arrivees : " << nbr_particule << std::endl;
 
     nbre_thread = nbr_particule * nbr_arrive;
     Output = Algo_PSO(&nbre_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);

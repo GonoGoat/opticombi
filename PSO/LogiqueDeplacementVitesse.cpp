@@ -14,32 +14,36 @@ void DeplacementVitesse(float* vitesse_x, float* vitesse_y, char* tankDir, std::
 	}
 
 	if (*vitesse_x > 0) {
-		if (*tankDir != 'R') {
+		if (*tankDir != 'R' && *tankDir != '/') {
 			*Output += 'R';
 			*tankDir = 'R';
 		}
+		else if (*tankDir = '/') *tankDir = 'R';
 		*Output += 'R';
 	}
 	else if(*vitesse_x < 0) {
-		if (*tankDir != 'L') {
+		if (*tankDir != 'L' && *tankDir != '/') {
 			*Output += 'L';
 			*tankDir = 'L';
 		}
+		else if (*tankDir = '/') *tankDir = 'L';
 		*Output += 'L';
 	}
 
 	if (*vitesse_y > 0) {
-		if (*tankDir != 'D') {
+		if (*tankDir != 'D' && *tankDir != '/') {
 			*Output += 'D';
 			*tankDir = 'D';
 		}
+		else if (*tankDir = '/') *tankDir = 'D';
 		*Output += 'D';
 	}
 	else if (*vitesse_y < 0) {
-		if (*tankDir != 'U') {
+		if (*tankDir != 'U' && *tankDir != '/') {
 			*Output += 'U';
 			*tankDir = 'U';
 		}
+		else if (*tankDir = '/') *tankDir = 'U';
 		*Output += 'U';
 	}
 }
