@@ -76,7 +76,9 @@
         "random": "cpp",
         "string_view": "cpp",
         "numbers": "cpp",
-        "semaphore": "cpp"
+        "semaphore": "cpp",
+        "span": "cpp",
+        "variant": "cpp"
     },
     "cmake.configureOnOpen": false
 }

@@ -12,7 +12,11 @@ std::string getRect(int x, int y, int width, int height, std::string style) {
     return ("\n<rect x='" + std::to_string(x) + "' y='" + std::to_string(y) + "' width='" + std::to_string(width) + "' height='" + std::to_string(height) + "' style='" + style + "'/>");
 }
 
-void drawSVG (std::vector<std::vector<int>> matrice, int Origine_x, int Origine_y, std::vector<int> Finish_x, std::vector<int> Finish_y, int nbr_arrive, std::string sequence,std::string output_file, int nombreLignes, int nombreColonnes) {
+std::string getLine (int x1, int y1, int x2, int y2, std::string style) {
+    return ("\n<line x1='" + std::to_string(x1) + "' y1='" + std::to_string(y1) + "' x2='" + std::to_string(x2) + "' y2='" + std::to_string(y2) +"' style='" + style + "'/>");
+}
+
+void drawSVG (std::vector<std::vector<int>> matrice, int Origine_x, int Origine_y, std::vector<int> Finish_x, std::vector<int> Finish_y, int nbr_arrive, std::string sequence,std::string output_file, int nombreLignes, int nombreColonnes, std::vector<int> trajX, std::vector<int> trajY, int succes) {
     // Taille du SVG - A adapter à votre écran
     int svgHeight = 40;
 
@@ -46,6 +50,13 @@ void drawSVG (std::vector<std::vector<int>> matrice, int Origine_x, int Origine_
             mapEndsElement += getCircle(((Finish_x[i]+1)*svgHeight),((Finish_y[i]+1)*svgHeight),5, "fill:red");
         }
         fichier << getSectionWithElement(mapEndsElement);
+
+        // Trajectoire
+        std::string trajElement = "";
+        for (int i = 0; i < trajX.size()-1; i++) {
+            trajElement += getLine(((trajX[i]+1)*svgHeight),((trajY[i]+1)*svgHeight),((trajX[i+1]+1)*svgHeight), ((trajY[i+1]+1)*svgHeight),"stroke:black");
+        }
+        fichier << getSectionWithElement(trajElement);
 
         fichier << "\n</svg>";
 

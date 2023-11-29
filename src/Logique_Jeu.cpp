@@ -1,18 +1,33 @@
+#include "Logique_jeu.h"
 
+void getPositionsOfSequence(std::vector<std::vector<int>> matrice, std::string& sequence, std::vector<int>* trajX, std::vector<int>* trajY, int* trajSuccess) {
+    // std::cout << (*trajX)[0];
+    // Etablir les positions X et Y de départ
+    int posX = (*trajX)[0]; 
+    int posY = (*trajY)[0];
 
-void getPositionsOfSequence (std::vector<std::vector<int>> matrice, std::string& sequence, std::vector<int>* trajX, std::vector<int>* trajY, char *dir_previous, int* succes) {
-    std::cout << (*trajX)[0];
+    // Initialisation des variables de lancement du moteur
+    int success;
+    char dir;
+    
     // Jusque dernier caractère de séquence
-    /*for(int i = 0;i<sequence.size();i++) {
-        std::string subSeq = sequence.substr(0,i);
-        //int posX = (*trajX)[i];
-        // int posY = (*trajY)[i];
-        //Engine(matrice, sequence, &(*trajX)[i], &(*trajY)[i], &(*dir_previous), &(*succes));
-    }*/
-        // Extraire séquence
-        // Jouer la séquence
-        // Enregistrer résultat
-        // Préparer le suivant si nécessaire
+    for(int i = 0;i<sequence.size();i++) {
+
+        // Extraction de la séquence à jouer
+        std::string subSeq = sequence.substr(0,i+1);
+
+        // Remise à zéro
+        dir = 'U';
+        success = 0;
+
+        // Préparer les positions
+        (*trajX).push_back(posX);
+        (*trajY).push_back(posY);
+
+        // Jeu de la séqeuence
+        Engine(matrice, subSeq, &(*trajX)[i+1], &(*trajY)[i+1], &dir, &success);
+    }
+    *trajSuccess = success;
 }
 
 //Fonction Engine est appel� dans le main et g�re le fonctionnement de la logique du jeu.

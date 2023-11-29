@@ -1,5 +1,11 @@
- #include "Main.h"
-// #include "Parseur.h"
+#include "Parseur.h"
+#include "LogiqueDeplacement.h"
+#include "LTRcreator.h"
+#include "Detection_Start_End.h"
+#include "Logique_Jeu.h"
+#include "sequenceToSVG.h"
+#include <thread>
+
 
 int main()
 {
@@ -22,7 +28,7 @@ int main()
     //Paramètres LTR
     std::string name = "One block into the water";
     std::string solver = "PSO";
-    std::string sequence = "DDRRRRRRUURRRUUULLLUULLLLLLLUUULLLLLUUUUULLLLRRRLLRRRUUULLL";
+    std::string sequence = "RRRRLL";
     std::string output_file = "5_arrive.ltr";
     //Paramètres instanciations
     int nbr_particule;
@@ -38,13 +44,18 @@ int main()
     parsage(nom_fichier,&matrice, &nombreLignes, &nombreColonnes);
     
     // Détection et dessin arrivées/Départ
-    //detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
+    detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
 
     // Etablissement du trajet
     std::vector<int> trajX = {Origine_x}; // Historique des positions X
     std::vector<int> trajY = {Origine_y}; // Historique des positions Y
+    int trajSuccess = 0;
 
-    // getPositionsOfSequence(matrice, sequence, &trajX, &trajY, &Direction_tank, &success);
+    getPositionsOfSequence(matrice, sequence, &trajX, &trajY, &trajSuccess);
+    /*for(int i = 0;i<trajX.size();i++) {
+        std::cout << trajX[i] << ":" << trajY[i] << std::endl;
+    }*/
+    drawSVG(matrice,Origine_x, Origine_y, Finish_x, Finish_y, nbr_arrive, sequence, "./Output/Sequence.svg",nombreLignes, nombreColonnes, trajX, trajY, trajSuccess);
 
     /*nbr_particule = nbr_instance/nbr_arrive;
     std::cout << "Nombre de particule : " << nbr_particule << std::endl;

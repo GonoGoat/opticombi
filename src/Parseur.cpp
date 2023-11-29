@@ -67,12 +67,12 @@ void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, in
             //end = std::chrono::system_clock::now();
             
             // Affiche la matrice
-            /**for (int i = 0; i < *nombreLignes; i++) {
+            for (int i = 0; i < *nombreLignes; i++) {
                 for (int j = 0; j < *nombreColonnes; j++) {
-                    std::cout << matrice[i][j] << " ";
+                    std::cout << (*matrice)[i][j] << " ";
                 }
                 std::cout << std::endl;
-            }*/
+            }
 
             /*long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
             std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/

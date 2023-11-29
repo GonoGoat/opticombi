@@ -1,4 +1,3 @@
-#include "data.h"
 #include "Parseur.h"
 #include "LogiqueDeplacement.h"
 #include "LTRcreator.h"

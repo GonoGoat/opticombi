@@ -19,13 +19,13 @@ void detection(std::vector<std::vector<int>> matrice,int nombreLignes, int nombr
             if (matrice[i][j] == Tank) {
                 *posOriginX = j;
                 *posOriginY = i;
-                //std::cout << "Depart trouve : " << j << "  " << i;
+                // std::cout << "Depart trouve : " << j << "  " << i;
             }
             else if(matrice[i][j] == Base) {
                 posFinishX->push_back(j);
                 posFinishY->push_back(i);
                *nbr_arrive = *nbr_arrive + 1;
-               //std::cout << "Arrive trouve : " << j << "  " << i;
+               // std::cout << "Arrive trouve : " << j << "  " << i;
             }
         }
        //std::cout<< std::endl;
