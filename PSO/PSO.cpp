@@ -3,6 +3,7 @@
 #include "LTRcreator.h"
 #include "Detection_Start_End.h"
 #include "Algo_PSO.h"
+#include <vector>
 #include <thread>
 
 int main()
@@ -19,8 +20,10 @@ int main()
     //Paramètres Deplacement
     int Origine_x;
     int Origine_y;
-    int Finish_x[5] = { 0,0,0,0,0 };
-    int Finish_y[5] = { 0,0,0,0,0 };
+    std::vector<int> Finish_x;
+    std::vector<int> Finish_y;
+    //int Finish_x[5] = { 0,0,0,0,0 };
+    //int Finish_y[5] = { 0,0,0,0,0 };
     //Paramètres LTR
     std::string name = "Full_Dirt";
     std::string solver = "PSO";
@@ -42,13 +45,13 @@ int main()
       
 
     parsage("..\\..\\"+nom_fichier,matrice);
-    detection(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive);
+    detection(matrice, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
 
     nbr_particule = nbr_instance/nbr_arrive;
     std::cout << "Nombre de particules par arrivees : " << nbr_particule << std::endl;
 
     nbre_thread = nbr_particule * nbr_arrive;
-    Output = Algo_PSO(&nbre_thread, &nbr_iteration_max, &Origine_x, &Origine_y, Finish_x, Finish_y);
+    Output = Algo_PSO(&nbre_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);
     /*instanciation_particule = new std::thread* [nbr_thread-1];
 
     for (int j = 0; j < nbr_particule; j++) {
