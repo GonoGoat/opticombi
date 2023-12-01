@@ -1,5 +1,13 @@
-#include <vector>
+#pragma once
+
+#ifndef DSE_H
+#define DSE_H
+
 #include <string>
 #include <iostream>
+#include <vector>
+#include "data.h"
 
-void detection(std::string matrice[16][16], int *posOriginX, int *posOriginY, std::vector<int>* posFinishX, std::vector<int>* posFinishY, int* nbr_arrive);
+void detection(std::vector<std::vector<int>> matrice, int nombreLignes, int nombreColonnes, int *posOriginX, int *posOriginY, std::vector<int>* posFinishX, std::vector<int>* posFinishY, int* nbr_arrive);
+
+#endif

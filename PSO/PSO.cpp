@@ -2,6 +2,8 @@
 #include "LogiqueDeplacement.h"
 #include "LTRcreator.h"
 #include "Detection_Start_End.h"
+#include "Logique_jeu.h"
+#include "sequenceToSVG.h"
 #include "Algo_PSO.h"
 #include <vector>
 #include <thread>
@@ -14,27 +16,30 @@ int main()
     //std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "Full_Dirt.lt4";
-    std::string matrice[16][16];
+    std::string nom_fichier = "Now_with_walls.lt4";
+    std::vector<std::vector<int>> matrice;
     int nbr_arrive = 0;
     //Paramètres Deplacement
     int Origine_x;
     int Origine_y;
+    int nombreLignes;
+    int nombreColonnes = 1;
     std::vector<int> Finish_x;
     std::vector<int> Finish_y;
     //int Finish_x[5] = { 0,0,0,0,0 };
     //int Finish_y[5] = { 0,0,0,0,0 };
     //Paramètres LTR
-    std::string name = "Full_Dirt";
+    std::string name = "Now_with_walls";
     std::string solver = "PSO";
-    std::string sequence;
-    std::string output_file = "Full_Dirt.ltr";
+    std::string sequence = "";
+    std::string output_file = "Now_with_walls.ltr";
     //Paramètres instanciations
     int nbr_particule;
     int nbre_thread;
     //Paramètres PSO
     int nbr_iteration_max;
-    std::string Output;
+    //paramètres engine
+    int success = 0;
 
     std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
     std::cin >> nbr_particule;
@@ -42,11 +47,20 @@ int main()
     std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
     std::cin >> nbr_iteration_max;
 
-    parsage("..\\..\\"+nom_fichier,matrice);
-    detection(matrice, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
+    parsage("../Maps/" + nom_fichier, &matrice, &nombreLignes, &nombreColonnes);
+    detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
+
+    // Etablissement du trajet
+    std::vector<int> trajX = { Origine_x }; // Historique des positions X
+    std::vector<int> trajY = { Origine_y }; // Historique des positions Y
+    int trajSuccess = 0;
 
     nbre_thread = nbr_particule * nbr_arrive;
-    Output = Algo_PSO(&nbre_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);
+    sequence = Algo_PSO(&matrice, &nbre_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);
+    std::cout << sequence << std::endl;
+
+    getPositionsOfSequence(&matrice, sequence, &trajX, &trajY, &trajSuccess);
+    drawSVG(matrice, Origine_x, Origine_y, Finish_x, Finish_y, nbr_arrive, sequence, "../Output/Sequence.svg", nombreLignes, nombreColonnes, trajX, trajY, trajSuccess);
     /*instanciation_particule = new std::thread* [nbr_thread-1];
 
     for (int j = 0; j < nbr_particule; j++) {
@@ -71,7 +85,7 @@ int main()
         std::cout << "Position : " << i << " x =" << Finish_x[i] << " | y =" << Finish_y[i] << std::endl;
     }*/
 
-    std::cout << Output << std::endl;
+    //std::cout << sequence << std::endl;
 
     /*for (int i = 0; i < nbr_thread; i++) {
         delete[] instanciation_particule[i];

@@ -1,6 +1,6 @@
 #include "Parseur.h"
 
-void parsage(std::string nom_fichier, std::string matrice[16][16]) {
+void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, int* nombreLignes, int* nombreColonnes) {
 
     /*std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();*/
@@ -27,7 +27,11 @@ void parsage(std::string nom_fichier, std::string matrice[16][16]) {
                 }
             }
 
-            for (int i = 0; i < 16; i++) {
+            // Détection des dimensions de la matrice
+            *nombreLignes = lignes.size() - index_saut_ligne;
+            for (int i = 0; i < lignes[index_saut_ligne].size(); i++) if (lignes[index_saut_ligne][i] == ' ') *nombreColonnes += 1;
+
+            for (int i = 0; i < *nombreLignes; i++) {
                 ligne = lignes[index_saut_ligne + i];
                 // Supprime les espaces et les caractères de nouvelle ligne éventuels
                 while (!ligne.empty() && (ligne.back() == ' ' || ligne.back() == '\n')) {
@@ -37,28 +41,35 @@ void parsage(std::string nom_fichier, std::string matrice[16][16]) {
                 // Divise la ligne en éléments
                 std::string motActuel = "";
                 int j = 0;
+
+                int type_case = 0;
+                std::vector<int> row;
+
                 for (char caractere : ligne) {
-                    if (caractere == ' ') {
-                        if (motActuel.empty())
-                        {
-                            motActuel = motActuel + caractere;
-                        }
+                    if (caractere != ' ') {
+                        motActuel += caractere;
+                    }
+                    else if (!motActuel.empty()) {
+                        type_case = conversion(motActuel);
+                        row.push_back(type_case);
+                        motActuel.clear();
                         j++;
                     }
-                    matrice[i][j] += caractere;
                 }
-                if (!motActuel.empty()) {
 
-                    matrice[i][j] += motActuel;
+                if (!motActuel.empty()) {
+                    type_case = conversion(motActuel);
+                    row.push_back(type_case);
                 }
+                matrice->push_back(row);
             }
 
             //end = std::chrono::system_clock::now();
 
             // Affiche la matrice
-            for (int i = 0; i < 16; i++) {
-                for (int j = 0; j < 16; j++) {
-                    std::cout << matrice[i][j] << " ";
+            for (int i = 0; i < *nombreLignes; i++) {
+                for (int j = 0; j < *nombreColonnes; j++) {
+                    std::cout << (*matrice)[i][j] << " ";
                 }
                 std::cout << std::endl;
             }
@@ -74,4 +85,12 @@ void parsage(std::string nom_fichier, std::string matrice[16][16]) {
     catch (const std::exception& e) {
         std::cerr << "Erreur : " << e.what() << std::endl;
     }
+}
+
+Matrice conversion(const std::string& caractere)
+{
+    if (conversionToEnum.find(caractere) != conversionToEnum.end()) {
+        return conversionToEnum[caractere];
+    }
+    return Matrice(-1);
 }

@@ -128,20 +128,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Algo_PSO.cpp" />
+    <ClCompile Include="Data.cpp" />
     <ClCompile Include="Detection_Start_End.cpp" />
     <ClCompile Include="LogiqueDeplacement.cpp" />
     <ClCompile Include="LogiqueDeplacementVitesse.cpp" />
+    <ClCompile Include="Logique_Jeu.cpp" />
     <ClCompile Include="LTRcreator.cpp" />
     <ClCompile Include="Parseur.cpp" />
     <ClCompile Include="PSO.cpp" />
+    <ClCompile Include="sequenceToSVG.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algo_PSO.h" />
+    <ClInclude Include="data.h" />
     <ClInclude Include="Detection_Start_End.h" />
     <ClInclude Include="LogiqueDeplacement.h" />
     <ClInclude Include="LogiqueDeplacementVitesse.h" />
+    <ClInclude Include="Logique_jeu.h" />
     <ClInclude Include="LTRcreator.h" />
     <ClInclude Include="Parseur.h" />
+    <ClInclude Include="sequenceToSVG.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Beginner-I.lt4" />
