@@ -2,14 +2,14 @@
 /**
  * @brief Détecte le point de départ et les points d'arrivée d'une carte
  * 
- * @param matrice Carte parsée
- * @param nombreLignes Nombres de ligne de la matrice
- * @param nombreColonnes Nombres de colonnes de la matrice
- * @param posOriginX RES - Coordonnée X du point de départ
- * @param posOriginY RES - Coordonnée Y du point de départ
- * @param posFinishX RES - Coordonnées X des arrivées détectées
- * @param posFinishY RES - Coordonnées Y des arrivées Détectées
- * @param nbr_arrive RES - Nombre d'arrivées détectées
+ * @param matrice IN - Carte parsée
+ * @param nombreLignes IN - Nombres de ligne de la matrice
+ * @param nombreColonnes IN - Nombres de colonnes de la matrice
+ * @param posOriginX OUT - Coordonnée X du point de départ
+ * @param posOriginY OUT - Coordonnée Y du point de départ
+ * @param posFinishX OUT - Coordonnées X des arrivées détectées
+ * @param posFinishY OUT - Coordonnées Y des arrivées détectées
+ * @param nbr_arrive OUT - Nombre d'arrivées détectées
  */
 void detection(std::vector<std::vector<int>> matrice,int nombreLignes, int nombreColonnes, int* posOriginX, int* posOriginY, std::vector<int>* posFinishX, std::vector<int>* posFinishY, int* nbr_arrive) {
 

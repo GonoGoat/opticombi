@@ -1,22 +1,57 @@
 #include "sequenceToSVG.h"
 
+/**
+ * @brief Encapsule des éléments SVG dans une balise <g>...</g>
+ * 
+ * @param element IN - Element a encapsuler 
+ * @return std::string Les éléments encapsulé
+ */
 std::string getSectionWithElement(std::string element) {
     return ("\n<g>" + element + "\n</g>");
 }
 
+/**
+ * @brief Génère un cercle SVG
+ * 
+ * @param cx IN - Coordonnées X du centre
+ * @param cy IN - Coordonnées Y du centre
+ * @param r IN - Valeur du rayon
+ * @param style IN - Style appliqué sur la forme au format SVG (<clé>:<valeur>;...)
+ * @return std::string Le cercle aux propriétés désirées
+ */
 std::string getCircle(int cx, int cy, int r, std::string style) {
     return ("\n<circle cx='" + std::to_string(cx) + "' cy='" + std::to_string(cy) + "' r='" + std::to_string(r) + "' style='" + style + "'/>");
 }
 
+/**
+ * @brief Génère un rectangle SVG
+ * 
+ * @param x IN - Coordonnées X du coin supérieur gauche
+ * @param y IN - Coordonnées Y du coin supérieur gauche
+ * @param width IN - Largeur du rectangle
+ * @param height IN - Hauteur du rectangle
+ * @param style IN - Style appliqué sur la forme au format SVG
+ * @return std::string Le rectangle aux propriétés désirées
+ */
 std::string getRect(int x, int y, int width, int height, std::string style) {
     return ("\n<rect x='" + std::to_string(x) + "' y='" + std::to_string(y) + "' width='" + std::to_string(width) + "' height='" + std::to_string(height) + "' style='" + style + "'/>");
 }
 
+/**
+ * @brief Génère une ligne SVG
+ * 
+ * @param x1 IN - Coordonnées X du premier point de la ligne
+ * @param y1 IN - Coordonnées Y du premier point de la ligne
+ * @param x2 IN - Coordonnées X du deuxième point de la ligne
+ * @param y2 IN - Coordonnées Y du deuxième point de la ligne
+ * @param style IN - Style appliqué sur la forme au format SVG
+ * @return std::string La ligne aux propriétés désirées
+ */
 std::string getLine (int x1, int y1, int x2, int y2, std::string style) {
     return ("\n<line x1='" + std::to_string(x1) + "' y1='" + std::to_string(y1) + "' x2='" + std::to_string(x2) + "' y2='" + std::to_string(y2) +"' style='" + style + "'/>");
 }
 
-void drawSVG (std::vector<std::vector<int>> matrice, int Origine_x, int Origine_y, std::vector<int> Finish_x, std::vector<int> Finish_y, int nbr_arrive, std::string sequence,std::string output_file, int nombreLignes, int nombreColonnes, std::vector<int> trajX, std::vector<int> trajY, int succes) {
+void drawSVG (std::vector<std::vector<int>>* matrice, int Origine_x, int Origine_y, std::vector<int>* Finish_x, std::vector<int>* Finish_y, int nbr_arrive, std::string sequence,std::string output_file, int nombreLignes, int nombreColonnes, std::vector<int>* trajX, std::vector<int>* trajY, int succes) {
     // Taille du SVG - A adapter à votre écran
     int svgHeight = 40;
 
@@ -47,14 +82,19 @@ void drawSVG (std::vector<std::vector<int>> matrice, int Origine_x, int Origine_
         // Arrivées de la carte
         std::string mapEndsElement = "";
         for (int i = 0; i < nbr_arrive; i++) {
-            mapEndsElement += getCircle(((Finish_x[i]+1)*svgHeight),((Finish_y[i]+1)*svgHeight),5, "fill:red");
+            mapEndsElement += getCircle((((*Finish_x)[i]+1)*svgHeight),(((*Finish_y)[i]+1)*svgHeight),5, "fill:red");
         }
         fichier << getSectionWithElement(mapEndsElement);
 
+        // Départ de la particule
+        // TODO : A adapter à position de début
+        std::string partStartElement = getCircle(((Origine_x+1)*svgHeight),((Origine_y+1)*svgHeight), 5, "fill:none;stroke-width:2;stroke:black");
+        fichier << getSectionWithElement(partStartElement);
+
         // Trajectoire
         std::string trajElement = "";
-        for (int i = 0; i < trajX.size()-1; i++) {
-            trajElement += getLine(((trajX[i]+1)*svgHeight),((trajY[i]+1)*svgHeight),((trajX[i+1]+1)*svgHeight), ((trajY[i+1]+1)*svgHeight),"stroke:black");
+        for (int i = 0; i < (*trajX).size()-1; i++) {
+            trajElement += getLine((((*trajX)[i]+1)*svgHeight),(((*trajY)[i]+1)*svgHeight),(((*trajX)[i+1]+1)*svgHeight), (((*trajY)[i+1]+1)*svgHeight),"stroke:black");
         }
         fichier << getSectionWithElement(trajElement);
 
@@ -66,6 +106,4 @@ void drawSVG (std::vector<std::vector<int>> matrice, int Origine_x, int Origine_
     else {
         std::cerr << "Erreur lors de l'ouverture du fichier." << std::endl;
     }
-
-    // Dessin séquence
 }

@@ -1,11 +1,4 @@
-#include "Parseur.h"
-#include "LogiqueDeplacement.h"
-#include "LTRcreator.h"
-#include "Detection_Start_End.h"
-#include "Logique_Jeu.h"
-#include "sequenceToSVG.h"
-#include <thread>
-
+#include "Main.h"
 
 int main()
 {
@@ -33,28 +26,44 @@ int main()
     int nbr_particule;
     int nbr_instance;
     int nbr_thread;
-    //paramètres engine
+    //paramètres engine *                      
+    /*Objectif atteint = 1
+    Toujours en vie = 0
+    Mort = -1*/
     int success = 0;
 
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
 
     // Import matrice
-    parsage(nom_fichier,&matrice, &nombreLignes, &nombreColonnes);
+    parsageParam params;
+    params.nom_fichier = nom_fichier;
+    params.matrice = &matrice;
+    params.nombreLignes = &nombreLignes;
+    params.nombreColonnes = &nombreColonnes;
+
+    parsage(&params);
+
+    /*for (int i = 0; i < nombreLignes; i++) {
+        for (int j = 0; j < nombreColonnes; j++) {
+            std::cout << matrice[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }*/
     
     // Détection et dessin arrivées/Départ
-    detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
+    /*detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
 
     // Etablissement du trajet
     std::vector<int> trajX = {Origine_x}; // Historique des positions X
     std::vector<int> trajY = {Origine_y}; // Historique des positions Y
-    int trajSuccess = 0;
+    int trajSuccess = 0; // Succès de la séquence
 
-    getPositionsOfSequence(matrice, sequence, &trajX, &trajY, &trajSuccess);
+    getPositionsOfSequence(&matrice, sequence, &trajX, &trajY, &trajSuccess);
     /*for(int i = 0;i<trajX.size();i++) {
         std::cout << trajX[i] << ":" << trajY[i] << std::endl;
     }*/
-    drawSVG(matrice,Origine_x, Origine_y, Finish_x, Finish_y, nbr_arrive, sequence, "./Output/Sequence.svg",nombreLignes, nombreColonnes, trajX, trajY, trajSuccess);
+    // drawSVG(&matrice,Origine_x, Origine_y, &Finish_x, &Finish_y, nbr_arrive, sequence, "./Output/Sequence.svg",nombreLignes, nombreColonnes, &trajX, &trajY, trajSuccess);
 
     /*nbr_particule = nbr_instance/nbr_arrive;
     std::cout << "Nombre de particule : " << nbr_particule << std::endl;

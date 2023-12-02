@@ -1,12 +1,12 @@
 #include "LTRcreator.h"
 
 /**
- * @brief Généère un fichier .ltr correspondant à une solution
+ * @brief Génère un fichier .ltr correspondant à une solution
  * 
- * @param name Nom donné à la solution
- * @param solver Méthode de résolution
- * @param sequence Séquence d'actions
- * @param output_file Nom du fichier de sortie
+ * @param name IN - Nom donné à la solution
+ * @param solver IN - Méthode de résolution
+ * @param sequence IN - Séquence d'actions
+ * @param output_file IN - Nom du fichier de sortie
  */
 void create_ltr_file(const std::string& name, const std::string& solver, const std::string& sequence, const std::string& output_file) {
 

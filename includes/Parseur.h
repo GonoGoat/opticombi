@@ -11,7 +11,15 @@
 #include <unordered_map>
 #include "data.h"
 
-void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, int* nombreLignes, int* nombreColonnes);
+struct parsageParam {
+    std::string nom_fichier;
+    std::vector<std::vector<int>>* matrice;
+    int* nombreLignes;
+    int* nombreColonnes;
+};
+// void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, int* nombreLignes, int* nombreColonnes);
+void parsage(parsageParam* params);
+
 Matrice conversion(const std::string& caractere);
 
 #endif
