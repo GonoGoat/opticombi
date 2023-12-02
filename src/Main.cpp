@@ -18,8 +18,7 @@ int main()
     std::string nom_fichier = "./Maps/Murs_limite_portail.lt4";
     std::vector<std::vector<int>> matrice;
     int nbr_arrive = 0;
-    int nombreLignes;
-    int nombreColonnes = 1;
+    int nombreLignes,nombreColonnes;
     //Paramètres Deplacement
     int Origine_x;
     int Origine_y;
