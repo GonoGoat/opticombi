@@ -28,8 +28,18 @@ void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, in
             }
 
             // Détection des dimensions de la matrice
-            *nombreLignes = lignes.size()-index_saut_ligne;
-            for (int i = 0; i < lignes[index_saut_ligne].size(); i++) if (lignes[index_saut_ligne][i] == ' ') *nombreColonnes+=1;
+            if (lignes[0].find("Rows: ") != std::string::npos) {
+                *nombreLignes = std::stoi(lignes[0].substr(6,lignes.size()));
+            }
+            else {
+                throw std::runtime_error("Nombres de lignes non detectees sur le fichier .lt4");
+            }
+            if (lignes[1].find("Cols: ") != std::string::npos) {
+                *nombreColonnes = std::stoi(lignes[1].substr(6,lignes.size()));
+            }
+            else {
+                throw std::runtime_error("Nombres de colonnes non detectees sur le fichier .lt4");
+            }
 
             for (int i = 0; i < *nombreLignes; i++) {
                 ligne = lignes[index_saut_ligne + i];
