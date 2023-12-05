@@ -1,26 +1,21 @@
 #include "Parseur.h"
 
-
-
-std::unordered_map<std::string, Matrice> conversionToEnum = {
-    {"D",Dirt},{"Tu",Tank},{"b",Base},{"w",Water},{"Bs",Sollid_Block},
-    {"Bm",Movable_Block},{"B",Bricks},{"Au",Anti_Tank_U},{"Ad",Anti_Tank_D},
-    {"Al",Anti_Tank_L},{"Ar",Anti_Tank_R},{"Mur",Mirror_UR},{"Mul",Mirror_UL},
-    {"Mdr",Mirror_DR},{"Mdl",Mirro_DL},{"Wu",Way_U},{"Wd",Way_D},{"Wr",Way_R},
-    {"Wl",Way_L},{"C",Crystal_Block},{"Rur",Rotative_Mirror_UR},{"Rul",Rotative_Mirror_UL},
-    {"Rdr",Rotative_Mirror_DR},{"Rdl",Rotative_Mirror_DL},{"I",Ice},{"i",Thin_Ice},
-    {"Tr",Tunnel_Red},{"Tg",Tunnel_Green},{"Tb",Tunnel_Blue},{"Tc",Tunnel_Cyan},
-    {"Ty",Tunnel_Yellow},{"Tp",Tunnel_Pink},{"Tw",Tunnel_White},{"Td",Tunnel_Dark}
-};
-
-void parsage(std::string nom_fichier, int matrice[16][16]) {
-
+/**
+ * @brief Convertit un fichier .lt4 en une matrice exploitable par le programme
+ *
+ * @param nom_fichier IN - Nom du fichier .lt4 à convertir
+ * @param matrice OUT - Matrice générée
+ * @param nombreLignes IN/OUT : Nombre de lignes de la carte
+ * @param nombreColonnes IN/OUT : Nombre de colonnes de la carte
+ */
+ // void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, int* nombreLignes, int* nombreColonnes) {
+void parsage(parsageParam* params) {
     /*std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();*/
     // Crée un tableau à 2D pour stocker la matrice
 
     try {
-        std::ifstream fichier(nom_fichier);
+        std::ifstream fichier(*params->nom_fichier);
         if (fichier.is_open()) {
             std::vector<std::string> lignes;
             std::string ligne;
@@ -40,7 +35,21 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
                 }
             }
 
-            for (int i = 0; i < 16; i++) {
+            // Détection des dimensions de la matrice
+            if (lignes[0].find("Rows: ") != std::string::npos) {
+                *(params->nombreLignes) = std::stoi(lignes[0].substr(6, lignes.size()));
+            }
+            else {
+                throw std::runtime_error("Nombres de lignes non detectees sur le fichier .lt4");
+            }
+            if (lignes[1].find("Cols: ") != std::string::npos) {
+                *(params->nombreColonnes) = std::stoi(lignes[1].substr(6, lignes.size()));
+            }
+            else {
+                throw std::runtime_error("Nombres de colonnes non detectees sur le fichier .lt4");
+            }
+
+            for (int i = 0; i < *(params->nombreLignes); i++) {
                 ligne = lignes[index_saut_ligne + i];
                 // Supprime les espaces et les caractères de nouvelle ligne éventuels
                 while (!ligne.empty() && (ligne.back() == ' ' || ligne.back() == '\n')) {
@@ -52,31 +61,59 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
                 int j = 0;
 
                 int type_case = 0;
+                std::vector<int> row;
+                std::vector<int> row_mobile;
 
                 for (char caractere : ligne) {
                     if (caractere != ' ') {
-                        motActuel += caractere; 
+                        motActuel += caractere;
                     }
                     else if (!motActuel.empty()) {
                         type_case = conversion(motActuel);
-                        matrice[i][j] = type_case;
+                        if (type_case == Movable_Block || (type_case >= Anti_Tank_U && type_case <= Mirro_DL)) {
+                            row_mobile.push_back(type_case);
+                            row.push_back(Dirt);
+                        }
+                        else {
+                            row_mobile.push_back(Dirt);
+                            row.push_back(type_case);
+                        }
                         motActuel.clear();
                         j++;
                     }
                 }
 
+
                 if (!motActuel.empty()) {
                     type_case = conversion(motActuel);
-                    matrice[i][j] = type_case;
+                    if (type_case == Movable_Block || (type_case >= Anti_Tank_U && type_case <= Mirro_DL)) {
+                        row_mobile.push_back(type_case);
+                        row.push_back(Dirt);
+                    }
+                    else {
+                        row_mobile.push_back(Dirt);
+                        row.push_back(type_case);
+                    }
                 }
+                params->matrice_fixe->push_back(row);
+                params->matrice_mobile->push_back(row_mobile);
             }
 
             //end = std::chrono::system_clock::now();
-            
-            // Affiche la matrice
-            for (int i = 0; i < 16; i++) {
-                for (int j = 0; j < 16; j++) {
-                    std::cout << matrice[i][j] << " ";
+
+            // Affiche la matrice fixe
+            std::cout << "Matrice fixe" << std::endl;
+            for (int i = 0; i < *(params->nombreLignes); i++) {
+                for (int j = 0; j < *(params->nombreColonnes); j++) {
+                    std::cout << (*params->matrice_fixe)[i][j] << " ";
+                }
+                std::cout << std::endl;
+            }
+            //Affiche la matrice mobile
+            std::cout << "Matrice mobile" << std::endl;
+            for (int i = 0; i < *(params->nombreLignes); i++) {
+                for (int j = 0; j < *(params->nombreColonnes); j++) {
+                    std::cout << (*params->matrice_mobile)[i][j] << " ";
                 }
                 std::cout << std::endl;
             }
@@ -86,7 +123,7 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
 
         }
         else {
-            std::cerr << "Le fichier " << nom_fichier << " n'a pas ete trouve." << std::endl;
+            std::cerr << "Le fichier " << params->nom_fichier << " n'a pas ete trouve." << std::endl;
         }
     }
     catch (const std::exception& e) {
@@ -94,6 +131,12 @@ void parsage(std::string nom_fichier, int matrice[16][16]) {
     }
 }
 
+/**
+ * @brief Conversion d'une chaine de caractère lue sur le fichier .lt4 en un bloc reconnu
+ *
+ * @param caractere IN - La chaien de caractère à reconnaitre comme bloc
+ * @return Matrice - Le bloc reconnu
+ */
 Matrice conversion(const std::string& caractere)
 {
     if (conversionToEnum.find(caractere) != conversionToEnum.end()) {

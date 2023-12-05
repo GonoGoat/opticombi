@@ -13,14 +13,15 @@ int main()
     std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "Trajectoire.lt4";
-    int matrice[16][16];
+    std::string nom_fichier = "..\\..\\Trajectoire.lt4";
+    std::vector<std::vector<int>> matrice_fixe;
+    std::vector<std::vector<int>> matrice_mobile;
     int nbr_arrive = 0;
+    int nombreLignes, nombreColonnes;
     //Paramètres Deplacement
     int Origine_x;
     int Origine_y;
-    int Finish_x[5] = { 0,0,0,0,0 };
-    int Finish_y[5] = { 0,0,0,0,0 };
+    std::vector<int> Finish_x, Finish_y = {};
     char Direction_tank = 'U';
     //Paramètres LTR
     std::string name = "One block into the water";
@@ -37,8 +38,18 @@ int main()
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
 
-    parsage("..\\..\\"+nom_fichier,matrice);
-    detection(matrice, &Origine_x, &Origine_y, Finish_x, Finish_y, &nbr_arrive);
+    // Import matrice
+    parsageParam params;
+    params.nom_fichier = &nom_fichier;
+    params.matrice_fixe = &matrice_fixe;
+    params.matrice_mobile = &matrice_mobile;
+    params.nombreLignes = &nombreLignes;
+    params.nombreColonnes = &nombreColonnes;
+    
+    parsage(&params);
+    
+    //parsage("..\\..\\"+nom_fichier,matrice);
+    detection(&matrice_fixe, &nombreLignes, &nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
 
     /*nbr_particule = nbr_instance/nbr_arrive;
     std::cout << "Nombre de particule : " << nbr_particule << std::endl;
@@ -64,11 +75,11 @@ int main()
 
     std::cout << "Depart x : " << Origine_x << "   Depart y : " << Origine_y << std::endl;
 
-    for (int i = 0; i < nbr_arrive; i++) {
+    /*for (int i = 0; i < nbr_arrive; i++) {
         std::cout << "Position : " << i << " x =" << Finish_x[i] << " | y =" << Finish_y[i] << std::endl;
-    }
+    }*/
 
-    Engine(matrice, sequence, &Origine_x, &Origine_y, &Direction_tank, &success);
+    Engine(&matrice_fixe, &matrice_mobile, sequence, &Origine_x, &Origine_y, &Direction_tank, &success);
 
     /*for (int i = 0; i < nbr_instance; i++) {
         delete[] instanciation_particule[i];
