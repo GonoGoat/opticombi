@@ -4,4 +4,5 @@
 #include "Detection_Start_End.h"
 #include "Logique_Jeu.h"
 #include "sequenceToSVG.h"
+#include "Algo_PSO.h"
 #include <thread>

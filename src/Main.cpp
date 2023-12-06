@@ -8,28 +8,26 @@ int main()
     //std::thread** instanciation_particule;
 
     //Paramètres Parsage
-    std::string nom_fichier = "./Maps/Murs_limite_portail.lt4";
-    std::vector<std::vector<int>> matrice;
+    std::string nom_fichier = "./Maps/Trajectoire.lt4";
+    std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
     int nbr_arrive = 0;
-    int nombreLignes,nombreColonnes;
+    int nombreLignes, nombreColonnes;
     //Paramètres Deplacement
-    int Origine_x;
-    int Origine_y;
-    std::vector<int> Finish_x,Finish_y = {};
+    int Origine_x, Origine_y;
+    std::vector<int> Finish_x, Finish_y = {};
     char Direction_tank = 'U';
     //Paramètres LTR
     std::string name = "One block into the water";
     std::string solver = "PSO";
-    std::string sequence = "RRRRLL";
+    std::string sequence = "FLLUFLLUFLLLUFURRRRRRRRUFRRUFRRRUF";
     std::string output_file = "5_arrive.ltr";
     //Paramètres instanciations
     int nbr_particule;
     int nbr_instance;
     int nbr_thread;
-    //paramètres engine *                      
-    /*Objectif atteint = 1
-    Toujours en vie = 0
-    Mort = -1*/
+    //Paramètres PSO
+    int nbr_iteration_max;
+    //paramètres engine
     int success = 0;
 
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
@@ -37,29 +35,33 @@ int main()
 
     // Import matrice
     parsageParam params;
-    params.nom_fichier = nom_fichier;
-    params.matrice = &matrice;
+    params.nom_fichier = &nom_fichier;
+    params.matrice_fixe = &matrice_fixe;
+    params.matrice_mobile = &matrice_mobile;
     params.nombreLignes = &nombreLignes;
     params.nombreColonnes = &nombreColonnes;
 
-    parsage(&params);
+    std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
+    std::cin >> nbr_particule;
 
-    /*for (int i = 0; i < nombreLignes; i++) {
-        for (int j = 0; j < nombreColonnes; j++) {
-            std::cout << matrice[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }*/
+    std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
+    std::cin >> nbr_iteration_max;
     
-    // Détection et dessin arrivées/Départ
-    /*detection(matrice, nombreLignes, nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
+    parsage(&params);
+    
+    //parsage("..\\..\\"+nom_fichier,matrice);
+    // detection(&matrice_fixe, &nombreLignes, &nombreColonnes, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_arrive);
 
     // Etablissement du trajet
     std::vector<int> trajX = {Origine_x}; // Historique des positions X
     std::vector<int> trajY = {Origine_y}; // Historique des positions Y
     int trajSuccess = 0; // Succès de la séquence
 
-    getPositionsOfSequence(&matrice, sequence, &trajX, &trajY, &trajSuccess);
+    nbr_thread = nbr_particule * nbr_arrive;
+    //sequence = Algo_PSO(&matrice, &nbr_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);
+    std::cout << sequence << std::endl;
+
+    getPositionsOfSequence(&matrice_fixe, sequence, &trajX, &trajY, &trajSuccess);
     /*for(int i = 0;i<trajX.size();i++) {
         std::cout << trajX[i] << ":" << trajY[i] << std::endl;
     }*/
@@ -81,12 +83,7 @@ int main()
     for (int i = 0; i < nbr_thread; i++) {
         instanciation_particule[i] -> join();
     }*/
-
-    //create_ltr_file(name, solver, sequence, output_file);
-    /*end = std::chrono::system_clock::now();
-    long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-    std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;*/
-
+    
     /*std::cout << "Depart x : " << Origine_x << "   Depart y : " << Origine_y << std::endl;
 
     for (int i = 0; i < nbr_arrive; i++) {
@@ -94,6 +91,11 @@ int main()
     }
 
     Engine(matrice, sequence, &Origine_x, &Origine_y, &Direction_tank, &success);*/
+
+    create_ltr_file(name, solver, sequence, output_file);
+    end = std::chrono::system_clock::now();
+    long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;
 
     /*for (int i = 0; i < nbr_instance; i++) {
         delete[] instanciation_particule[i];

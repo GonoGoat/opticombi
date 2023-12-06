@@ -1,6 +1,45 @@
 ﻿#include "Logique_Jeu.h"
 
 /**
+ * @brief Liste toutes les positions d'un tank lors de l'exécution d'une séquence
+ * 
+ * @param matrice IN - La matrice parsee
+ * @param sequence IN - La séquence jouée par le tank dans la matrice
+ * @param trajX IN/OUT - L'historique des positions en X du tank
+ * @param trajY IN/OUT - L'historique des positions en Y du tank
+ * @param trajSuccess IN/OUT - L'etat du tank après l'exécution de la séquence
+ */
+void getPositionsOfSequence(std::vector<std::vector<int>>* matrice, std::string& sequence, std::vector<int>* trajX, std::vector<int>* trajY, int* trajSuccess) {
+    // std::cout << (*trajX)[0];
+    // Etablir les positions X et Y de départ
+    int posX = (*trajX)[0]; 
+    int posY = (*trajY)[0];
+
+    // Initialisation des variables de lancement du moteur
+    int success;
+    char dir;
+    
+    // Jusque dernier caractère de séquence
+    for(int i = 0;i<sequence.size();i++) {
+
+        // Extraction de la séquence à jouer
+        std::string subSeq = sequence.substr(0,i+1);
+
+        // Remise à zéro
+        dir = 'U';
+        success = 0;
+
+        // Préparer les positions
+        (*trajX).push_back(posX);
+        (*trajY).push_back(posY);
+
+        // Jeu de la séqeuence
+        // Engine(matrice, subSeq, &(*trajX)[i+1], &(*trajY)[i+1], &dir, &success);
+    }
+    *trajSuccess = success;
+}
+
+/**
  * @brief Execute la logique du jeu
  *
  * @param matrice IN - La carte parsée
