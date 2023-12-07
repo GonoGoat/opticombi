@@ -2,20 +2,16 @@
 
 /**
  * @brief Convertit un fichier .lt4 en une matrice exploitable par le programme
- *
- * @param nom_fichier IN - Nom du fichier .lt4 à convertir
- * @param matrice OUT - Matrice générée
- * @param nombreLignes IN/OUT : Nombre de lignes de la carte
- * @param nombreColonnes IN/OUT : Nombre de colonnes de la carte
+ * 
+ * @param mapParams DonnÃ©es de la carte
  */
- // void parsage(std::string nom_fichier, std::vector<std::vector<int>>* matrice, int* nombreLignes, int* nombreColonnes) {
-void parsage(parsageParam* params) {
+void parsage(mapStruct* mapParams) {
     /*std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();*/
-    // Crée un tableau à 2D pour stocker la matrice
+    // Crï¿½e un tableau ï¿½ 2D pour stocker la matrice
 
     try {
-        std::ifstream fichier(*params->nom_fichier);
+        std::ifstream fichier(mapParams->nom_fichier);
         if (fichier.is_open()) {
             std::vector<std::string> lignes;
             std::string ligne;
@@ -27,36 +23,36 @@ void parsage(parsageParam* params) {
 
             int index_saut_ligne = 0;
 
-            // Détecte le saut de ligne vide avant la matrice
+            // Dï¿½tecte le saut de ligne vide avant la matrice
             for (int index = 0; index < lignes.size(); index++) {
                 if (lignes[index].empty()) {
                     index_saut_ligne = index + 1; // Stocke l'index du saut de ligne
-                    //std::cout << "Ligne vide détectée à la ligne " << index + 1 << ": '" << lignes[index] << "'" << std::endl;
+                    //std::cout << "Ligne vide dï¿½tectï¿½e ï¿½ la ligne " << index + 1 << ": '" << lignes[index] << "'" << std::endl;
                 }
             }
 
-            // Détection des dimensions de la matrice
+            // Dï¿½tection des dimensions de la matrice
             if (lignes[0].find("Rows: ") != std::string::npos) {
-                *(params->nombreLignes) = std::stoi(lignes[0].substr(6, lignes.size()));
+                mapParams->nbr_lignes = std::stoi(lignes[0].substr(6, lignes.size()));
             }
             else {
                 throw std::runtime_error("Nombres de lignes non detectees sur le fichier .lt4");
             }
             if (lignes[1].find("Cols: ") != std::string::npos) {
-                *(params->nombreColonnes) = std::stoi(lignes[1].substr(6, lignes.size()));
+                mapParams->nbr_colonnes = std::stoi(lignes[1].substr(6, lignes.size()));
             }
             else {
                 throw std::runtime_error("Nombres de colonnes non detectees sur le fichier .lt4");
             }
 
-            for (int i = 0; i < *(params->nombreLignes); i++) {
+            for (int i = 0; i < mapParams->nbr_lignes; i++) {
                 ligne = lignes[index_saut_ligne + i];
-                // Supprime les espaces et les caractères de nouvelle ligne éventuels
+                // Supprime les espaces et les caractï¿½res de nouvelle ligne ï¿½ventuels
                 while (!ligne.empty() && (ligne.back() == ' ' || ligne.back() == '\n')) {
                     ligne.pop_back();
                 }
 
-                // Divise la ligne en éléments
+                // Divise la ligne en ï¿½lï¿½ments
                 std::string motActuel = "";
                 int j = 0;
 
@@ -95,25 +91,25 @@ void parsage(parsageParam* params) {
                         row.push_back(type_case);
                     }
                 }
-                params->matrice_fixe->push_back(row);
-                params->matrice_mobile->push_back(row_mobile);
+                mapParams->matrice_fixe.push_back(row);
+                mapParams->matrice_mobile.push_back(row_mobile);
             }
 
             //end = std::chrono::system_clock::now();
 
             // Affiche la matrice fixe
             std::cout << "Matrice fixe" << std::endl;
-            for (int i = 0; i < *(params->nombreLignes); i++) {
-                for (int j = 0; j < *(params->nombreColonnes); j++) {
-                    std::cout << (*params->matrice_fixe)[i][j] << " ";
+            for (int i = 0; i < mapParams->nbr_lignes; i++) {
+                for (int j = 0; j < mapParams->nbr_colonnes; j++) {
+                    std::cout << mapParams->matrice_fixe[i][j] << " ";
                 }
                 std::cout << std::endl;
             }
             //Affiche la matrice mobile
             std::cout << "Matrice mobile" << std::endl;
-            for (int i = 0; i < *(params->nombreLignes); i++) {
-                for (int j = 0; j < *(params->nombreColonnes); j++) {
-                    std::cout << (*params->matrice_mobile)[i][j] << " ";
+            for (int i = 0; i < mapParams->nbr_lignes; i++) {
+                for (int j = 0; j < mapParams->nbr_colonnes; j++) {
+                    std::cout << mapParams->matrice_mobile[i][j] << " ";
                 }
                 std::cout << std::endl;
             }
@@ -123,7 +119,7 @@ void parsage(parsageParam* params) {
 
         }
         else {
-            std::cerr << "Le fichier " << params->nom_fichier << " n'a pas ete trouve." << std::endl;
+            std::cerr << "Le fichier " << mapParams->nom_fichier << " n'a pas ete trouve." << std::endl;
         }
     }
     catch (const std::exception& e) {
@@ -132,9 +128,9 @@ void parsage(parsageParam* params) {
 }
 
 /**
- * @brief Conversion d'une chaine de caractère lue sur le fichier .lt4 en un bloc reconnu
+ * @brief Conversion d'une chaine de caractï¿½re lue sur le fichier .lt4 en un bloc reconnu
  *
- * @param caractere IN - La chaien de caractère à reconnaitre comme bloc
+ * @param caractere IN - La chaien de caractï¿½re ï¿½ reconnaitre comme bloc
  * @return Matrice - Le bloc reconnu
  */
 Matrice conversion(const std::string& caractere)

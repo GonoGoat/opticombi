@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include <string>
+#include <vector>
 
 #ifndef DATA_H
 #define DATA_H
@@ -24,6 +25,75 @@ enum Matrice
     Bridge
 
 };
+
+// A splitter avec particleStruct quand parallèle
+struct mapStruct {
+    std::string nom_fichier;
+	std::vector<std::vector<int>> matrice_fixe;
+    std::vector<std::vector<int>> matrice_mobile;
+    int nbr_arrive;
+    int nbr_lignes;
+    int nbr_colonnes;
+    
+    // Coordonnées du point de départ du tank sur la carte
+    int Origine_x,Origine_y;
+
+    // Coordonnées de travail
+    int posX,posY;
+    
+    // Ensemble des coordonnées d'arrivées possibles sur la carte
+    std::vector<int> Finish_x, Finish_y; 
+    char Direction_tank;
+
+    // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
+    int success;
+};
+
+struct outputStruct {
+    // Nom de la solution
+    std::string name;
+
+    // Nom du solver
+    std::string solver; 
+
+    // Séquence 
+    std::string sequence;
+
+    // Nom du fichier de sortie (extension .lt4)
+    std::string output_file; 
+};
+
+struct psoStruct {
+    int nbr_particule;
+
+    // Nombre de positions initalisées
+    int nbr_instance;
+    int nbr_thread;
+
+    // Durée de vie d'une particule en nombre d'itération
+    int nbr_iteration_max;
+};
+
+struct svgStruct {
+    // Historique des coordonnées
+    std::vector<int> trajX, trajY; 
+
+    // Etat du tank
+    int trajSuccess;
+
+    // Nom du fichier de sortie (extension .svg)
+    std::string output_file;
+
+    // Taille du SVG - A adapter à votre écran
+    int svgHeight;
+};
+
+// TODO : particleStruct
+// matrice_mobile
+// start_posX/Y
+// success
+// finish_X/Y
+// dir
 
 extern std::unordered_map<std::string, Matrice> conversionToEnum;
 

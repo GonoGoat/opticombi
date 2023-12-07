@@ -6,8 +6,8 @@
  * @param element IN - Element a encapsuler 
  * @return std::string Les éléments encapsulé
  */
-std::string getSectionWithElement(std::string element) {
-    return ("\n<g>" + element + "\n</g>");
+std::string getSectionWithElement(std::string* element) {
+    return ("\n<g>" + *element + "\n</g>");
 }
 
 /**
@@ -51,57 +51,55 @@ std::string getLine (int x1, int y1, int x2, int y2, std::string style) {
     return ("\n<line x1='" + std::to_string(x1) + "' y1='" + std::to_string(y1) + "' x2='" + std::to_string(x2) + "' y2='" + std::to_string(y2) +"' style='" + style + "'/>");
 }
 
-void drawSVG (std::vector<std::vector<int>>* matrice, int Origine_x, int Origine_y, std::vector<int>* Finish_x, std::vector<int>* Finish_y, int nbr_arrive, std::string sequence,std::string output_file, int nombreLignes, int nombreColonnes, std::vector<int>* trajX, std::vector<int>* trajY, int succes) {
-    // Taille du SVG - A adapter à votre écran
-    int svgHeight = 40;
+void drawSVG (mapStruct* mapParams, svgStruct* svgParams) {
 
     // Création fichier
-    std::ofstream fichier(output_file);
+    std::ofstream fichier(svgParams->output_file);
     if (fichier.is_open()) {
 
         // En-tête SVG
         fichier << "<svg version='1.2' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-labelledby='title' role='img'>'";
 
         // Contour matrice
-        std::string matrixElement = getRect(0,0,((nombreColonnes+1)*svgHeight),((nombreLignes+1)*svgHeight),"fill:none;stroke:black;stroke-width:5");
-        fichier << getSectionWithElement(matrixElement);
+        std::string matrixElement = getRect(0,0,((mapParams->nbr_colonnes+1)*svgParams->svgHeight),((mapParams->nbr_lignes+1)*svgParams->svgHeight),"fill:none;stroke:black;stroke-width:5");
+        fichier << getSectionWithElement(&matrixElement);
 
         // Points matrice
         std::string dotsElement = "";
-        for (int i = 0; i < nombreLignes; i++) {
-            for (int j = 0; j < nombreColonnes; j++) {
-                dotsElement += getCircle(((j+1)*svgHeight), ((i+1)*svgHeight), 2, "");
+        for (int i = 0; i < mapParams->nbr_lignes; i++) {
+            for (int j = 0; j < mapParams->nbr_colonnes; j++) {
+                dotsElement += getCircle(((j+1)*svgParams->svgHeight), ((i+1)*svgParams->svgHeight), 2, "");
             }
         }
-        fichier << getSectionWithElement(dotsElement);
+        fichier << getSectionWithElement(&dotsElement);
 
         // Départ de la carte "fill:none;stroke:black"
-        std::string mapStartElement = getCircle(((Origine_x+1)*svgHeight),((Origine_y+1)*svgHeight), 5, "fill:green");
-        fichier << getSectionWithElement(mapStartElement);
+        std::string mapStartElement = getCircle(((mapParams->Origine_x+1)*svgParams->svgHeight),((mapParams->Origine_y+1)*svgParams->svgHeight), 5, "fill:green");
+        fichier << getSectionWithElement(&mapStartElement);
 
         // Arrivées de la carte
         std::string mapEndsElement = "";
-        for (int i = 0; i < nbr_arrive; i++) {
-            mapEndsElement += getCircle((((*Finish_x)[i]+1)*svgHeight),(((*Finish_y)[i]+1)*svgHeight),5, "fill:red");
+        for (int i = 0; i < mapParams->nbr_arrive; i++) {
+            mapEndsElement += getCircle(((mapParams->Finish_x[i]+1)*svgParams->svgHeight),((mapParams->Finish_y[i]+1)*svgParams->svgHeight),5, "fill:red");
         }
-        fichier << getSectionWithElement(mapEndsElement);
+        fichier << getSectionWithElement(&mapEndsElement);
 
         // Départ de la particule
         // TODO : A adapter à position de début
-        std::string partStartElement = getCircle(((Origine_x+1)*svgHeight),((Origine_y+1)*svgHeight), 5, "fill:none;stroke-width:2;stroke:black");
-        fichier << getSectionWithElement(partStartElement);
+        std::string partStartElement = getCircle(((mapParams->Origine_x+1)*svgParams->svgHeight),((mapParams->Origine_y+1)*svgParams->svgHeight), 5, "fill:none;stroke-width:2;stroke:black");
+        fichier << getSectionWithElement(&partStartElement);
 
         // Trajectoire
         std::string trajElement = "";
-        for (int i = 0; i < (*trajX).size()-1; i++) {
-            trajElement += getLine((((*trajX)[i]+1)*svgHeight),(((*trajY)[i]+1)*svgHeight),(((*trajX)[i+1]+1)*svgHeight), (((*trajY)[i+1]+1)*svgHeight),"stroke:black");
+        for (int i = 0; i < svgParams->trajX.size()-1; i++) {
+            trajElement += getLine(((svgParams->trajX[i]+1)*svgParams->svgHeight),((svgParams->trajY[i]+1)*svgParams->svgHeight),((svgParams->trajX[i+1]+1)*svgParams->svgHeight), ((svgParams->trajY[i+1]+1)*svgParams->svgHeight),"stroke:black");
         }
-        fichier << getSectionWithElement(trajElement);
+        fichier << getSectionWithElement(&trajElement);
 
         fichier << "\n</svg>";
 
         fichier.close();
-        std::cout << "Le fichier " << " a ete cree avec succes." << std::endl;
+        std::cout << "Le fichier " << svgParams->output_file <<  " a ete cree avec succes." << std::endl;
     }
     else {
         std::cerr << "Erreur lors de l'ouverture du fichier." << std::endl;
