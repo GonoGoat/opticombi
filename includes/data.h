@@ -88,6 +88,14 @@ struct svgStruct {
     int svgHeight;
 };
 
+struct moveStruct {
+    // Position envisagée
+    int depl_x, depl_y;
+
+    // Sens du tank
+    char dir;
+};
+
 // TODO : particleStruct
 // matrice_mobile
 // start_posX/Y

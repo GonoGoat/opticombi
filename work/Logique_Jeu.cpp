@@ -56,17 +56,20 @@ void Engine(mapStruct* mapParams, outputStruct* outputParams) {
     //int taille_sequence = 0;
 
     //Traite la séquence d'entrée
+    moveStruct move;
     for (char dir_actuelle : outputParams->sequence)
     {
         //Logique de fonctionnement du jeu : 2 direction identiques pour effectuer le déplacement
         if (dir_actuelle == mapParams->Direction_tank) {
 
-            deplacement_x = mapParams->posX;
-            deplacement_y = mapParams->posY;
+            move.depl_x = mapParams->posX;
+            move.depl_y = mapParams->posY;
+            move.dir = dir_actuelle;
 
-            Deplacement(&dir_actuelle, &deplacement_x, &deplacement_y);
+            // Déplacement qui tente d'être opéré
+            Deplacement(&move);
             //Verification_deplacement(matrice, matrice_mobile, &deplacement_x, &deplacement_y, posX, posY, succes, &dir_actuelle);
-            Verification_deplacement(mapParams, &deplacement_x, &deplacement_y, &dir_actuelle);
+            Verification_deplacement(mapParams, &move);
             std::cout << "deplacement x : " << mapParams->posX << " |deplacement y : " << mapParams->posY << std::endl;
             mapParams->success = 0;
         }
@@ -91,49 +94,49 @@ void Engine(mapStruct* mapParams, outputStruct* outputParams) {
  * @param pos_x OUT - Position en X modifiée par la direction demandée
  * @param pos_y OUT - Position en Y modifiée par la direction demandée
  */
-void Deplacement(char* dir, int* pos_x, int* pos_y) {
-    switch (*dir) {
+void Deplacement(moveStruct* moveParams) {
+    switch (moveParams->dir) {
     case 'U':
-        *pos_y -= 1;
+        moveParams->depl_y -= 1;
         break;
     case 'D':
-        *pos_y += 1;
+        moveParams->depl_y += 1;
         break;
     case 'R':
-        *pos_x += 1;
+        moveParams->depl_x += 1;
         break;
     case 'L':
-        *pos_x -= 1;
+        moveParams->depl_x -= 1;
         break;
     }
 }
 
 //Fonction de verification de la possibilité d'effectuer le déplacement rentré
-void Verification_deplacement(mapStruct* mapParams, int* depl_x, int* depl_y, char* dir) {
+void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams) {
 
     //Vérification des limites si dépasse pas de mouvement enregistré
-    if (*depl_x > mapParams->nbr_colonnes-1) {
+    if (moveParams->depl_x > mapParams->nbr_colonnes-1) {
         std::cout << "Depassement limite" << std::endl;
-        *depl_x = mapParams->nbr_colonnes-1;
+        moveParams->depl_x = mapParams->nbr_colonnes-1;
     }
-    else if (*depl_x < 0) {
-        *depl_x = 0;
+    else if (moveParams->depl_x < 0) {
+        moveParams->depl_x = 0;
     }
-    else if (*depl_y > mapParams->nbr_lignes) {
+    else if (moveParams->depl_y > mapParams->nbr_lignes) {
         std::cout << "Depassement limite" << std::endl;
-        *depl_y = mapParams->nbr_lignes;
+        moveParams->depl_y = mapParams->nbr_lignes;
     }
-    else if (*depl_y < 0) {
-        *depl_y = 0;
+    else if (moveParams->depl_y < 0) {
+        moveParams->depl_y = 0;
     }
     //Vérifie une position valide
     else {
-        switch (mapParams->matrice_fixe[*depl_y][*depl_x] + mapParams->matrice_mobile[*depl_y][*depl_x])
+        switch (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x])
         {
         case Dirt:
         case Bridge:
         case Tank :
-            Verification_Anti_Tank(mapParams, depl_x, depl_y);
+            Verification_Anti_Tank(mapParams, moveParams);
             break;
             /**pos_x = *depl_x;
             *pos_y = *depl_y;*/
@@ -143,11 +146,11 @@ void Verification_deplacement(mapStruct* mapParams, int* depl_x, int* depl_y, ch
             mapParams->success = 1;
             std::cout << "Base atteinte" << std::endl;
 
-            Verification_Anti_Tank(mapParams, depl_x, depl_y);
+            Verification_Anti_Tank(mapParams, moveParams);
             break;
         case Water:
             mapParams->success = -1;
-            std::cout << "Mort dans l'eau a la case (" << *depl_x << "," << *depl_y << ")" << std::endl;
+            std::cout << "Mort dans l'eau a la case (" << moveParams->depl_x << "," << moveParams->depl_y << ")" << std::endl;
             break;
         case Way_U:
         case Way_D:
@@ -171,7 +174,7 @@ void Verification_deplacement(mapStruct* mapParams, int* depl_x, int* depl_y, ch
         case Tunnel_Dark:
             //Portail(matrice, matrice_mobile, (*matrice)[*depl_y][*depl_x], depl_x, depl_y,succes);
             //Verification anti tank du côté du portail de sortie
-            Verification_Anti_Tank(mapParams, depl_x, depl_y);
+            Verification_Anti_Tank(mapParams, moveParams);
             break;
         default:
             break;
@@ -210,14 +213,14 @@ void Portail(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int
 }
 
 //Fonction permettant de vérifier si un anti tank ne nous tue pas en effectuant le déplacement
-void Verification_Anti_Tank(mapStruct* mapParams, int* depl_x, int* depl_y)
+void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams)
 {
     //!\ ICI utilisation d'une méthode afin de ne pas devoir repenser les conditions car la somme des deux donnera le bon élément (1 des 2 toujours = 0)
-    int position = mapParams->matrice_fixe[*depl_y][*depl_x] + mapParams->matrice_mobile[*depl_y][*depl_x];
+    int position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
     //Verification vertical
         //Au dessus de la position en cours
-    for (int i = 1; i < *depl_y + 1; i++) {
-        position = mapParams->matrice_fixe[*depl_y - i][*depl_x] + mapParams->matrice_mobile[*depl_y - i][*depl_x];
+    for (int i = 1; i < moveParams->depl_y + 1; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y - i][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y - i][moveParams->depl_x];
         if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
             //std::cout << "Quitte car " << position << std::endl;
             break;
@@ -227,8 +230,8 @@ void Verification_Anti_Tank(mapStruct* mapParams, int* depl_x, int* depl_y)
         }
     }
     //En dessous de la position en cours
-    for (int i = 1; i < 16 - *depl_y; i++) {
-        position = mapParams->matrice_fixe[*depl_y + i][*depl_x] + mapParams->matrice_mobile[*depl_y + i][*depl_x];
+    for (int i = 1; i < mapParams->nbr_lignes - moveParams->depl_y; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y + i][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y + i][moveParams->depl_x];
         if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
             //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
@@ -240,8 +243,8 @@ void Verification_Anti_Tank(mapStruct* mapParams, int* depl_x, int* depl_y)
 
     //Verification verticale
         //A gauche de la position en cours
-    for (int i = 1; i < *depl_x + 1; i++) {
-        position = mapParams->matrice_fixe[*depl_y][*depl_x - i] + mapParams->matrice_mobile[*depl_y][*depl_x - i];
+    for (int i = 1; i < moveParams->depl_x + 1; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x - i] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x - i];
         if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
             //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
@@ -251,8 +254,8 @@ void Verification_Anti_Tank(mapStruct* mapParams, int* depl_x, int* depl_y)
         }
     }
     //A droite de la position en cours
-    for (int i = 1; i < 16 - *depl_x; i++) {
-        position = mapParams->matrice_fixe[*depl_y][*depl_x + i] + mapParams->matrice_mobile[*depl_y][*depl_x + i];
+    for (int i = 1; i < mapParams->nbr_colonnes - moveParams->depl_x; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x + i] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x + i];
         if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
             //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
@@ -265,8 +268,8 @@ void Verification_Anti_Tank(mapStruct* mapParams, int* depl_x, int* depl_y)
     //Si encore en vie alors deplacement effectué
     if (mapParams->success != -1) {
         std::cout << "Deplacement OK" << std::endl;
-        mapParams->posX = *depl_x;
-        mapParams->posY = *depl_y;
+        mapParams->posX = moveParams->depl_x;
+        mapParams->posY = moveParams->depl_y;
     }
 }
 
@@ -415,7 +418,7 @@ void Verification_Anti_Tank_parcour_horizontal(std::vector<std::vector<int>>* ma
 }
 
 //Fonction de calcul de trajectoire
-void Tir(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int depl_x, int depl_y, char dir_laser, int* succes)
+/*void Tir(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int depl_x, int depl_y, char dir_laser, int* succes)
 {
     bool disparaitre = false;
     int pos_tank_x = depl_x;
@@ -617,3 +620,4 @@ void path(char* direction, std::vector<std::vector<int>>* matrice, std::vector<s
 
 }
 
+*/
