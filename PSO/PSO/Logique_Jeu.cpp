@@ -3,7 +3,7 @@
 //Variables pour tir laser Anti_tank
 int pos_laser_x, pos_laser_y = -1;
 bool premiere_case = true;
-char dir_anti_tank = 'L';
+char dir_anti_tank = 'X';
 
 /**
  * @brief Execute la logique du jeu
@@ -117,18 +117,18 @@ void Verification_deplacement(std::vector<std::vector<int>>* matrice, std::vecto
         case Way_D:
         case Way_R:
         case Way_L:
-            premiere_case = true;
             std::cout << "Premiere case du chemin est un Way" << std::endl;
+            premiere_case = true;
             path(dir, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
             break;
         case Ice:
-            premiere_case = true;
             std::cout << "Premiere case du chemin est un Ice" << std::endl;
+            premiere_case = true;
             glace(dir, matrice, matrice_mobile,depl_x,depl_y, pos_x, pos_y, succes);
             break;
         case Thin_Ice:
-            premiere_case = true;
             std::cout << "Premiere case du chemin est un Thin_Ice" << std::endl;
+            premiere_case = true;
             glace_fine(dir, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
             break;
         case Tunnel_Red:
@@ -252,116 +252,87 @@ void Verification_Anti_Tank_parcour_vertical(std::vector<std::vector<int>>* matr
 {
     std::cout << "Verification vertical" << std::endl;
     int position = (*matrice)[*depl_y][*depl_x] + (*matrice_mobile)[*depl_y][*depl_x];
+    int distance = 1;
 
     if (premiere_case) {
-        //Verification horizontal
-            //A droite de la position en cours
-        for (int i = *depl_x + 1; (i < *depl_x + 2 && i < 15) && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][i] + (*matrice_mobile)[*depl_y][i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_L) {
-                std::cout << "Anti Tank Left vert" << std::endl;
-                *succes = -1;
-            }
-        }
-            //A gauche de la position en cours
-        for (int i = *depl_x - 1; (i < *depl_x && i > 0) && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][i] + (*matrice_mobile)[*depl_y][i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_R) {
-                std::cout << "Anti Tank Right vert" << std::endl;
-                *succes = -1;
-            }
-        }
-
-        //Verification vertical
-            //En dessous de la position en cours
-        for (int i = 1; i < 16 - *depl_y && *succes != -1; i++) {
-            position = (*matrice)[*depl_y + i][*depl_x] + (*matrice_mobile)[*depl_y + i][*depl_x];
-            if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_U) {
-                std::cout << "Anti Tank UP chemin vert" << std::endl;
-                *succes = -1;
-            }
-        }
-            //Au dessus de la position en cours
-        for (int i = 1; i < *depl_y + 1 && *succes != -1; i++) {
-            position = (*matrice)[*depl_y - i][*depl_x] + (*matrice_mobile)[*depl_y - i][*depl_x];
-            if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << position << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_D) {
-                std::cout << "Anti Tank Down chemin vert" << std::endl;
-                *succes = -1;
-            }
-        }
         premiere_case = false;
     }
     else {
-        //Verification horizontal
-            //A droite de la position en cours
-        for (int i = *depl_x + 1; (i < *depl_x + 3 && i < 15) && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][i] + (*matrice_mobile)[*depl_y][i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_L) {
-                std::cout << "Anti Tank Left vert" << std::endl;
-                *succes = -1;
-            }
-        }
-            //A gauche de la position en cours
-        for (int i = *depl_x - 2; (i < *depl_x && i > 0) && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][i] + (*matrice_mobile)[*depl_y][i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_R) {
-                std::cout << "Anti Tank Right vert" << std::endl;
-                *succes = -1;
-            }
-        }
+        distance = 2;
+    }
 
-        //Verification vertical
-            //En dessous de la position en cours
-        for (int i = 1; i < 16 - *depl_y && *succes != -1; i++) {
-            position = (*matrice)[*depl_y + i][*depl_x] + (*matrice_mobile)[*depl_y + i][*depl_x];
-            if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_U) {
-                std::cout << "Anti Tank UP chemin vert" << std::endl;
+    //Verification horizontal
+        //A droite de la position en cours
+    for (int i = 1; i < 16 - *depl_x && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y][*depl_x + i] + (*matrice_mobile)[*depl_y][*depl_x + i];
+        if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << Matrice(position) << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_L) {
+            std::cout << "Anti Tank Left vert" << std::endl;
+            if (i <= distance) {
+                std::cout << "Tue tank" << std::endl;
                 *succes = -1;
+            }
+            else {
+                dir_anti_tank = 'L';
+                pos_laser_x = *depl_x + i - distance;
+                pos_laser_y = *depl_y;
+                std::cout << "Laser x : " << pos_laser_x << " | y : " << pos_laser_y << std::endl;
             }
         }
-            //Au dessus de la position en cours
-        for (int i = 1; i < *depl_y + 1 && *succes != -1; i++) {
-            position = (*matrice)[*depl_y - i][*depl_x] + (*matrice_mobile)[*depl_y - i][*depl_x];
-            if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << position << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_D) {
-                std::cout << "Anti Tank Down chemin vert" << std::endl;
+    }
+        //A gauche de la position en cours
+    for (int i = 1; i < *depl_x + 1 && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y][*depl_x - i] + (*matrice_mobile)[*depl_y][*depl_x - i];
+        if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << Matrice(position) << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_R) {
+            std::cout << "Anti Tank Right vert" << std::endl;
+            if (i <= distance) {
+                std::cout << "Tue tank" << std::endl;
                 *succes = -1;
+            }
+            else {
+                dir_anti_tank = 'R';
+                pos_laser_x = *depl_x - i + distance;
+                pos_laser_y = *depl_y;
             }
         }
     }
 
-
+    //Verification vertical
+        //En dessous de la position en cours
+    for (int i = 1; i < 16 - *depl_y && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y + i][*depl_x] + (*matrice_mobile)[*depl_y + i][*depl_x];
+        if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << Matrice(position) << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_U) {
+            std::cout << "Anti Tank UP chemin vert" << std::endl;
+            dir_anti_tank = 'U';
+            pos_laser_x = *depl_x;
+            pos_laser_y = *depl_y + i - distance;
+        }
+    }
+        //Au dessus de la position en cours
+    for (int i = 1; i < *depl_y + 1 && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y - i][*depl_x] + (*matrice_mobile)[*depl_y - i][*depl_x];
+        if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << position << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_D) {
+            std::cout << "Anti Tank Down chemin vert" << std::endl;
+            dir_anti_tank = 'D';
+            pos_laser_x = *depl_x;
+            pos_laser_y = *depl_y - i + distance;
+        }
+    }
 }
 
 //Fonction permettant de vérifier si un anti tank ne nous tue pas autour d'un parcour continue sur l'axe x (chemin/glace)
@@ -369,115 +340,90 @@ void Verification_Anti_Tank_parcour_horizontal(std::vector<std::vector<int>>* ma
 {
     std::cout << "Verification horizontal" << std::endl;
     int position = (*matrice)[*depl_y][*depl_x] + (*matrice_mobile)[*depl_y][*depl_x];
+    int distance = 1;
 
     if (premiere_case) {
-        //Verification horizontal
-            //A droite de la position en cours
-        for (int i = 1; i < 16 - *depl_x && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][*depl_x + i] + (*matrice_mobile)[*depl_y][*depl_x + i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_L) {
-                std::cout << "Anti Tank Left horiz" << std::endl;
-                *succes = -1;
-            }
-        }
-            //A gauche de la position en cours
-        for (int i = 1; i < *depl_x + 1 && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][*depl_x - i] + (*matrice_mobile)[*depl_y][*depl_x - i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_R) {
-                std::cout << "Anti Tank Right horiz" << std::endl;
-                *succes = -1;
-            }
-        }
-
-        //Verification vertical
-            //En dessous de la position en cours
-        for (int i = *depl_y + 1; (i < *depl_y + 2 && i < 15) && *succes != -1; i++) {
-            position = (*matrice)[i][*depl_x] + (*matrice_mobile)[i][*depl_x];
-            if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_U) {
-                std::cout << "Anti Tank UP horiz" << std::endl;
-                *succes = -1;
-            }
-        }
-            //Au dessus de la position en cours
-        for (int i = *depl_y - 1; (i < *depl_y && i > 0) && *succes != -1; i++) {
-            position = (*matrice)[i][*depl_x] + (*matrice_mobile)[i][*depl_x];
-            if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << position << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_D) {
-                std::cout << "Anti Tank Down horiz" << std::endl;
-                *succes = -1;
-            }
-        }
         premiere_case = false;
     }
-    else {
-        //Verification horizontal
-    //A droite de la position en cours
-        for (int i = 1; i < 16 - *depl_x && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][*depl_x + i] + (*matrice_mobile)[*depl_y][*depl_x + i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_L) {
-                std::cout << "Anti Tank Left horiz" << std::endl;
-                *succes = -1;
-            }
-        }
-        //A gauche de la position en cours
-        for (int i = 1; i < *depl_x + 1 && *succes != -1; i++) {
-            position = (*matrice)[*depl_y][*depl_x - i] + (*matrice_mobile)[*depl_y][*depl_x - i];
-            if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_R) {
-                std::cout << "Anti Tank Right horiz" << std::endl;
-                *succes = -1;
-            }
-        }
+    else
+    {
+        distance = 2;
+    }
 
-        //Verification vertical
-            //En dessous de la position en cours
-        for (int i = *depl_y + 1; (i < *depl_y + 3 && i < 15) && *succes != -1; i++) {
-            position = (*matrice)[i][*depl_x] + (*matrice_mobile)[i][*depl_x];
-            if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << Matrice(position) << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_U) {
-                std::cout << "Anti Tank UP horiz" << std::endl;
-                *succes = -1;
-            }
+    //Verification horizontal
+            //A droite de la position en cours
+    for (int i = 1; i < 16 - *depl_x && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y][*depl_x + i] + (*matrice_mobile)[*depl_y][*depl_x + i];
+        if ((position >= Sollid_Block && position <= Anti_Tank_R) || (position >= Mirror_UR && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << Matrice(position) << std::endl;
+            break;
         }
-        //Au dessus de la position en cours
-        for (int i = *depl_y - 2; (i < *depl_y && i > 0) && *succes != -1; i++) {
-            position = (*matrice)[i][*depl_x] + (*matrice_mobile)[i][*depl_x];
-            if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
-                //std::cout << "Quitte car " << position << std::endl;
-                break;
-            }
-            else if (position == Anti_Tank_D) {
-                std::cout << "Anti Tank Down horiz" << std::endl;
-                *succes = -1;
-            }
+        else if (position == Anti_Tank_L) {
+            std::cout << "Anti Tank Left horiz" << std::endl;
+            dir_anti_tank = 'L';
+            pos_laser_x = *depl_x + i - distance;
+            pos_laser_y = *depl_y;
+            //*succes = -1;
+        }
+    }
+        //A gauche de la position en cours
+    for (int i = 1; i < *depl_x + 1 && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y][*depl_x - i] + (*matrice_mobile)[*depl_y][*depl_x - i];
+        if ((position >= Sollid_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << Matrice(position) << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_R) {
+            std::cout << "Anti Tank Right horiz" << std::endl;
+            dir_anti_tank = 'R';
+            pos_laser_x = *depl_x - i + distance;
+            pos_laser_y = *depl_y;
+            //*succes = -1;
         }
     }
 
+    //Verification vertical
+        //En dessous de la position en cours
+    for (int i = 1; i < 16 - *depl_y && *succes != -1 && dir_anti_tank == 'X'; i++) {
+        position = (*matrice)[*depl_y + i][*depl_x] + (*matrice_mobile)[*depl_y + i][*depl_x];
+        if ((position >= Sollid_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << Matrice(position) << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_U) {
+            std::cout << "Anti Tank UP horiz" << std::endl;
+            if (i <= distance) {
+                std::cout << "Tue tank" << std::endl;
+                *succes = -1;
+            }
+            else {
+                dir_anti_tank = 'U';
+                pos_laser_x = *depl_x;
+                pos_laser_y = *depl_y + i - distance;
+            }
+        }
+    }
+        //Au dessus de la position en cours
+    for (int i = 1; i < *depl_y + 1 && *succes != -1 && dir_anti_tank == 'X'; i++) {
+
+        position = (*matrice)[*depl_y - i][*depl_x] + (*matrice_mobile)[*depl_y - i][*depl_x];
+        if ((position >= Sollid_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Mirro_DL) || (position >= Crystal_Block && position < Ice)) {
+            //std::cout << "Quitte car " << position << std::endl;
+            break;
+        }
+        else if (position == Anti_Tank_D) {
+            std::cout << "Anti Tank Down horiz" << std::endl;
+            if (i <= distance) {
+                std::cout << "Tue tank" << std::endl;
+                *succes = -1;
+            }
+            else {
+                dir_anti_tank = 'D';
+                pos_laser_x = *depl_x;
+                pos_laser_y = *depl_y - i + distance;
+            }
+        }
+    }
 }
 
 //Fonction de calcul de trajectoire
@@ -497,6 +443,7 @@ void Tir(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* 
         }
         else if (depl_x == pos_tank_x && depl_y == pos_tank_y) {
             *succes = -1;
+            disparaitre = true;
             std::cout << "Auto Kill" << std::endl;
         }
         //Vérifie une position valide
@@ -616,11 +563,14 @@ void glace(char* direction, std::vector<std::vector<int>>* matrice, std::vector<
     int position;
 
     do {
-        if (*direction == 'U' || *direction == 'D') {
+        if ((*direction == 'U' || *direction == 'D') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_vertical(matrice, matrice_mobile, depl_x, depl_y, succes);
         }
-        else if (*direction == 'L' || *direction == 'R') {
+        else if ((*direction == 'L' || *direction == 'R') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_horizontal(matrice, matrice_mobile, depl_x, depl_y, succes);
+        }
+        else if (dir_anti_tank != 'X') {
+            tir_Anti_Tank(matrice, matrice_mobile, depl_x, depl_y, succes);
         }
 
         if (*succes == -1) {
@@ -632,25 +582,18 @@ void glace(char* direction, std::vector<std::vector<int>>* matrice, std::vector<
         position = (*matrice)[*depl_y][*depl_x] + (*matrice_mobile)[*depl_y][*depl_x];
 
         //Verifie si tank bloque si c'est le cas, il est juste arrêté et sa position est valide
-        if (*depl_x < 0 || *depl_x>15 || *depl_y < 0 || *depl_y>15 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL)) {
+        if (*depl_x < 0 || *depl_x>15 || *depl_y < 0 || *depl_y>15 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL) ) {
             std::cout << "Position non valide" << std::endl;
             *succes = -2;
-            switch (*direction)
-            {
-            case 'U':
-                *direction = 'D';
-                break;
-            case 'D':
-                *direction = 'U';
-                break;
-            case 'R':
-                *direction = 'L';
-                break;
-            case 'L':
-                *direction = 'R';
-                break;
-            }
+            inverserDirection(direction);
             Deplacement(direction, depl_x, depl_y);
+            inverserDirection(direction);
+            break;
+        }
+        else if ((position == Way_U && *direction == 'D') || (position == Way_D && *direction == 'U') || (position == Way_L && *direction == 'R') || (position == Way_R && *direction == 'L')) {
+            inverserDirection(direction);
+            Deplacement(direction, depl_x, depl_y);
+            inverserDirection(direction);
             break;
         }
 
@@ -663,12 +606,24 @@ void glace(char* direction, std::vector<std::vector<int>>* matrice, std::vector<
             *succes = 2;
             glace_fine(direction, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
         }
-        else if ((*matrice)[*depl_y][*depl_x] == Thin_Ice) {
+        else if ((*matrice)[*depl_y][*depl_x] >= Way_U && (*matrice)[*depl_y][*depl_x] <= Way_L) {
             *succes = 2;
-
+            path(direction, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
         }
-        else if (*succes == 0) { 
-            Verification_deplacement(matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes, direction); 
+        else if ((*matrice)[*depl_y][*depl_x] == Ice) {
+            *succes = 2;
+            glace(direction, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
+        }
+
+        if (*succes == 0) {
+            premiere_case = true;
+            if (dir_anti_tank != 'X') {
+                tir_Anti_Tank(matrice, matrice_mobile, depl_x, depl_y, succes);
+            }
+            Verification_deplacement(matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes, direction);
+        }
+        else {
+            *succes = 0;
         }
     }
     else if (*succes == -2) {
@@ -686,11 +641,14 @@ void glace_fine(char* direction, std::vector<std::vector<int>>* matrice, std::ve
     do {
         (*matrice)[*depl_y][*depl_x] = Water;
 
-        if (*direction == 'U' || *direction == 'D') {
+        if ((* direction == 'U' || *direction == 'D') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_vertical(matrice, matrice_mobile, depl_x, depl_y, succes);
         }
-        else if (*direction == 'L' || *direction == 'R') {
+        else if ((* direction == 'L' || *direction == 'R') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_horizontal(matrice, matrice_mobile, depl_x, depl_y, succes);
+        }
+        else if (dir_anti_tank != 'X') {
+            tir_Anti_Tank(matrice, matrice_mobile, depl_x, depl_y, succes);
         }
 
         if (*succes == -1) {
@@ -702,7 +660,8 @@ void glace_fine(char* direction, std::vector<std::vector<int>>* matrice, std::ve
         position = (*matrice)[*depl_y][*depl_x] + (*matrice_mobile)[*depl_y][*depl_x];
 
         //Verifie si le tank est bloqué dans son mouvement, si c'est le cas il est mort car la glace fine c'est transformé en eau et la séquence est invalide
-        if (*depl_x < 0 || *depl_x>15 || *depl_y < 0 || *depl_y>15 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL)) {
+        if (*depl_x < 0 || *depl_x>15 || *depl_y < 0 || *depl_y>15 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL) || 
+            (position == Way_U && *direction == 'D') || (position == Way_D && *direction == 'U') || (position == Way_L && *direction == 'R') || (position == Way_R && *direction == 'L')) {
             std::cout << "Position non valide, donc mort dans l'eau" << std::endl;
             *succes = -1;
             break;
@@ -721,8 +680,16 @@ void glace_fine(char* direction, std::vector<std::vector<int>>* matrice, std::ve
             *succes = 2;
             path(direction, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
         }
-        else if (*succes == 0) {
+
+        if (*succes == 0) {
+            premiere_case = true;
+            if (dir_anti_tank != 'X') {
+                tir_Anti_Tank(matrice, matrice_mobile, depl_x, depl_y, succes);
+            }
             Verification_deplacement(matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes, direction);
+        }
+        else {
+            *succes = 0;
         }
     }
 
@@ -754,11 +721,14 @@ void path(char* direction, std::vector<std::vector<int>>* matrice, std::vector<s
             break;
         }
 
-        if (dir_way == 'U' || dir_way == 'D') {
+        if ((dir_way == 'U' || dir_way == 'D') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_vertical(matrice, matrice_mobile, depl_x, depl_y, succes);
         }
-        else if (dir_way == 'L' || dir_way == 'R') {
+        else if ((dir_way == 'L' || dir_way == 'R') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_horizontal(matrice, matrice_mobile, depl_x, depl_y, succes);
+        }
+        else if (dir_anti_tank != 'X') {
+            tir_Anti_Tank(matrice, matrice_mobile, depl_x, depl_y, succes);
         }
 
         if (*succes == -1) {
@@ -773,21 +743,7 @@ void path(char* direction, std::vector<std::vector<int>>* matrice, std::vector<s
         if (*depl_x < 0 || *depl_x>15 || *depl_y < 0 || *depl_y>15 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL)) {
             std::cout << "Position non valide" << std::endl;
             *succes = -2;
-            switch (dir_way)
-            {
-            case 'U':
-                dir_way = 'D';
-                break;
-            case 'D' :
-                dir_way = 'U';
-                break;
-            case 'R':
-                dir_way = 'L';
-                break;
-            case 'L' :
-                dir_way = 'R';
-                break;
-            }
+            inverserDirection(&dir_way);
             Deplacement(&dir_way, depl_x, depl_y);
             break;
         }
@@ -803,8 +759,16 @@ void path(char* direction, std::vector<std::vector<int>>* matrice, std::vector<s
             *succes = 2;
             glace_fine(&dir_way, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
         }
-        else if (*succes == 0) {
+        
+        if (*succes == 0) {
+            premiere_case = true;
+            if (dir_anti_tank != 'X') {
+                tir_Anti_Tank(matrice, matrice_mobile, depl_x, depl_y, succes);
+            }
             Verification_deplacement(matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes, direction);
+        }
+        else {
+            *succes = 0;
         }
     }
     else if (*succes == -2) {
@@ -813,3 +777,162 @@ void path(char* direction, std::vector<std::vector<int>>* matrice, std::vector<s
     }
 }
 
+void tir_Anti_Tank(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int* depl_x, int* depl_y, int* succes)
+{
+    std::cout << "Trajectoire laser Anti Tank" << std::endl;
+    do
+    {
+        //Deplacement laser en fonction direction
+        Deplacement(&dir_anti_tank, &pos_laser_x, &pos_laser_y);
+
+        std::cout << "Laser x : " << pos_laser_x << " | y : " << pos_laser_y << std::endl;
+
+        if (pos_laser_x == *depl_x && pos_laser_y == *depl_y) {
+            std::cout << "Tank tue" << std::endl;
+            *succes = -1;
+            dir_anti_tank = 'X';
+            break;
+        }
+        //Vérification des limites si dépasse le laser disparait
+        else if (pos_laser_x == 15 || pos_laser_x == 0 || pos_laser_y == 15 || pos_laser_y == 0) {
+            dir_anti_tank = 'X';
+        }
+        //Vérifie une position valide
+        else {
+            Deplacement(&dir_anti_tank, &pos_laser_x, &pos_laser_y);
+            switch ((*matrice)[pos_laser_y][pos_laser_x] + (*matrice_mobile)[pos_laser_y][pos_laser_x])
+            {
+            case Mirror_DR:
+            case Rotative_Mirror_DR:
+                std::cout << "Miroir DR" << std::endl;
+                if (dir_anti_tank == 'U') {
+                    dir_anti_tank = 'R';
+                }
+                else if (dir_anti_tank == 'L') {
+                    dir_anti_tank = 'D';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    dir_anti_tank = 'X';
+                }
+                break;
+            case Mirro_DL:
+            case Rotative_Mirror_DL:
+                std::cout << "Miroir DL" << std::endl;
+                if (dir_anti_tank == 'U') {
+                    dir_anti_tank = 'L';
+                }
+                else if (dir_anti_tank == 'R') {
+                    dir_anti_tank = 'D';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    dir_anti_tank = 'X';
+                }
+                break;
+            case Mirror_UL:
+            case Rotative_Mirror_UL:
+                std::cout << "Miroir UL" << std::endl;
+                if (dir_anti_tank == 'D') {
+                    dir_anti_tank = 'L';
+                }
+                else if (dir_anti_tank == 'R') {
+                    dir_anti_tank = 'U';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    dir_anti_tank = 'X';
+                }
+                break;
+            case Mirror_UR:
+            case Rotative_Mirror_UR:
+                std::cout << "Miroir UR" << std::endl;
+                if (dir_anti_tank == 'D') {
+                    dir_anti_tank = 'R';
+                }
+                else if (dir_anti_tank == 'L') {
+                    dir_anti_tank = 'U';
+                }
+                else {
+                    std::cout << "Tir arrete" << std::endl;
+                    dir_anti_tank = 'X';
+                }
+                break;
+            case Bricks:
+            case Sollid_Block:
+                std::cout << "Tir arrete Sollid_Block ou Bricks" << std::endl;
+                dir_anti_tank = 'X';
+                break;
+            case Anti_Tank_U:
+                if (dir_anti_tank == 'D') {
+                    std::cout << "Anti tank Up mort" << std::endl;
+                }
+                else {
+                    std::cout << "Tir arrete Anti tank Up" << std::endl;
+                }
+                dir_anti_tank = 'X';
+                break;
+            case Anti_Tank_D:
+                if (dir_anti_tank == 'U') {
+                    std::cout << "Anti tank Down mort" << std::endl;
+                }
+                else {
+                    std::cout << "Tir arrete Anti tank Down" << std::endl;
+                }
+                dir_anti_tank = 'X';
+                break;
+            case Anti_Tank_L:
+                if (dir_anti_tank == 'R') {
+                    std::cout << "Anti tank Left mort" << std::endl;
+                }
+                else {
+                    std::cout << "Tir arrete Anti tank Left" << std::endl;
+                }
+                dir_anti_tank = 'X';
+                break;
+            case Anti_Tank_R:
+                if (dir_anti_tank == 'L') {
+                    std::cout << "Anti tank Right mort" << std::endl;
+                }
+                else {
+                    std::cout << "Tir arrete Anti tank Right" << std::endl;
+                }
+                dir_anti_tank = 'X';
+                break;
+
+            default:
+                break;
+            }
+            inverserDirection(&dir_anti_tank);
+            Deplacement(&dir_anti_tank, &pos_laser_x, &pos_laser_y);
+            inverserDirection(&dir_anti_tank);
+        }
+
+        //Vérification des limites si dépasse le laser disparait
+        /*if (pos_laser_x == 15 || pos_laser_x == 0 || pos_laser_y == 15 || pos_laser_y == 0) {
+            dir_anti_tank = 'X';
+        }*/
+
+        if (dir_anti_tank == 'X') {
+            premiere_case = true;
+        }
+
+    } while (dir_anti_tank != 'X' && premiere_case);
+}
+
+void inverserDirection(char* direction) {
+    switch (*direction) {
+    case 'U':
+        *direction = 'D';
+        break;
+    case 'D':
+        *direction = 'U';
+        break;
+    case 'R':
+        *direction = 'L';
+        break;
+    case 'L':
+        *direction = 'R';
+        break;
+    }
+}
