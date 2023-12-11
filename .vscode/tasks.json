@@ -12,8 +12,6 @@
                 "${workspaceFolder}/work/*.cpp",
                 "-o",
                 "${workspaceFolder}/bin/test.exe",
-                ";",
-                "${workspaceFolder}/bin/test.exe"
             ],
             "group": "build",
             "problemMatcher": {
@@ -42,14 +40,8 @@
                 "${workspaceFolder}/includes",
                 "${workspaceFolder}/src/*.cpp",
                 "-o",
-                "${workspaceFolder}/bin/main.exe",
-                ";",
                 "${workspaceFolder}/bin/main.exe"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
             "problemMatcher": {
                 "owner": "cpp",
                 "fileLocation": [
@@ -76,8 +68,6 @@
                 "${workspaceFolder}/includes",
                 "${file}",
                 "-o",
-                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
-                ";",
                 "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe"
             ],
             "group": "build",
@@ -96,6 +86,36 @@
                     "message": 5
                 }
             }
-        }
+        },
+        {
+            "type": "shell",
+            "label": "Run file",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn":["Compile file"],
+            "dependsOrder": "sequence",
+        },
+        {
+            "type": "shell",
+            "label": "Run work",
+            "command": "./bin/test.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn":["Compile work"],
+            "dependsOrder": "sequence",
+        },
+        {
+            "type": "shell",
+            "label": "Run project",
+            "command": "./bin/main.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn":["Compile project"],
+            "dependsOrder": "sequence",
+        },
     ]
 }

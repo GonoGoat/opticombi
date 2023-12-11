@@ -7,11 +7,11 @@ void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, outputS
 void Engine(mapStruct* mapParams, outputStruct* outputParams);
 void Deplacement(moveStruct* moveParams);
 void Verification_deplacement (mapStruct* mapParams, moveStruct* moveParams);
-void Portail(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int couleur, int* depl_x, int* depl_y, int* succes);
+void Portail (mapStruct* mapParams, moveStruct* moveParams);
 void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams);
-void Verification_Anti_Tank_parcour_vertical(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
-void Verification_Anti_Tank_parcour_horizontal(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
-void Tir(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int depl_x, int depl_y, char dir_laser, int* succes);
-void glace(char* direction, std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
-void glace_fine(char* direction, std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
-void path(char* direction, std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, int* depl_x, int* depl_y, int* pos_x, int* pos_y, int* succes);
+void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* moveParams);
+void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct* moveParams);
+void Tir(mapStruct* mapParams, moveStruct* moveParams);
+void glace(mapStruct* mapParams, moveStruct* moveParams);
+void glace_fine(mapStruct* mapParams, moveStruct* moveParams);
+void path(mapStruct* mapParams, moveStruct* moveParams);
