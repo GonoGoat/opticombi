@@ -167,10 +167,10 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams) {
             path(mapParams, moveParams);
             break;
         case Ice:
-            //glace(dir, matrice, matrice_mobile,depl_x,depl_y, pos_x, pos_y, succes);
+            glace(mapParams,moveParams);
             break;
         case Thin_Ice:
-            //glace_fine(dir, matrice, matrice_mobile, depl_x, depl_y, pos_x, pos_y, succes);
+            glace_fine(mapParams, moveParams);
             break;
         case Tunnel_Red:
         case Tunnel_Green:
