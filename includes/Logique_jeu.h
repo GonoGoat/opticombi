@@ -3,10 +3,10 @@
 #include <vector>
 #include "data.h"
 
-void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, outputStruct* outputParams);
-void Engine(mapStruct* mapParams, outputStruct* outputParams);
+void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, particleStruct* partParams);
+void Engine(mapStruct* mapParams, particleStruct* partParams);
 void Deplacement(char* dir, int* pos_x, int* pos_y);
-void Verification_deplacement (mapStruct* mapParams, moveStruct* moveParams);
+void Verification_deplacement (mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams);
 void Portail (mapStruct* mapParams, moveStruct* moveParams);
 void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams);
 void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* moveParams);
