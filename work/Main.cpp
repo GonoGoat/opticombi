@@ -51,10 +51,8 @@ int main()
     particleStruct part;
     part.Direction_tank = map.Direction_tank;
     part.success = 0;
-    part.initX = map.Origine_x;
-    part.initY = map.Origine_y;
-    part.posX = map.Origine_x;
-    part.posY = map.Origine_y;
+    part.Origine_x, part.posX, part.posX_final = map.Origine_x;
+    part.Origine_y, part.posY, part.posY_final = map.Origine_y;
     part.Finish_x = map.Finish_x[0];
     part.Finish_y = map.Finish_y[0];
     particles.push_back(part);

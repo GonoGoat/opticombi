@@ -103,15 +103,18 @@ struct particleStruct {
     // Position de départ de la particule
     int Origine_x, Origine_y;
 
+    // Position de l'arrivée définie pour la particule
+    int Finish_x, Finish_y;
+
     // Coordonnées de l'arrivée que la particule essaie de joindre
-    int posX_final, posY_final;
+    int posX,posY;
     char Direction_tank;
 
     // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
     int success;
 
     // Coordonnées de travail
-    int posX,posY;
+    int posX_final, posY_final;
     std::string Output, finish_Output;
 };
 
