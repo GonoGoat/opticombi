@@ -1,6 +1,6 @@
 #include "data.h"
 
-// Map entre la chaine de caractère d'un bloc et son moyen de fonctionnement dans l'application
+// Map entre la chaine de caractÃ¨re d'un bloc et son moyen de fonctionnement dans l'application
 std::unordered_map<std::string, Matrice> conversionToEnum = {
     {"D",Dirt},{"Tu",Tank},{"b",Base},{"w",Water},{"Bs",Sollid_Block},
     {"Bm",Movable_Block},{"B",Bricks},{"Au",Anti_Tank_U},{"Ad",Anti_Tank_D},

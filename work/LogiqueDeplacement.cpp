@@ -1,5 +1,16 @@
 #include "LogiqueDeplacement.h"
 
+/**
+ * @brief Génération d'une séquence pour arriver d'un point à un autre (plus court chemin)
+ * 
+ * @param posOriginX IN - Coordonnée X de la position de départ
+ * @param posOriginY IN - Coordonnée Y de la position de départ
+ * @param posFinishX IN - Coordonnées X des positions d'arrivée
+ * @param posFinishY IN - Coordonnées Y des positions d'arrivée
+ * @param tankDir IN - Direction du tank au début de la séquence
+ * @param Output OUT - Séquence générée
+ * @param selection IN - Arrivée choisie
+ */
 void Deplacement(int *posOriginX, int *posOriginY, int *posFinishX, int *posFinishY, char *tankDir, std::string* Output, int* selection) {
 
 	int left = 0;
