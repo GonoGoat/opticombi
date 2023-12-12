@@ -14,21 +14,21 @@ char dir_anti_tank = 'X';
  * @param trajY IN/OUT - L'historique des positions en Y du tank
  * @param trajSuccess IN/OUT - L'etat du tank après l'exécution de la séquence
  */
-void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, particleStruct* partParams) {
+void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, outputStruct* outputParams) {
 
     // Etablir les positions X et Y de départ
-    svgParams->trajX = {partParams->Origine_x};
-    svgParams->trajY = {partParams->Origine_y};
+    svgParams->trajX = {mapParams->Origine_x};
+    svgParams->trajY = {mapParams->Origine_y};
 
     // Initialisation des variables de lancement du moteur
     int success;
     char dir;
     
     // Jusque dernier caractère de séquence
-    for(int i = 0;i<partParams->finish_Output.size();i++) {
+    for(int i = 0;i<outputParams->sequence.size();i++) {
 
         // Extraction de la séquence à jouer
-        std::string subSeq = partParams->finish_Output.substr(0,i+1);
+        std::string subSeq = outputParams->sequence.substr(0,i+1);
 
         // Remise à zéro
         dir = 'U';
@@ -39,7 +39,7 @@ void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, particl
         svgParams->trajY.push_back(svgParams->trajY[0]);
 
         // Jeu de la séqeuence
-        Engine(mapParams,partParams);
+        Engine(mapParams,outputParams);
     }
     svgParams->trajSuccess = success;
 }
@@ -55,40 +55,40 @@ void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, particl
  * @param succes OUT - Représentation de l'état du tank après exécution de la séquence :
  */
 //void Engine(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, const std::string& sequence, int* posX, int* posY, char* dir_previous, int* succes) {
-void Engine(mapStruct* mapParams, particleStruct* partParams) {
+void Engine(mapStruct* mapParams, outputStruct* outputParams) {
     //Variables pour traiter le déplacement sans le ressortir directement
     int deplacement_x, deplacement_y;
     //int taille_sequence = 0;
 
     //Traite la séquence d'entrée
     moveStruct move;
-    for (char dir_actuelle : partParams->finish_Output)
+    for (char dir_actuelle : outputParams->sequence)
     {
         //Logique de fonctionnement du jeu : 2 direction identiques pour effectuer le déplacement
-        if (dir_actuelle == partParams->Direction_tank) {
+        if (dir_actuelle == mapParams->Direction_tank) {
 
-            move.depl_x = partParams->posX;
-            move.depl_y = partParams->posY;
+            move.depl_x = mapParams->posX;
+            move.depl_y = mapParams->posY;
             move.dir = dir_actuelle;
 
             // Déplacement qui tente d'être opéré
             Deplacement(&(move.dir),&(move.depl_x),&(move.depl_y));
             //Verification_deplacement(matrice, matrice_mobile, &deplacement_x, &deplacement_y, posX, posY, succes, &dir_actuelle);
-            Verification_deplacement(mapParams, &move, partParams);
-            std::cout << "deplacement x : " << partParams->posX << " |deplacement y : " << partParams->posY << std::endl;
-            partParams->success = 0;
+            Verification_deplacement(mapParams, &move);
+            std::cout << "deplacement x : " << mapParams->posX << " |deplacement y : " << mapParams->posY << std::endl;
+            mapParams->success = 0;
         }
         //Tir gérer séparemment car une seul instance suffit pour tirer
         else if (dir_actuelle == 'F') {
-            move.depl_x = partParams->posX;
-            move.depl_y = partParams->posY;
-            move.dir = partParams->Direction_tank;
-            Tir(mapParams, &move, partParams);
-            partParams->success = 0;
+            move.depl_x = mapParams->posX;
+            move.depl_y = mapParams->posY;
+            move.dir = mapParams->Direction_tank;
+            Tir(mapParams, &move);
+            mapParams->success = 0;
         }
         //Enregistre les changement de direction du tank sans le faire bouger sur la carte
         else {
-            partParams->Direction_tank = dir_actuelle;
+            mapParams->Direction_tank = dir_actuelle;
         }
         //taille_sequence++;
     }
@@ -120,7 +120,7 @@ void Deplacement(char* dir, int* pos_x, int* pos_y) {
 }
 
 //Fonction de verification de la possibilité d'effectuer le déplacement rentré
-void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
+void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams) {
 
     //Vérification des limites si dépasse pas de mouvement enregistré
     if (moveParams->depl_x > mapParams->nbr_colonnes-1) {
@@ -132,14 +132,14 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
     }
     else if (moveParams->depl_y > mapParams->nbr_lignes-1) {
         std::cout << "Depassement limite" << std::endl;
-        moveParams->depl_y = mapParams->nbr_lignes-1;
+        moveParams->depl_y = mapParams->nbr_lignes;
     }
     else if (moveParams->depl_y < 0) {
         moveParams->depl_y = 0;
     }
     //Vérifie une position valide
     else {
-        switch (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x])
+        switch (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x])
         {
         case Dirt:
         case Bridge:
@@ -283,8 +283,8 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
     //Si encore en vie alors deplacement effectué
     if (partParams->success != -1) {
         std::cout << "Deplacement OK" << std::endl;
-        partParams->posX = moveParams->depl_x;
-        partParams->posY = moveParams->depl_y;
+        mapParams->posX = moveParams->depl_x;
+        mapParams->posY = moveParams->depl_y;
     }
 }
 

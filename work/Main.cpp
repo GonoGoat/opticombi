@@ -9,59 +9,53 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "./Maps/Beginner-II.lt4";
+    map.nom_fichier = "./Maps/Chemin_Anti_Tank.lt4";
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
+    map.success = 0;
     std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
 
     // Paramètres Output
     outputStruct output;
     output.name = "One block into the water";
     output.solver = "PSO";
-    //output.sequence = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDLLLDDDRRRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"; // Temporaire
+    output.sequence = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDLLLDDDRRRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
     
+    //Paramètres PSO
+    psoStruct pso;
+
     // Paramètres dessin SVG
     svgStruct svg;
     svg.trajSuccess = 0;
     svg.output_file = "./Output/test.svg";
     svg.svgHeight = 40;
 
-    //Paramètres PSO
-    psoStruct pso;
+    /*std::cout << "Combien d'instance voulez-vous generer ? : ";
+    std::cin >> nbr_instance;*/
+
+    // Import matrice
     /*
-    std::cout << "Combien d'instance voulez-vous generer ? : ";
-    std::cin >> pso.nbr_instance;
-    
     std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
     std::cin >> pso.nbr_particule;
 
     std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
-    std::cin >> pso.nbr_iteration_max;
-    */
+    std::cin >> pso.nbr_iteration_max;*/
+    
     // Parsage de la carte
     parsage(&map);
     
     // Détection des arrivées et du départ de la carte
     detection(&map);
 
-    // Initialisation particule
-    // TODO : Descendre dans Algo_PSO
-    std::vector<particleStruct> particles;
-    particleStruct part;
-    part.Direction_tank = map.Direction_tank;
-    part.success = 0;
-    part.Origine_x, part.posX, part.posX_final = map.Origine_x;
-    part.Origine_y, part.posY, part.posY_final = map.Origine_y;
-    part.Finish_x = map.Finish_x[0];
-    part.Finish_y = map.Finish_y[0];
-    particles.push_back(part);
+    // TODO : Assignation des positions de travail (Une partie aléatoire et certains sur départ)
+    map.posX = map.Origine_x;
+    map.posY = map.Origine_y;
 
-    /*
-    pso.nbr_thread = pso.nbr_particule * map.nbr_arrive;
-    output.sequence = Algo_PSO(&map, &pso);
-    std::cout << output.sequence << std::endl;
-    */
+    //nbr_thread = nbr_particule * nbr_arrive;
+    //sequence = Algo_PSO(&matrice, &nbr_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);
+    //std::cout << sequence << std::endl;
+
     // Etablissement du trajet
     /*getPositionsOfSequence(&map,&svg,&output);
     for(int i = 0;i<svg.trajX.size();i++) {

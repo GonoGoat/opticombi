@@ -29,18 +29,24 @@ enum Matrice
 // A splitter avec particleStruct quand parallèle
 struct mapStruct {
     std::string nom_fichier;
-	std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
+	std::vector<std::vector<int>> matrice_fixe;
+    std::vector<std::vector<int>> matrice_mobile;
     int nbr_arrive;
     int nbr_lignes;
     int nbr_colonnes;
     
     // Coordonnées du point de départ du tank sur la carte
     int Origine_x,Origine_y;
+
+    // Coordonnées de travail
+    int posX,posY;
     
     // Ensemble des coordonnées d'arrivées possibles sur la carte
     std::vector<int> Finish_x, Finish_y; 
     char Direction_tank;
 
+    // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
+    int success;
 };
 
 struct outputStruct {
@@ -96,27 +102,6 @@ struct moveStruct {
 // success
 // finish_X/Y
 // dir
-
-struct particleStruct {
-    std::vector<std::vector<int>> matrice_mobile;
-
-    // Position de départ de la particule
-    int Origine_x, Origine_y;
-
-    // Position de l'arrivée définie pour la particule
-    int Finish_x, Finish_y;
-
-    // Coordonnées de l'arrivée que la particule essaie de joindre
-    int posX,posY;
-    char Direction_tank;
-
-    // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
-    int success;
-
-    // Coordonnées de travail
-    int posX_final, posY_final;
-    std::string Output, finish_Output;
-};
 
 extern std::unordered_map<std::string, Matrice> conversionToEnum;
 
