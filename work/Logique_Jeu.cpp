@@ -8,11 +8,10 @@ char dir_anti_tank = 'X';
 /**
  * @brief Liste toutes les positions d'un tank lors de l'exécution d'une séquence
  * 
- * @param matrice IN - La matrice parsee
- * @param sequence IN - La séquence jouée par le tank dans la matrice
- * @param trajX IN/OUT - L'historique des positions en X du tank
- * @param trajY IN/OUT - L'historique des positions en Y du tank
- * @param trajSuccess IN/OUT - L'etat du tank après l'exécution de la séquence
+ * @param mapParams Les paramètres de la carte
+ * @param svgParams Les paramètres du SVG de sortie
+ * @param outputParams Les paramètres du fichiers ltr
+ * @param partParams Les paramères de la particule
  */
 void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, outputStruct* outputParams, particleStruct* partParams) {
 
@@ -48,16 +47,12 @@ void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, outputS
 
 /**
  * @brief Execute la logique du jeu
- *
- * @param matrice IN - La carte parsée
- * @param sequence IN - La séquence jouée
- * @param posX IN/OUT - La position initiale (IN) et finale (OUT) du tank en X après exécution de la séquence
- * @param posY IN/OUT - La position initiale (IN) et finale (OUT) du tank en Y après exécution de la séquence
- * @param dir_previous IN/OUT - L'orientation initiale (IN) et finale (OUT) du tank après exécution de la séquence
- * @param succes OUT - Représentation de l'état du tank après exécution de la séquence :
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param partParams Les paramères de la particule
  */
-//void Engine(std::vector<std::vector<int>>* matrice, std::vector<std::vector<int>>* matrice_mobile, const std::string& sequence, int* posX, int* posY, char* dir_previous, int* succes) {
 void Engine(mapStruct* mapParams,  particleStruct* partParams) {
+
     //Variables pour traiter le déplacement sans le ressortir directement
     int deplacement_x, deplacement_y;
     //int taille_sequence = 0;
@@ -75,7 +70,6 @@ void Engine(mapStruct* mapParams,  particleStruct* partParams) {
 
             // Déplacement qui tente d'être opéré
             Deplacement(&(move.dir),&(move.depl_x),&(move.depl_y));
-            //Verification_deplacement(matrice, matrice_mobile, &deplacement_x, &deplacement_y, posX, posY, succes, &dir_actuelle);
             Verification_deplacement(mapParams, &move, partParams);
             std::cout << "deplacement x : " << partParams->posX << " |deplacement y : " << partParams->posY << std::endl;
             partParams->success = 0;
@@ -96,7 +90,6 @@ void Engine(mapStruct* mapParams,  particleStruct* partParams) {
     }
 }
 
-//Fonction permettant de calculer le déplacement à effectuer sur la particule sur base du caractére de la séquence -> conversion
 /**
  * @brief Calcul du déplacement à effectuer sur le tank sur base d'un caractère
  *
@@ -121,7 +114,13 @@ void Deplacement(char* dir, int* pos_x, int* pos_y) {
     }
 }
 
-//Fonction de verification de la possibilité d'effectuer le déplacement rentré
+/**
+ * @brief Fonction de verification de la possibilité d'effectuer le déplacement rentré
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
 
     //Vérification des limites si dépasse pas de mouvement enregistré
@@ -193,6 +192,13 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
 
 }
 
+/**
+ * @brief Gère le déplacement du tank par un portail (tunnel)
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void Portail(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {   
     int couleur = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x];
@@ -222,7 +228,13 @@ void Portail(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partP
     }
 }
 
-//Fonction permettant de vérifier si un anti tank ne nous tue pas en effectuant le déplacement
+/**
+ * @brief Vérifier si un anti tank ne nous tue pas en effectuant le déplacement
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
     //!\ ICI utilisation d'une méthode afin de ne pas devoir repenser les conditions car la somme des deux donnera le bon élément (1 des 2 toujours = 0)
@@ -290,7 +302,13 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
     }
 }
 
-//Fonction permettant de vérifier si un anti tank ne nous tue pas autour d'un parcour continue sur l'axe y (chemin/glace)
+/**
+ * @brief Vérifier si un anti tank ne nous tue pas autour d'un parcour continue sur l'axe y (chemin/glace)
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
     std::cout << "Verification vertical" << std::endl;
@@ -378,7 +396,13 @@ void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* m
     }
 }
 
-//Fonction permettant de vérifier si un anti tank ne nous tue pas autour d'un parcour continue sur l'axe x (chemin/glace)
+/**
+ * @brief Vérifier si un anti tank ne nous tue pas autour d'un parcour continue sur l'axe x (chemin/glace)
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
     std::cout << "Verification horizontal" << std::endl;
@@ -469,7 +493,13 @@ void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct*
     }
 }
 
-//Fonction de calcul de trajectoire
+/**
+ * @brief Calcul de trajectoire
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement du laser
+ * @param partParams Les paramères de la particule 
+ */
 void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
     bool disparaitre = false;
@@ -599,7 +629,13 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
     } while (disparaitre == false);
 }
 
-//Fonction pour l'interaction glace
+/**
+ * @brief Interraction du tank avec la glace
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
 
     std::cout << "Bonjour je suis la fonction Glace!Direction " << moveParams->dir << std::endl;
@@ -675,7 +711,13 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
     }
 }
 
-
+/**
+ * @brief Interraction du tank avec la glace fine
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
     
     std::cout << "Bonjour je suis la fonction Glace fine!Direction " << moveParams->dir << std::endl;
@@ -738,6 +780,13 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
 
 }
 
+/**
+ * @brief Interraction du tank avec les tapis roulants
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
     
     char dir_way;
@@ -822,6 +871,13 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
     }
 }
 
+/**
+ * @brief Gestion du déplacement du laser tiré par un anti tank
+ * 
+ * @param mapParams Les paramètres de la carte
+ * @param moveParams Les paramètres du déplacement désiré
+ * @param partParams Les paramères de la particule 
+ */
 void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
     std::cout << "Trajectoire laser Anti Tank" << std::endl;
@@ -965,6 +1021,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
     } while (dir_anti_tank != 'X' && premiere_case);
 }
 
+/**
+ * @brief Inverser la direction d'un déplacement
+ * 
+ * @param direction La direction initiale
+ */
 void inverserDirection(char* direction) {
     switch (*direction) {
     case 'U':

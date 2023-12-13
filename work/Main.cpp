@@ -98,14 +98,14 @@ int main()
     for (int i = 0; i < nbr_thread; i++) {
         instanciation_particule[i] -> join();
     }*/
-    
+    /*
     std::cout << "Depart x : " << map.Origine_x << "   Depart y : " << map.Origine_y << std::endl;
 
     for (int i = 0; i < map.nbr_arrive; i++) {
         std::cout << "Position : " << i << " x =" << map.Finish_x[i] << " | y =" << map.Finish_y[i] << std::endl;
     }
 
-    Engine(&map, &part);
+    Engine(&map, &part);*/
 
     //create_ltr_file(&output);
     end = std::chrono::system_clock::now();
