@@ -650,7 +650,7 @@ void glace(mapStruct* mapParams, moveStruct* moveParams) {
     } while (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice && mapParams->success != -1);
 
     if (mapParams->success != -1 && mapParams->success != -2) {
-        if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
+        if (mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
             //Permet d'eviter que le système ne face la vérification finale car les valeurs peuvent être mauvaise (direction)
             mapParams->success = 2;
             glace_fine(mapParams, moveParams);
@@ -812,7 +812,7 @@ void path(mapStruct* mapParams, moveStruct* moveParams) {
             mapParams->success = 2;
             glace(mapParams, moveParams);
         }
-        else if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
+        else if (mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
             mapParams->success = 2;
             glace_fine(mapParams, moveParams);
         }

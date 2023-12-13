@@ -9,7 +9,7 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "..\\..\\Trajectoire_Anti_Tank_4.lt4";
+    map.nom_fichier = "..\\..\\Chemin_Anti_Tank.lt4";
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
     map.success = 0;
@@ -19,7 +19,7 @@ int main()
     outputStruct output;
     output.name = "One block into the water";
     output.solver = "PSO";
-    output.sequence = "U"; // Temporaire
+    output.sequence = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
     
     //Paramètres PSO
