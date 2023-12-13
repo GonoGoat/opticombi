@@ -103,6 +103,24 @@ struct moveStruct {
 // finish_X/Y
 // dir
 
+struct particleStruct {
+    std::vector<std::vector<int>> matrice_mobile;
+
+    // Position de départ de la particule
+    int Origine_x, Origine_y;
+
+    // Coordonnées de l'arrivée que la particule essaie de joindre
+    int posX_final, posY_final;
+    char Direction_tank;
+
+    // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
+    int success;
+
+    // Coordonnées de travail
+    int posX,posY;
+    std::string Output, finish_Output;
+};
+
 extern std::unordered_map<std::string, Matrice> conversionToEnum;
 
 #endif

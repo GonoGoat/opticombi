@@ -48,14 +48,23 @@ int main()
     // Détection des arrivées et du départ de la carte
     detection(&map);
 
-    // TODO : Assignation des positions de travail (Une partie aléatoire et certains sur départ)
-    map.posX = map.Origine_x;
-    map.posY = map.Origine_y;
+    // Initialisation particule
+    // TODO : Descendre dans Algo_PSO
+    std::vector<particleStruct> particles;
+    particleStruct part;
+    part.Direction_tank = map.Direction_tank;
+    part.success = 0;
+    part.Origine_x, part.posX, part.posX_final = map.Origine_x;
+    part.Origine_y, part.posY, part.posY_final = map.Origine_y;
+    part.Finish_x = map.Finish_x[0];
+    part.Finish_y = map.Finish_y[0];
+    particles.push_back(part);
 
-    //nbr_thread = nbr_particule * nbr_arrive;
-    //sequence = Algo_PSO(&matrice, &nbr_thread, &nbr_iteration_max, &Origine_x, &Origine_y, &Finish_x, &Finish_y, &nbr_particule);
-    //std::cout << sequence << std::endl;
-
+    /*
+    pso.nbr_thread = pso.nbr_particule * map.nbr_arrive;
+    output.sequence = Algo_PSO(&map, &pso);
+    std::cout << output.sequence << std::endl;
+    */
     // Etablissement du trajet
     /*getPositionsOfSequence(&map,&svg,&output);
     for(int i = 0;i<svg.trajX.size();i++) {
