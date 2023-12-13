@@ -155,14 +155,19 @@ Base atteinte
 deplacement x : 6 |deplacement y : 6
 
 Séquence vérification Chemin_Anti_Tank (premier case):
-"LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDLLLDDDRRRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"
+"LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"
 Depart x : 7   Depart y : 15
 Deplacement OK
 deplacement x : 6 |deplacement y : 15
 Deplacement OK
 deplacement x : 5 |deplacement y : 15
+Bonjour je suis la fonction Path!Direction U
 Verification horizontal
 Anti Tank Right horiz
+Sur 0 deplacement x : 4 | deplacement y : 14
+Trajectoire laser Anti Tank
+Laser x : 4 | y : 14
+Tank tue
 deplacement x : 5 |deplacement y : 15
 Deplacement OK
 deplacement x : 6 |deplacement y : 15
@@ -172,17 +177,28 @@ Deplacement OK
 deplacement x : 7 |deplacement y : 14
 Deplacement OK
 deplacement x : 7 |deplacement y : 13
+Bonjour je suis la fonction Path!Direction L
 Verification horizontal
 Anti Tank UP horiz
+Tue tank
 deplacement x : 7 |deplacement y : 13
 Deplacement OK
 deplacement x : 8 |deplacement y : 13
+Bonjour je suis la fonction Path!Direction U
 Verification vertical
 Anti Tank Left vert
+Tue tank
 deplacement x : 8 |deplacement y : 13
 Deplacement OK
 deplacement x : 7 |deplacement y : 13
+Bonjour je suis la fonction Path!Direction U
 Verification vertical
+Anti Tank Left vert
+Laser x : 8 | y : 12
+Sur 0 deplacement x : 7 | deplacement y : 11
+Trajectoire laser Anti Tank
+Laser x : 7 | y : 12
+Tir arrete Sollid_Block ou Bricks
 Deplacement OK
 deplacement x : 7 |deplacement y : 11
 Deplacement OK
@@ -195,12 +211,20 @@ Deplacement OK
 deplacement x : 3 |deplacement y : 11
 Deplacement OK
 deplacement x : 2 |deplacement y : 11
+Bonjour je suis la fonction Path!Direction U
 Verification vertical
 Anti Tank Right vert
+Tue tank
 deplacement x : 2 |deplacement y : 11
 Deplacement OK
 deplacement x : 3 |deplacement y : 11
-Premiere case du chemin est un Way
+Bonjour je suis la fonction Path!Direction U
+Verification vertical
+Anti Tank Right vert
+Sur 0 deplacement x : 3 | deplacement y : 9
+Trajectoire laser Anti Tank
+Laser x : 3 | y : 10
+Tir arrete Sollid_Block ou Bricks
 Deplacement OK
 deplacement x : 3 |deplacement y : 9
 Deplacement OK
@@ -217,19 +241,19 @@ Deplacement OK
 deplacement x : 3 |deplacement y : 5
 Deplacement OK
 deplacement x : 4 |deplacement y : 5
+Bonjour je suis la fonction Path!Direction D
 Verification vertical
-Anti Tank Right vert
-deplacement x : 4 |deplacement y : 5
-Deplacement OK
-deplacement x : 3 |deplacement y : 5
-Deplacement OK
-deplacement x : 2 |deplacement y : 5
-Deplacement OK
-deplacement x : 2 |deplacement y : 6
-Deplacement OK
-deplacement x : 2 |deplacement y : 7
-Deplacement OK
-deplacement x : 3 |deplacement y : 7
+Anti Tank Left vert
+Laser x : 10 | y : 6
+Sur 0 deplacement x : 4 | deplacement y : 7
+Trajectoire laser Anti Tank
+Laser x : 9 | y : 6
+Laser x : 8 | y : 6
+Laser x : 7 | y : 6
+Laser x : 6 | y : 6
+Laser x : 5 | y : 6
+Laser x : 4 | y : 6
+Anti tank Right mort
 Deplacement OK
 deplacement x : 4 |deplacement y : 7
 Deplacement OK
@@ -252,12 +276,20 @@ Deplacement OK
 deplacement x : 7 |deplacement y : 9
 Deplacement OK
 deplacement x : 7 |deplacement y : 8
+Bonjour je suis la fonction Path!Direction L
 Verification horizontal
 Anti Tank Down horiz
+Tue tank
 deplacement x : 7 |deplacement y : 8
 Deplacement OK
 deplacement x : 7 |deplacement y : 9
+Bonjour je suis la fonction Path!Direction L
 Verification horizontal
+Anti Tank Down horiz
+Sur 0 deplacement x : 5 | deplacement y : 9
+Trajectoire laser Anti Tank
+Laser x : 6 | y : 9
+Tir arrete Sollid_Block ou Bricks
 Deplacement OK
 deplacement x : 5 |deplacement y : 9
 Deplacement OK
@@ -276,8 +308,16 @@ Deplacement OK
 deplacement x : 7 |deplacement y : 8
 Deplacement OK
 deplacement x : 7 |deplacement y : 7
+Bonjour je suis la fonction Path!Direction U
 Verification horizontal
 Anti Tank Left horiz
+Sur 0 deplacement x : 6 | deplacement y : 6
+Trajectoire laser Anti Tank
+Laser x : 9 | y : 6
+Laser x : 8 | y : 6
+Laser x : 7 | y : 6
+Laser x : 6 | y : 6
+Tank tue
 deplacement x : 7 |deplacement y : 7
 Deplacement OK
 deplacement x : 8 |deplacement y : 7
@@ -287,15 +327,32 @@ Deplacement OK
 deplacement x : 10 |deplacement y : 7
 Deplacement OK
 deplacement x : 11 |deplacement y : 7
+Bonjour je suis la fonction Path!Direction R
 Verification vertical
 Anti Tank Down chemin vert
+Sur 0 deplacement x : 12 | deplacement y : 6
+Trajectoire laser Anti Tank
+Laser x : 12 | y : 2
+Laser x : 12 | y : 3
+Laser x : 12 | y : 4
+Laser x : 12 | y : 5
+Laser x : 12 | y : 6
+Tank tue
 deplacement x : 11 |deplacement y : 7
 Deplacement OK
 deplacement x : 11 |deplacement y : 8
 Deplacement OK
 deplacement x : 11 |deplacement y : 9
+Bonjour je suis la fonction Path!Direction D
 Verification horizontal
 Anti Tank Left horiz
+Sur 0 deplacement x : 10 | deplacement y : 10
+Trajectoire laser Anti Tank
+Laser x : 13 | y : 10
+Laser x : 12 | y : 10
+Laser x : 11 | y : 10
+Laser x : 10 | y : 10
+Tank tue
 deplacement x : 11 |deplacement y : 9
 
 

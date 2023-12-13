@@ -165,12 +165,15 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
         case Way_D:
         case Way_R:
         case Way_L:
+        premiere_case = true;
             path(mapParams, moveParams, partParams);
             break;
         case Ice:
+            premiere_case = true;
             glace(mapParams,moveParams, partParams);
             break;
         case Thin_Ice:
+            premiere_case = true;
             glace_fine(mapParams, moveParams, partParams);
             break;
         case Tunnel_Red:
@@ -511,7 +514,7 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
         Deplacement(&(moveParams->dir),&(moveParams->depl_x),&(moveParams->depl_y));
 
         //Vérification des limites si dépasse le laser disparait
-        if (moveParams->depl_x > mapParams->nbr_colonnes || moveParams->depl_x < 0 || moveParams->depl_y > mapParams->nbr_lignes || moveParams->depl_y < 0) {
+        if (moveParams->depl_x > mapParams->nbr_colonnes-1 || moveParams->depl_x < 0 || moveParams->depl_y > mapParams->nbr_lignes-1 || moveParams->depl_y < 0) {
             disparaitre = true;
         }
         else if (moveParams->depl_x == pos_tank_x && moveParams->depl_y == pos_tank_y) {
@@ -661,7 +664,12 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
         position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
 
         //Verifie si tank bloque si c'est le cas, il est juste arrêté et sa position est valide
-        if (moveParams->depl_x < 0 || moveParams->depl_x>mapParams->nbr_colonnes-1 || moveParams->depl_y < 0 || moveParams->depl_y>mapParams->nbr_lignes-1 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL) ) {
+        if ((moveParams->depl_x == 0 && moveParams->dir == 'L') || (moveParams->depl_x == mapParams->nbr_colonnes - 1 && moveParams->dir == 'R') || (moveParams->depl_y == 0 && moveParams->dir == 'U') || (moveParams->depl_y == mapParams->nbr_lignes - 1 && moveParams->dir == 'L')) {
+            partParams->success = -2;
+            std::cout << "Limite atteinte" << std::endl;
+            break;
+        }
+        else if (moveParams->depl_x < 0 || moveParams->depl_x>mapParams->nbr_colonnes-1 || moveParams->depl_y < 0 || moveParams->depl_y>mapParams->nbr_lignes-1 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL) ) {
             std::cout << "Position non valide" << std::endl;
             partParams->success = -2;
             inverserDirection(&(moveParams->dir));
@@ -724,7 +732,7 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
     int position;
 
     do {
-        mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] = Water;
+        partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] = Water;
 
         if ((moveParams->dir == 'U' || moveParams->dir == 'D') && dir_anti_tank == 'X') {
             Verification_Anti_Tank_parcour_vertical(mapParams,moveParams, partParams);
@@ -745,7 +753,7 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
         position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
 
         //Verifie si le tank est bloqué dans son mouvement, si c'est le cas il est mort car la glace fine c'est transformé en eau et la séquence est invalide
-        if (moveParams->depl_x < 0 || moveParams->depl_x>mapParams->nbr_colonnes || moveParams->depl_y < 0 || moveParams->depl_y>mapParams->nbr_lignes || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL) || 
+        if (moveParams->depl_x == 0 || moveParams->depl_x == mapParams->nbr_colonnes - 1 || moveParams->depl_y == 0 || moveParams->depl_y == mapParams->nbr_lignes - 1 || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL) ||
             (position == Way_U && moveParams->dir == 'D') || (position == Way_D && moveParams->dir == 'U') || (position == Way_L && moveParams->dir == 'R') || (position == Way_R && moveParams->dir == 'L')) {
             std::cout << "Position non valide, donc mort dans l'eau" << std::endl;
             partParams->success = -1;
@@ -753,7 +761,7 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
         }
         
         std::cout << "Sur Glace fine deplacement x : " << moveParams->depl_x << " |deplacement y : " << moveParams->depl_y << std::endl;
-    } while (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Thin_Ice);
+    } while (partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice);
 
     if (partParams->success != -1 && partParams->success != -2) {
         if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice) {
@@ -832,7 +840,12 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
         position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
 
         //Verifie si tank bloque si c'est le cas, il est juste arrêté et sa position est valide
-        if (moveParams->depl_x < 0 || moveParams->depl_x>mapParams->nbr_colonnes || moveParams->depl_y < 0 || moveParams->depl_y>mapParams->nbr_lignes || (position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL)) {
+        if ((moveParams->depl_x == 0 && dir_way == 'L') || (moveParams->depl_x == mapParams->nbr_colonnes - 1 && dir_way == 'R') || (moveParams->depl_y == 0 && dir_way == 'U') || (moveParams->depl_y == mapParams->nbr_lignes - 1 && dir_way == 'L')) {
+            partParams->success = -2;
+            std::cout << "Limite atteinte" << std::endl;
+            break;
+        } 
+        else if ((position >= Sollid_Block && position <= Mirro_DL) || (position >= Crystal_Block && position <= Rotative_Mirror_DL)) {
             std::cout << "Position non valide" << std::endl;
             partParams->success = -2;
             inverserDirection(&dir_way);
@@ -849,7 +862,8 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
         if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice) {
             partParams->success = 2;
             glace(mapParams, moveParams, partParams);
-        }else if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Thin_Ice){
+        }
+        else if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
             partParams->success = 2;
             glace_fine(mapParams, moveParams, partParams);
         }

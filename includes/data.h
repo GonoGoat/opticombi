@@ -57,10 +57,10 @@ struct outputStruct {
 };
 
 struct psoStruct {
+    // Nombre de positions initalisées
     int nbr_particule;
 
-    // Nombre de positions initalisées
-    int nbr_instance;
+    // Nombre de trajets uniques
     int nbr_thread;
 
     // Durée de vie d'une particule en nombre d'itération
@@ -112,6 +112,14 @@ struct particleStruct {
     // Coordonnées de travail
     int posX,posY;
     std::string Output, finish_Output;
+
+    // Algorithmie
+    float vitX, vitY;
+    int p_bestX, p_bestY;
+    int score_p_best;
+    int score;
+    bool become_finish;
+    float distance_finish;
 };
 
 extern std::unordered_map<std::string, Matrice> conversionToEnum;

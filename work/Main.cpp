@@ -9,7 +9,7 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "./Maps/Chemin_Anti_Tank_2.lt4";
+    map.nom_fichier = "./Maps/Chemin_Anti_Tank.lt4";
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
     std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
@@ -21,31 +21,8 @@ int main()
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
 
-    std::string testSeq = "UULLUUURRUURRRUURRUUUULLLDDLL";
+    std::string testSeq = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD";
     // Paramètres particules
-    
-    //Paramètres PSO
-    psoStruct pso;
-
-    /*std::cout << "Combien d'instance voulez-vous generer ? : ";
-    std::cin >> nbr_instance;*/
-
-    // Import matrice
-    /*
-    std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
-    std::cin >> pso.nbr_particule;
-
-    std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
-    std::cin >> pso.nbr_iteration_max;*/
-    
-    // Parsage de la carte
-    parsage(&map);
-    
-    // Détection des arrivées et du départ de la carte
-    detection(&map);
-
-    // Initialisation particule
-    // TODO : Descendre dans Algo_PSO
     std::vector<particleStruct> particles;
     particleStruct part;
     part.Direction_tank = map.Direction_tank;
@@ -62,12 +39,26 @@ int main()
     part.finish_Output = testSeq; // Temporaire
 
     particles.push_back(part);
+    
+    //Paramètres PSO
+    psoStruct pso;
 
     /*
+    std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
+    std::cin >> pso.nbr_particule;
+
+    std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
+    std::cin >> pso.nbr_iteration_max;
+
     pso.nbr_thread = pso.nbr_particule * map.nbr_arrive;
     output.sequence = Algo_PSO(&map, &pso);
-    std::cout << output.sequence << std::endl;
-    */
+    std::cout << output.sequence << std::endl;*/
+    
+    // Parsage de la carte
+    parsage(&map);
+    
+    // Détection des arrivées et du départ de la carte
+    detection(&map);
 
     /*
     // Paramètres dessin SVG
@@ -98,14 +89,14 @@ int main()
     for (int i = 0; i < nbr_thread; i++) {
         instanciation_particule[i] -> join();
     }*/
-    /*
+    
     std::cout << "Depart x : " << map.Origine_x << "   Depart y : " << map.Origine_y << std::endl;
 
     for (int i = 0; i < map.nbr_arrive; i++) {
         std::cout << "Position : " << i << " x =" << map.Finish_x[i] << " | y =" << map.Finish_y[i] << std::endl;
     }
 
-    Engine(&map, &part);*/
+    Engine(&map, &part);
 
     //create_ltr_file(&output);
     end = std::chrono::system_clock::now();

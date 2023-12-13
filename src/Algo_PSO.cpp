@@ -1,45 +1,74 @@
 #include "Algo_PSO.h"
 
-std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, int* nbr_iteration_max, int* Origine_x, int* Origine_y, std::vector<int>* Finish_x, std::vector<int>* Finish_y, int* nbr_particule) {
-	std::vector<int> posX(*nbre_thread); std::vector<int> posY(*nbre_thread);
-	std::vector<int> posX_final(*nbre_thread); std::vector<int> posY_final(*nbre_thread);
-	std::vector<float> vitX(*nbre_thread); std::vector<float> vitY(*nbre_thread);
-	std::vector<int> p_bestX(*nbre_thread); std::vector<int> p_bestY(*nbre_thread);
-	std::vector<int> score_p_best(*nbre_thread);
-	std::vector<int> g_bestX(*nbre_thread / *nbr_particule); std::vector<int> g_bestY(*nbre_thread / *nbr_particule);
-	std::vector<int> score_g_best(*nbre_thread / *nbr_particule);
+
+//std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, int* nbr_iteration_max, int* Origine_x, int* Origine_y, std::vector<int>* Finish_x, std::vector<int>* Finish_y, int* nbr_particule) {
+std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
+
+	//std::vector<int> posX(*nbre_thread); std::vector<int> posY(*nbre_thread); ->  Origine_x/y
+	//std::vector<int> posX_final(*nbre_thread); std::vector<int> posY_final(*nbre_thread); -> posX/Y
+	//std::vector<float> vitX(*nbre_thread); std::vector<float> vitY(*nbre_thread);
+	//std::vector<int> p_bestX(*nbre_thread); std::vector<int> p_bestY(*nbre_thread);
+	//std::vector<int> score_p_best(*nbre_thread);
+	std::vector<int> g_bestX(mapParams->nbr_arrive); std::vector<int> g_bestY(mapParams->nbr_arrive);
+	std::vector<int> score_g_best(mapParams->nbr_arrive);
 	int n1 = 150;int n2 = 2;
 	float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
-	std::vector<float> distance_finish(*nbre_thread);
-	std::vector<int> score(*nbre_thread);
-	std::vector<char> directionTank(*nbre_thread);
-	std::vector<char> directionOriginalTank(*nbre_thread);
-	std::vector<std::string> Output(*nbre_thread);
+	//std::vector<float> distance_finish(*nbre_thread);
+	//std::vector<int> score(*nbre_thread);
+	std::vector<char> directionTank(psoParams->nbr_thread);
+	std::vector<char> directionOriginalTank(psoParams->nbr_thread);
+	std::vector<std::string> Output(psoParams->nbr_thread);
 	int nbr_iteration_t = 0;
 	int n;
-	std::vector<bool> become_finish(*nbre_thread);
-	bool found_finish = false;
-	std::vector<std::string> finish_Output(*nbre_thread / *nbr_particule);
-	int succes;
+	//std::vector<bool> become_finish(*nbre_thread);
+	//bool found_finish = false;
+	//std::vector<std::string> finish_Output(*nbre_thread / *nbr_particule);
+	//int succes;
 
-	n = *nbre_thread / *nbr_particule;
+	// TODO : Initialisation des particules
+	// for (int i = 0; i<psoParams->nbr_thread;i++) {}
+	std::vector<particleStruct> particles;
+    particleStruct part;
+    part.Direction_tank = mapParams->Direction_tank;
+    part.matrice_mobile = mapParams->matrice_mobile;
+    part.success = 0;
+    part.Origine_x = mapParams->Origine_x;
+    part.Origine_y = mapParams->Origine_y;
+    part.posX = mapParams->Origine_x;
+    part.posY = mapParams->Origine_y;
+    if (mapParams->Finish_x.size() != 0 && mapParams->Finish_y.size() != 0) {
+        part.Finish_x = mapParams->Finish_x[0];    
+        part.Finish_y = mapParams->Finish_y[0];
+    }
+    
+
+    particles.push_back(part);
+
+	// n = *nbre_thread / *nbr_particule;
+	n = mapParams->nbr_arrive;
+	// Initialisation des arrivées
 	for (int i = 0; i < n; i++) {
 		score_g_best[i] = -9999;
-		finish_Output[i] = "";
+		//finish_Output[i] = "";
 	}
 
 	n = 0;
-	for (int i = 0; i < *nbre_thread; i++) {
-		if (i == n * *nbr_particule) {
-			posX[i] = *Origine_x;
-			posY[i] = *Origine_y;
-			directionTank[i] = 'U';
+
+	//----Première ittération PSO-----
+	for (int i = 0; i < psoParams->nbr_thread; i++) { // Pour tous les trajets
+		// Si le numéro de trajet vaut ?
+		if (i == n * psoParams->nbr_particule) {
+			particles[i].Origine_x = mapParams->Origine_x;
+			particles[i].Origine_y = mapParams->Origine_y;
+			//directionTank[i] = 'U';
+			particles[i].Direction_tank = mapParams->Direction_tank;
 			n++;
 		}
 		else {
-			posX[i] = rand() % 16;
-			posY[i] = rand() % 16;
-			directionTank[i] = '/';
+			particles[i].Origine_x = rand() % 16;
+			particles[i].Origine_y = rand() % 16;
+			// directionTank[i] = '/';
+			particles[i].Direction_tank = mapParams->Direction_tank;
 		}
 		vitX[i] = rand() % 16 - 8;
 		vitY[i] = rand() % 16 - 8;
