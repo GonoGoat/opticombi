@@ -130,17 +130,21 @@
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="Detection_Start_End.cpp" />
     <ClCompile Include="LogiqueDeplacement.cpp" />
+    <ClCompile Include="LogiqueDeplacementVitesse.cpp" />
     <ClCompile Include="Logique_Jeu.cpp" />
     <ClCompile Include="LTRcreator.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Parseur.cpp" />
-    <ClCompile Include="PSO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algo_PSO.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="Detection_Start_End.h" />
     <ClInclude Include="LogiqueDeplacement.h" />
+    <ClInclude Include="LogiqueDeplacementVitesse.h" />
     <ClInclude Include="Logique_Jeu.h" />
     <ClInclude Include="LTRcreator.h" />
+    <ClInclude Include="Main.h" />
     <ClInclude Include="Parseur.h" />
   </ItemGroup>
   <ItemGroup>

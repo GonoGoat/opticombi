@@ -9,7 +9,7 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "./Maps/Chemin_Anti_Tank.lt4";
+    map.nom_fichier = "..\\..\\Trajectoire_Anti_Tank_4.lt4";
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
     map.success = 0;
@@ -19,7 +19,7 @@ int main()
     outputStruct output;
     output.name = "One block into the water";
     output.solver = "PSO";
-    output.sequence = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDLLLDDDRRRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"; // Temporaire
+    output.sequence = "U"; // Temporaire
     output.output_file = "./Output/new.ltr";
     
     //Paramètres PSO
@@ -79,7 +79,6 @@ int main()
     for (int i = 0; i < nbr_thread; i++) {
         instanciation_particule[i] -> join();
     }*/
-    
     std::cout << "Depart x : " << map.Origine_x << "   Depart y : " << map.Origine_y << std::endl;
 
     for (int i = 0; i < map.nbr_arrive; i++) {
