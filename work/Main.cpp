@@ -9,27 +9,23 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "./Maps/Chemin_Anti_Tank.lt4";
+    map.nom_fichier = "./Maps/Chemin_Anti_Tank_2.lt4";
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
-    map.success = 0;
     std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
 
     // Paramètres Output
     outputStruct output;
     output.name = "One block into the water";
     output.solver = "PSO";
-    output.sequence = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDLLLDDDRRRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD"; // Temporaire
+    // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
+
+    std::string testSeq = "UULLUUURRUURRRUURRUUUULLLDDLL";
+    // Paramètres particules
     
     //Paramètres PSO
     psoStruct pso;
-
-    // Paramètres dessin SVG
-    svgStruct svg;
-    svg.trajSuccess = 0;
-    svg.output_file = "./Output/test.svg";
-    svg.svgHeight = 40;
 
     /*std::cout << "Combien d'instance voulez-vous generer ? : ";
     std::cin >> nbr_instance;*/
@@ -53,11 +49,18 @@ int main()
     std::vector<particleStruct> particles;
     particleStruct part;
     part.Direction_tank = map.Direction_tank;
+    part.matrice_mobile = map.matrice_mobile;
     part.success = 0;
-    part.Origine_x, part.posX, part.posX_final = map.Origine_x;
-    part.Origine_y, part.posY, part.posY_final = map.Origine_y;
-    part.Finish_x = map.Finish_x[0];
-    part.Finish_y = map.Finish_y[0];
+    part.Origine_x = map.Origine_x;
+    part.Origine_y = map.Origine_y;
+    part.posX = map.Origine_x;
+    part.posY = map.Origine_y;
+    if (map.Finish_x.size() != 0 && map.Finish_y.size() != 0) {
+        part.Finish_x = map.Finish_x[0];    
+        part.Finish_y = map.Finish_y[0];
+    }
+    part.finish_Output = testSeq; // Temporaire
+
     particles.push_back(part);
 
     /*
@@ -65,8 +68,15 @@ int main()
     output.sequence = Algo_PSO(&map, &pso);
     std::cout << output.sequence << std::endl;
     */
-    // Etablissement du trajet
-    /*getPositionsOfSequence(&map,&svg,&output);
+
+    /*
+    // Paramètres dessin SVG
+    svgStruct svg;
+    svg.trajSuccess = 0;
+    svg.output_file = "./Output/test.svg";
+    svg.svgHeight = 40;
+
+    getPositionsOfSequence(&map,&svg,&output);
     for(int i = 0;i<svg.trajX.size();i++) {
         std::cout << svg.trajX[i] << ":" << svg.trajY[i] << std::endl;
     }
@@ -95,7 +105,7 @@ int main()
         std::cout << "Position : " << i << " x =" << map.Finish_x[i] << " | y =" << map.Finish_y[i] << std::endl;
     }
 
-    Engine(&map, &output);
+    Engine(&map, &part);
 
     //create_ltr_file(&output);
     end = std::chrono::system_clock::now();
