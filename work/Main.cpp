@@ -1,6 +1,7 @@
 #include "Main.h"
 
-int main()
+
+int main(int argc, char const *argv[])
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
@@ -9,7 +10,12 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "./Maps/Anti_Tank.lt4";
+    if (argc == 2) {
+        map.nom_fichier = argv[1];
+    }
+    else {
+        map.nom_fichier = "./Maps/Beginner-I.lt4";
+    }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
     std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
@@ -21,7 +27,7 @@ int main()
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
 
-    std::string testSeq = "ULLUUURRDDDRRRRUUUURRUUDDDLLLLLLLLUUUUURRRUUUURRUUURRRUU";
+    std::string testSeq = "UUUUUUUUURR";
     // Paramètres particules
     std::vector<particleStruct> particles;
     
