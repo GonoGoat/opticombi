@@ -9,7 +9,7 @@ int main()
 
     // Paramètres processing
     mapStruct map;
-    map.nom_fichier = "./Maps/Chemin_Anti_Tank.lt4";
+    map.nom_fichier = "./Maps/Anti_Tank.lt4";
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
     std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
@@ -21,24 +21,9 @@ int main()
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
 
-    std::string testSeq = "LLLUURRRUUULLRRUULLUULLLLLLUURRUUUULLUUURRRDDRRDDDDDRRRUUUULLDDLLDDDRRRUUUUUURRRRRRDDDD";
+    std::string testSeq = "ULLUUURRDDDRRRRUUUURRUUDDDLLLLLLLLUUUUURRRUUUURRUUURRRUU";
     // Paramètres particules
     std::vector<particleStruct> particles;
-    particleStruct part;
-    part.Direction_tank = map.Direction_tank;
-    part.matrice_mobile = map.matrice_mobile;
-    part.success = 0;
-    part.Origine_x = map.Origine_x;
-    part.Origine_y = map.Origine_y;
-    part.posX = map.Origine_x;
-    part.posY = map.Origine_y;
-    if (map.Finish_x.size() != 0 && map.Finish_y.size() != 0) {
-        part.Finish_x = map.Finish_x[0];    
-        part.Finish_y = map.Finish_y[0];
-    }
-    part.finish_Output = testSeq; // Temporaire
-
-    particles.push_back(part);
     
     //Paramètres PSO
     psoStruct pso;
@@ -60,6 +45,22 @@ int main()
     // Détection des arrivées et du départ de la carte
     detection(&map);
 
+    // Préparation particules
+    particleStruct part;
+    part.Direction_tank = map.Direction_tank;
+    part.matrice_mobile = map.matrice_mobile;
+    part.success = 0;
+    part.Origine_x = map.Origine_x;
+    part.Origine_y = map.Origine_y;
+    part.posX = map.Origine_x;
+    part.posY = map.Origine_y;
+    if (map.Finish_x.size() != 0 && map.Finish_y.size() != 0) {
+        part.Finish_x = map.Finish_x[0];    
+        part.Finish_y = map.Finish_y[0];
+    }
+    part.finish_Output = testSeq; // Temporaire
+
+    particles.push_back(part);
     /*
     // Paramètres dessin SVG
     svgStruct svg;
