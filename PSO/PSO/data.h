@@ -26,27 +26,28 @@ enum Matrice
 
 };
 
+enum Success {
+    En_vie,
+    Mort,
+    Base_atteinte,
+    Position_non_valide,
+    Passage_chemin
+};
+
 // A splitter avec particleStruct quand parallèle
 struct mapStruct {
     std::string nom_fichier;
-	std::vector<std::vector<int>> matrice_fixe;
-    std::vector<std::vector<int>> matrice_mobile;
+    std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
     int nbr_arrive;
     int nbr_lignes;
     int nbr_colonnes;
-    
+
     // Coordonnées du point de départ du tank sur la carte
-    int Origine_x,Origine_y;
+    int Origine_x, Origine_y;
 
-    // Coordonnées de travail
-    int posX,posY;
-    
     // Ensemble des coordonnées d'arrivées possibles sur la carte
-    std::vector<int> Finish_x, Finish_y; 
+    std::vector<int> Finish_x, Finish_y;
     char Direction_tank;
-
-    // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
-    int success;
 };
 
 struct outputStruct {
@@ -54,20 +55,20 @@ struct outputStruct {
     std::string name;
 
     // Nom du solver
-    std::string solver; 
+    std::string solver;
 
     // Séquence 
     std::string sequence;
 
     // Nom du fichier de sortie (extension .lt4)
-    std::string output_file; 
+    std::string output_file;
 };
 
 struct psoStruct {
+    // Nombre de positions initalisées
     int nbr_particule;
 
-    // Nombre de positions initalisées
-    int nbr_instance;
+    // Nombre de trajets uniques
     int nbr_thread;
 
     // Durée de vie d'une particule en nombre d'itération
@@ -76,7 +77,7 @@ struct psoStruct {
 
 struct svgStruct {
     // Historique des coordonnées
-    std::vector<int> trajX, trajY; 
+    std::vector<int> trajX, trajY;
 
     // Etat du tank
     int trajSuccess;
@@ -102,6 +103,32 @@ struct moveStruct {
 // success
 // finish_X/Y
 // dir
+
+struct particleStruct {
+    std::vector<std::vector<int>> matrice_mobile;
+
+    // Position de départ de la particule
+    int Origine_x, Origine_y;
+
+    // Coordonnées de l'arrivée que la particule essaie de joindre
+    int Finish_x, Finish_y;
+    char Direction_tank;
+
+    // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
+    int success;
+
+    // Coordonnées de travail
+    int posX, posY;
+    std::string Output, finish_Output;
+
+    // Algorithmie
+    float vitX, vitY;
+    int p_bestX, p_bestY;
+    int score_p_best;
+    int score;
+    bool become_finish;
+    float distance_finish;
+};
 
 extern std::unordered_map<std::string, Matrice> conversionToEnum;
 
