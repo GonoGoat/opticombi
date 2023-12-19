@@ -1,13 +1,8 @@
-﻿  Data.cpp
-  Detection_Start_End.cpp
-  LTRcreator.cpp
-C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\LTRcreator.cpp(10,48): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-  Logique_Jeu.cpp
+﻿  Logique_Jeu.cpp
 C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Logique_Jeu.cpp(24,10): warning C4101: 'dir' : variable locale non référencée
 C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Logique_Jeu.cpp(57,9): warning C4101: 'deplacement_x' : variable locale non référencée
 C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Logique_Jeu.cpp(57,24): warning C4101: 'deplacement_y' : variable locale non référencée
   Main.cpp
 C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Main.cpp(35,15): warning C4101: 'pso' : variable locale non référencée
-  Parseur.cpp
   Génération de code en cours...
   PSO.vcxproj -> C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\x64\Debug\PSO.exe

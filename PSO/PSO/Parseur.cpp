@@ -66,7 +66,7 @@ void parsage(mapStruct* mapParams) {
                     }
                     else if (!motActuel.empty()) {
                         type_case = conversion(motActuel);
-                        if ((type_case >= Movable_Block && type_case <= Mirro_DL) || (type_case >= Rotative_Mirror_UR && type_case <= Rotative_Mirror_DL) || type_case == Thin_Ice) {
+                        if ((type_case >= Movable_Block && type_case <= Mirror_DL) || (type_case >= Rotative_Mirror_UR && type_case <= Rotative_Mirror_DL) || type_case == Thin_Ice) {
                             row_mobile.push_back(type_case);
                             row.push_back(Dirt);
                         }
@@ -82,7 +82,7 @@ void parsage(mapStruct* mapParams) {
 
                 if (!motActuel.empty()) {
                     type_case = conversion(motActuel);
-                    if ((type_case >= Movable_Block && type_case <= Mirro_DL) || (type_case >= Rotative_Mirror_UR && type_case <= Rotative_Mirror_DL) || type_case == Thin_Ice) {
+                    if ((type_case >= Movable_Block && type_case <= Mirror_DL) || (type_case >= Rotative_Mirror_UR && type_case <= Rotative_Mirror_DL) || type_case == Thin_Ice) {
                         row_mobile.push_back(type_case);
                         row.push_back(Dirt);
                     }

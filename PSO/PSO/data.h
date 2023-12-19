@@ -15,7 +15,8 @@ enum Matrice
     Movable_Block,
     Bricks,
     Anti_Tank_U, Anti_Tank_D, Anti_Tank_R, Anti_Tank_L,
-    Mirror_UR, Mirror_UL, Mirror_DR, Mirro_DL,
+    Anti_Tank_Dead_U, Anti_Tank_Dead_D, Anti_Tank_Dead_R, Anti_Tank_Dead_L,
+    Mirror_UR, Mirror_UL, Mirror_DR, Mirror_DL,
     Way_U, Way_D, Way_R, Way_L,
     Crystal_Block,
     Rotative_Mirror_UR, Rotative_Mirror_UL, Rotative_Mirror_DR, Rotative_Mirror_DL,
@@ -131,5 +132,16 @@ struct particleStruct {
 };
 
 extern std::unordered_map<std::string, Matrice> conversionToEnum;
+
+struct mobileStruct {
+    // Position envisagée
+    int depl_x, depl_y;
+
+    // Position origine bloc
+    int Origine_x, Origine_y;
+
+    // Sens du laser
+    char dir;
+};
 
 #endif

@@ -17,3 +17,5 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
 void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams);
 void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams);
 void inverserDirection(char* direction);
+void verification_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, particleStruct* partParams);
+void portail_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, particleStruct* partParams);
