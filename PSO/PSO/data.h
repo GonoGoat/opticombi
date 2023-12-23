@@ -32,7 +32,8 @@ enum Success {
     Mort,
     Base_atteinte,
     Position_non_valide,
-    Passage_chemin
+    Passage_chemin,
+    Portail_bloque
 };
 
 // A splitter avec particleStruct quand parallèle

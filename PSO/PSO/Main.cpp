@@ -14,7 +14,7 @@ int main(int argc, char const* argv[])
         map.nom_fichier = argv[1];
     }
     else {
-        map.nom_fichier = "..\\..\\Bloc_mobile.lt4";
+        map.nom_fichier = "..\\..\\Bloc_mobile_Anti_Tank.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
@@ -27,7 +27,7 @@ int main(int argc, char const* argv[])
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
     output.output_file = "./Output/new.ltr";
 
-    std::string testSeq = "FUUFFFFLLRFFFFFLFFFFFFFLLUFF";
+    std::string testSeq = "UUURR";
     // Paramètres particules
     std::vector<particleStruct> particles;
 
