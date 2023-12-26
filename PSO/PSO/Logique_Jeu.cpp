@@ -55,6 +55,7 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
 
     //Variables pour traiter le déplacement sans le ressortir directement
     int deplacement_x, deplacement_y;
+    partParams->taille_sequence = 0;
     //int taille_sequence = 0;
 
     //Traite la séquence d'entrée
@@ -72,9 +73,6 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
             Deplacement(&(move.dir), &(move.depl_x), &(move.depl_y));
             Verification_deplacement(mapParams, &move, partParams);
             std::cout << "deplacement x : " << partParams->posX << " |deplacement y : " << partParams->posY << std::endl;
-            if (partParams->success != Portail_bloque) {
-                partParams->success = En_vie;
-            }
         }
         //Tir gérer séparemment car une seul instance suffit pour tirer
         else if (dir_actuelle == 'F') {
@@ -82,13 +80,21 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
             move.depl_y = partParams->posY;
             move.dir = partParams->Direction_tank;
             Tir(mapParams, &move, partParams);
-            partParams->success = En_vie;
         }
         //Enregistre les changement de direction du tank sans le faire bouger sur la carte
         else {
             partParams->Direction_tank = dir_actuelle;
         }
-        //taille_sequence++;
+        partParams->taille_sequence++;
+
+        if (partParams->success == Mort) {
+            partParams->posX = move.depl_x;
+            partParams->posY = move.depl_y;
+            break;
+        }
+        else if (partParams->success == Base_atteinte) {
+            break;
+        }
     }
     //Affiche la matrice mobile
     std::cout << "Matrice mobile" << std::endl;
@@ -97,6 +103,14 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
             std::cout << partParams->matrice_mobile[i][j] << " ";
         }
         std::cout << std::endl;
+    }
+    if (partParams->success == Mort) {
+        std::cout << "Taille sequence executee avant la mort : " << partParams->taille_sequence << std::endl;
+        std::cout << "Mort en position x : " << partParams->posX << "| y : " << partParams->posY << std::endl;
+    }
+    else if (partParams->success == Base_atteinte) {
+        std::cout << "Taille sequence executee avant atteindre la base : " << partParams->taille_sequence << std::endl;
+        std::cout << "Base atteinte en position x : " << partParams->posX << "| y : " << partParams->posY << std::endl;
     }
 }
 

@@ -123,6 +123,9 @@ struct particleStruct {
     int posX, posY;
     std::string Output, finish_Output;
 
+    //Taille séquence exécuté
+    int taille_sequence;
+
     // Algorithmie
     float vitX, vitY;
     int p_bestX, p_bestY;
