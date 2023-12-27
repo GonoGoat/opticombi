@@ -56,7 +56,6 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
     //Variables pour traiter le déplacement sans le ressortir directement
     int deplacement_x, deplacement_y;
     partParams->taille_sequence = 0;
-    //int taille_sequence = 0;
 
     //Traite la séquence d'entrée
     moveStruct move;
@@ -72,7 +71,6 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
             // Déplacement qui tente d'être opéré
             Deplacement(&(move.dir), &(move.depl_x), &(move.depl_y));
             Verification_deplacement(mapParams, &move, partParams);
-            std::cout << "deplacement x : " << partParams->posX << " |deplacement y : " << partParams->posY << std::endl;
         }
         //Tir gérer séparemment car une seul instance suffit pour tirer
         else if (dir_actuelle == 'F') {
@@ -95,22 +93,6 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
         else if (partParams->success == Base_atteinte) {
             break;
         }
-    }
-    //Affiche la matrice mobile
-    std::cout << "Matrice mobile" << std::endl;
-    for (int i = 0; i < mapParams->nbr_lignes; i++) {
-        for (int j = 0; j < mapParams->nbr_colonnes; j++) {
-            std::cout << partParams->matrice_mobile[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    if (partParams->success == Mort) {
-        std::cout << "Taille sequence executee avant la mort : " << partParams->taille_sequence << std::endl;
-        std::cout << "Mort en position x : " << partParams->posX << "| y : " << partParams->posY << std::endl;
-    }
-    else if (partParams->success == Base_atteinte) {
-        std::cout << "Taille sequence executee avant atteindre la base : " << partParams->taille_sequence << std::endl;
-        std::cout << "Base atteinte en position x : " << partParams->posX << "| y : " << partParams->posY << std::endl;
     }
 }
 
@@ -149,14 +131,12 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
 
     //Vérification des limites si dépasse pas de mouvement enregistré
     if (moveParams->depl_x > mapParams->nbr_colonnes - 1) {
-        std::cout << "Depassement limite" << std::endl;
         moveParams->depl_x = mapParams->nbr_colonnes - 1;
     }
     else if (moveParams->depl_x < 0) {
         moveParams->depl_x = 0;
     }
     else if (moveParams->depl_y > mapParams->nbr_lignes - 1) {
-        std::cout << "Depassement limite" << std::endl;
         moveParams->depl_y = mapParams->nbr_lignes;
     }
     else if (moveParams->depl_y < 0) {
@@ -175,16 +155,11 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
                 Verification_Anti_Tank(mapParams, moveParams, partParams);
                 break;
             case Base:
-                /**pos_x = moveParams->depl_x;
-                *pos_y = moveParams->depl_y;*/
                 partParams->success = Base_atteinte;
-                std::cout << "Base atteinte" << std::endl;
-
                 Verification_Anti_Tank(mapParams, moveParams, partParams);
                 break;
             case Water:
                 partParams->success = Mort;
-                std::cout << "Mort dans l'eau a la case (" << moveParams->depl_x << "," << moveParams->depl_y << ")" << std::endl;
                 break;
             case Way_U:
             case Way_D:
@@ -205,7 +180,6 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
             case Tunnel_Pink:
             case Tunnel_White:
             case Tunnel_Dark:
-                //std::cout << "Position x : " << moveParams->depl_x << " y : " << moveParams->depl_y << std::endl;
                 Portail(mapParams, moveParams, partParams);
                 //Verification anti tank du côté du portail de sortie
                 Verification_Anti_Tank(mapParams, moveParams, partParams);
@@ -219,7 +193,6 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
             break;
         case Water:
             partParams->success = Mort;
-            std::cout << "Mort dans l'eau a la case (" << moveParams->depl_x << "," << moveParams->depl_y << ")" << std::endl;
             break;
         case Thin_Ice:
             premiere_case = true;
@@ -251,7 +224,6 @@ void Portail(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partP
                 if ((partParams->matrice_mobile[i][j] == Dirt)) {
                     moveParams->depl_y = i;
                     moveParams->depl_x = j;
-                    std::cout << "Sortie au portail situe en " << i << ", " << j << std::endl;
                     partParams->success = En_vie;
                     //sortie du parseur quand trouvé le premier portail correspondant
                     sortie = true;
@@ -259,7 +231,6 @@ void Portail(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partP
                 }
                 else {
                     partParams->success = Portail_bloque;
-                    std::cout << "Portail bouche a la sortie" << std::endl;
                     sortie = true;
                 }
             }
@@ -272,7 +243,6 @@ void Portail(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partP
     //Si pas sorti par un tunnel alors mort.
     if (sortie == false) {
         partParams->success = Mort;
-        std::cout << "Mort car pas de sortie au portail" << std::endl;
     }
 }
 
@@ -294,7 +264,6 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x + i];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x + i];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_R) || (position_mobile >= Anti_Tank_Dead_U && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_L) {
@@ -308,7 +277,6 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x - i];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x - i];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_D) || (position_mobile >= Anti_Tank_L && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_R) {
@@ -323,7 +291,6 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y + i][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y + i][moveParams->depl_x];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Bricks) || (position_mobile >= Anti_Tank_D && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_U) {
@@ -337,11 +304,9 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y - i][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y - i][moveParams->depl_x];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_U) || (position_mobile >= Anti_Tank_R && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << position << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_D) {
-            std::cout << "Tue par Anti Tank Down" << std::endl;
             partParams->success = Mort;
             break;
         }
@@ -349,7 +314,6 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
 
     //Si encore en vie alors deplacement effectué
     if (partParams->success != Mort) {
-        std::cout << "Deplacement OK" << std::endl;
         partParams->posX = moveParams->depl_x;
         partParams->posY = moveParams->depl_y;
     }
@@ -364,7 +328,6 @@ void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, partic
  */
 void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
-    std::cout << "Verification vertical" << std::endl;
     int position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x];
     int position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
     int distance = 1;
@@ -382,20 +345,16 @@ void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* m
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x + i];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x + i];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_R) || (position_mobile >= Anti_Tank_Dead_U && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_L) {
-            std::cout << "Anti Tank Left vert" << std::endl;
             if (i <= distance) {
-                std::cout << "Tue tank" << std::endl;
                 partParams->success = Mort;
             }
             else {
                 dir_anti_tank = 'L';
                 pos_laser_x = moveParams->depl_x + i - distance;
                 pos_laser_y = moveParams->depl_y;
-                std::cout << "Laser x : " << pos_laser_x << " | y : " << pos_laser_y << std::endl;
             }
         }
     }
@@ -404,13 +363,10 @@ void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* m
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x - i];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x - i];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_D) || (position_mobile >= Anti_Tank_L && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_R) {
-            std::cout << "Anti Tank Right vert" << std::endl;
             if (i <= distance) {
-                std::cout << "Tue tank" << std::endl;
                 partParams->success = Mort;
             }
             else {
@@ -426,11 +382,9 @@ void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* m
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y + i][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y + i][moveParams->depl_x];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Bricks) || (position_mobile >= Anti_Tank_D && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_U) {
-            std::cout << "Anti Tank UP chemin vert" << std::endl;
             dir_anti_tank = 'U';
             pos_laser_x = moveParams->depl_x;
             pos_laser_y = moveParams->depl_y + i - distance;
@@ -441,11 +395,9 @@ void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* m
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y - i][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y - i][moveParams->depl_x];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_U) || (position_mobile >= Anti_Tank_R && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << position << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_D) {
-            std::cout << "Anti Tank Down chemin vert" << std::endl;
             dir_anti_tank = 'D';
             pos_laser_x = moveParams->depl_x;
             pos_laser_y = moveParams->depl_y - i + distance;
@@ -462,7 +414,6 @@ void Verification_Anti_Tank_parcour_vertical(mapStruct* mapParams, moveStruct* m
  */
 void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
-    std::cout << "Verification horizontal" << std::endl;
     int position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x];
     int position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
     int distance = 1;
@@ -481,15 +432,12 @@ void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct*
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x + i];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x + i];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_R) || (position_mobile >= Anti_Tank_Dead_U && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_L) {
-            std::cout << "Anti Tank Left horiz" << std::endl;
             dir_anti_tank = 'L';
             pos_laser_x = moveParams->depl_x + i - distance;
             pos_laser_y = moveParams->depl_y;
-            //partParams->success = Mort;
         }
     }
     //A gauche de la position en cours
@@ -497,15 +445,12 @@ void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct*
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x - i];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x - i];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_D) || (position_mobile >= Anti_Tank_L && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_R) {
-            std::cout << "Anti Tank Right horiz" << std::endl;
             dir_anti_tank = 'R';
             pos_laser_x = moveParams->depl_x - i + distance;
             pos_laser_y = moveParams->depl_y;
-            //partParams->success = Mort;
         }
     }
 
@@ -515,13 +460,10 @@ void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct*
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y + i][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y + i][moveParams->depl_x];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Bricks) || (position_mobile >= Anti_Tank_D && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << Matrice(position) << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_U) {
-            std::cout << "Anti Tank UP horiz" << std::endl;
             if (i <= distance) {
-                std::cout << "Tue tank" << std::endl;
                 partParams->success = Mort;
             }
             else {
@@ -537,13 +479,10 @@ void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct*
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y - i][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y - i][moveParams->depl_x];
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Anti_Tank_U) || (position_mobile >= Anti_Tank_R && position_mobile <= Rotative_Mirror_DL)) {
-            //std::cout << "Quitte car " << position << std::endl;
             break;
         }
         else if (position_mobile == Anti_Tank_D) {
-            std::cout << "Anti Tank Down horiz" << std::endl;
             if (i <= distance) {
-                std::cout << "Tue tank" << std::endl;
                 partParams->success = Mort;
             }
             else {
@@ -565,8 +504,6 @@ void Verification_Anti_Tank_parcour_horizontal(mapStruct* mapParams, moveStruct*
 void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
     bool disparaitre = false;
-    /*int pos_tank_x = moveParams->depl_x;
-    int pos_tank_y = moveParams->depl_y;*/
 
     mobileStruct bloc_mobile;
     bloc_mobile.dir = moveParams->dir;
@@ -575,31 +512,25 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
     
     do
     {
-        //std::cout << "Laser creation x : " << bloc_mobile.depl_x << " y : " << bloc_mobile.depl_y << std::endl;
         //Deplacement laser en fonction direction
         Deplacement(&(bloc_mobile.dir), &(bloc_mobile.depl_x), &(bloc_mobile.depl_y));
-        //std::cout << "Laser avant deplacement bloc x : " << bloc_mobile.depl_x << " y : " << bloc_mobile.depl_y << std::endl;
 
         //Vérification des limites si dépasse le laser disparait
         if (bloc_mobile.depl_x > mapParams->nbr_colonnes - 1 || bloc_mobile.depl_x < 0 || bloc_mobile.depl_y > mapParams->nbr_lignes - 1 || bloc_mobile.depl_y < 0) {
-            //std::cout << "Dans le if" << std::endl;
             disparaitre = true;
         }
         else if (bloc_mobile.depl_x == moveParams->depl_x && bloc_mobile.depl_y == moveParams->depl_y) {
             partParams->success = Mort;
             disparaitre = true;
-            std::cout << "Auto Kill" << std::endl;
         }
         else if (mapParams->matrice_fixe[bloc_mobile.depl_y][bloc_mobile.depl_x] == Sollid_Block) {
             disparaitre = true;
-            std::cout << "Tir arrete Sollid_Block" << std::endl;
         }
         //Vérifie une position valide
         else {
             switch (partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x])
             {
             case Mirror_DR:
-                std::cout << "Miroir DR" << std::endl;
                 if (bloc_mobile.dir == 'U') {
                     bloc_mobile.dir = 'R';
                 }
@@ -607,13 +538,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'D';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     disparaitre = true;
                 }
                 break;
             case Rotative_Mirror_DR:
-                std::cout << "Miroir Tournant DR" << std::endl;
                 if (bloc_mobile.dir == 'U') {
                     bloc_mobile.dir = 'R';
                 }
@@ -621,13 +550,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'D';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Rotative_Mirror_DL;
                     disparaitre = true;
                 }
                 break;
             case Mirror_DL:
-                std::cout << "Miroir DL" << std::endl;
                 if (bloc_mobile.dir == 'U') {
                     bloc_mobile.dir = 'L';
                 }
@@ -635,13 +562,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'D';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     disparaitre = true;
                 }
                 break;
             case Rotative_Mirror_DL:
-                std::cout << "Miroir Tournant DL" << std::endl;
                 if (bloc_mobile.dir == 'U') {
                     bloc_mobile.dir = 'L';
                 }
@@ -649,13 +574,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'D';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Rotative_Mirror_UL;
                     disparaitre = true;
                 }
                 break;
             case Mirror_UL:
-                std::cout << "Miroir UL" << std::endl;
                 if (bloc_mobile.dir == 'D') {
                     bloc_mobile.dir = 'L';
                 }
@@ -663,13 +586,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'U';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     disparaitre = true;
                 }
                 break;
             case Rotative_Mirror_UL:
-                std::cout << "Miroir Tournant UL" << std::endl;
                 if (bloc_mobile.dir == 'D') {
                     bloc_mobile.dir = 'L';
                 }
@@ -677,13 +598,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'U';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Rotative_Mirror_UR;
                     disparaitre = true;
                 }
                 break;
             case Mirror_UR:
-                std::cout << "Miroir UR" << std::endl;
                 if (bloc_mobile.dir == 'D') {
                     bloc_mobile.dir = 'R';
                 }
@@ -691,13 +610,11 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'U';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     disparaitre = true;
                 }
                 break;
             case Rotative_Mirror_UR:
-                std::cout << "Miroir Tournant UR" << std::endl;
                 if (bloc_mobile.dir == 'D') {
                     bloc_mobile.dir = 'R';
                 }
@@ -705,24 +622,20 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
                     bloc_mobile.dir = 'U';
                 }
                 else {
-                    std::cout << "Tir arrete" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Rotative_Mirror_DR;
                     disparaitre = true;
                 }
                 break;
             case Bricks:
                 partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Dirt;
-                std::cout << "Tir arrete Bricks" << std::endl;
                 disparaitre = true;
                 break;
             case Anti_Tank_U:
             case Anti_Tank_Dead_U:
                 if (bloc_mobile.dir == 'D') {
-                    std::cout << "Anti tank Up mort" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Anti_Tank_Dead_U;
                 }
                 else {
-                    std::cout << "Tir arrete Anti tank Up" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                 }
                 disparaitre = true;
@@ -730,11 +643,9 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
             case Anti_Tank_D:
             case Anti_Tank_Dead_D :
                 if (bloc_mobile.dir == 'U') {
-                    std::cout << "Anti tank Down mort" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Anti_Tank_Dead_D;
                 }
                 else {
-                    std::cout << "Tir arrete Anti tank Down" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                 }
                 disparaitre = true;
@@ -742,11 +653,9 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
             case Anti_Tank_L:
             case Anti_Tank_Dead_L:
                 if (bloc_mobile.dir == 'R') {
-                    std::cout << "Anti tank Left mort" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Anti_Tank_Dead_L;
                 }
                 else {
-                    std::cout << "Tir arrete Anti tank Left" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                 }
                 disparaitre = true;
@@ -754,31 +663,25 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
             case Anti_Tank_R:
             case Anti_Tank_Dead_R:
                 if (bloc_mobile.dir == 'L') {
-                    std::cout << "Anti tank Right mort" << std::endl;
                     partParams->matrice_mobile[bloc_mobile.depl_y][bloc_mobile.depl_x] = Anti_Tank_Dead_R;
                 }
                 else {
-                    std::cout << "Tir arrete Anti tank Right" << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                 }
                 disparaitre = true;
                 break;
             case Movable_Block:
-                std::cout << "Tir arrete Bloc mobile" << std::endl;
-                std::cout << "Laser avant deplacement bloc x : " << bloc_mobile.depl_x << " y : " << bloc_mobile.depl_y << std::endl;
                 verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                 disparaitre = true;
                 break;
             default:
-                //std::cout << "Pas au bonne endroit" << std::endl;
                 break;
             }
         }
 
     } while (disparaitre == false);
-    //std::cout << "Sortie de While et success = " << partParams->success << std::endl;
+
     if (partParams->success == Portail_bloque) {
-        //std::cout << "Condition portail bloque " << std::endl;
         Portail(mapParams, moveParams, partParams);
     }
     Verification_Anti_Tank(mapParams, moveParams, partParams);
@@ -793,7 +696,6 @@ void Tir(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParam
  */
 void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
 
-    std::cout << "Bonjour je suis la fonction Glace!Direction " << moveParams->dir << std::endl;
     int position_fixe;
     int position_mobile;
 
@@ -817,21 +719,18 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
         //Verifie si tank bloque si c'est le cas, il est juste arrêté et sa position est valide
         if ((moveParams->depl_x <= 0 && moveParams->dir == 'L') || (moveParams->depl_x >= mapParams->nbr_colonnes - 1 && moveParams->dir == 'R') || (moveParams->depl_y <= 0 && moveParams->dir == 'U') || (moveParams->depl_y >= mapParams->nbr_lignes - 1 && moveParams->dir == 'D')) {
             if (partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
-                std::cout << "Limite atteinte et sur Glace fine donc mort" << std::endl;
                 partParams->success = Mort;
                 partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] = Water;
                 break;
             }
             else {
                 partParams->success = Position_non_valide;
-                std::cout << "Limite atteinte" << std::endl;
                 break;
             }
         }
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
         if (moveParams->depl_x < 0 || moveParams->depl_x>mapParams->nbr_colonnes - 1 || moveParams->depl_y < 0 || moveParams->depl_y>mapParams->nbr_lignes - 1 || position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_fixe <= Rotative_Mirror_DL)) {
-            std::cout << "Position non valide" << std::endl;
             partParams->success = Position_non_valide;
             inverserDirection(&(moveParams->dir));
             Deplacement(&(moveParams->dir), &(moveParams->depl_x), &(moveParams->depl_y));
@@ -844,8 +743,6 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
             inverserDirection(&(moveParams->dir));
             break;
         }
-
-        std::cout << "Sur Glace deplacement x : " << moveParams->depl_x << " |deplacement y : " << moveParams->depl_y << std::endl;
     } while (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice && partParams->success != Mort);
 
     if (partParams->success != Mort && partParams->success != Position_non_valide) {
@@ -889,7 +786,6 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
  */
 void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
 
-    std::cout << "Bonjour je suis la fonction Glace fine!Direction " << moveParams->dir << std::endl;
     int position_fixe;
     int position_mobile;
 
@@ -913,7 +809,6 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
         Deplacement(&(moveParams->dir), &(moveParams->depl_x), &(moveParams->depl_y));
 
         if ((moveParams->depl_x <= 0 && moveParams->dir == 'L') || (moveParams->depl_x >= mapParams->nbr_colonnes - 1 && moveParams->dir == 'R') || (moveParams->depl_y <= 0 && moveParams->dir == 'U') || (moveParams->depl_y >= mapParams->nbr_lignes - 1 && moveParams->dir == 'D')) {
-            std::cout << "Position non valide (limite), donc mort dans l'eau" << std::endl;
             partParams->success = Mort;
             partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] = Water;
             break;
@@ -925,13 +820,11 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
         //Verifie si le tank est bloqué dans son mouvement, si c'est le cas il est mort car la glace fine c'est transformé en eau et la séquence est invalide
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Rotative_Mirror_DL) || (position_mobile == Way_U && moveParams->dir == 'D')
             || (position_fixe == Way_D && moveParams->dir == 'U') || (position_fixe == Way_L && moveParams->dir == 'R') || (position_fixe == Way_R && moveParams->dir == 'L')) {
-            std::cout << "Position non valide, donc mort dans l'eau" << std::endl;
             partParams->success = Mort;
             partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] = Water;
             break;
         }
 
-        std::cout << "Sur Glace fine deplacement x : " << moveParams->depl_x << " |deplacement y : " << moveParams->depl_y << std::endl;
     } while (partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice);
 
     if (partParams->success != Mort && partParams->success != Position_non_valide) {
@@ -972,8 +865,6 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
     int position_fixe;
     int position_mobile;
 
-    std::cout << "Bonjour je suis la fonction Path!Direction " << moveParams->dir << std::endl;
-
     do {
         switch (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x])
         {
@@ -1012,14 +903,12 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
         //Verifie si tank bloque si c'est le cas, il est juste arrêté et sa position est valide
         if ((moveParams->depl_x <= 0 && dir_way == 'L') || (moveParams->depl_x >= mapParams->nbr_colonnes - 1 && dir_way == 'R') || (moveParams->depl_y <= 0 && dir_way == 'U') || (moveParams->depl_y >= mapParams->nbr_lignes - 1 && dir_way == 'D')) {
             if (partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
-                std::cout << "Limite atteinte et sur Glace fine donc mort" << std::endl;
                 partParams->success = Mort;
                 partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] = Water;
                 break;
             }
             else {
                 partParams->success = Position_non_valide;
-                std::cout << "Limite atteinte" << std::endl;
                 break;
             }
         }
@@ -1028,14 +917,11 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
         
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Rotative_Mirror_DL)) {
-            std::cout << "Position non valide" << std::endl;
             partParams->success = Position_non_valide;
             inverserDirection(&dir_way);
             Deplacement(&dir_way, &(moveParams->depl_x), &(moveParams->depl_y));
             break;
         }
-
-        std::cout << "Sur " << mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] << " deplacement x : " << moveParams->depl_x << " | deplacement y : " << moveParams->depl_y << std::endl;
     } while (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] >= Way_U && mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] <= Way_L);  //Matrice.path --> 15--18
 
     if (partParams->success != Mort && partParams->success != Position_non_valide) {
@@ -1076,8 +962,6 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
  */
 void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams)
 {
-    std::cout << "Trajectoire laser Anti Tank" << std::endl;
-
     mobileStruct bloc_mobile;
 
     do
@@ -1085,10 +969,7 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
         //Deplacement laser en fonction direction
         Deplacement(&dir_anti_tank, &pos_laser_x, &pos_laser_y);
 
-        std::cout << "Laser x : " << pos_laser_x << " | y : " << pos_laser_y << std::endl;
-
         if (pos_laser_x == moveParams->depl_x && pos_laser_y == moveParams->depl_y) {
-            std::cout << "Tank tue" << std::endl;
             partParams->success = Mort;
             dir_anti_tank = 'X';
             break;
@@ -1101,7 +982,6 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
             Deplacement(&dir_anti_tank, &pos_laser_x, &pos_laser_y);
             if (mapParams->matrice_fixe[pos_laser_y][pos_laser_x] == Sollid_Block) {
                 dir_anti_tank = 'X';
-                std::cout << "Tir arrete Sollid_Block" << std::endl;
             }
             //Vérifie une position valide
             else {
@@ -1111,7 +991,6 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                 switch (partParams->matrice_mobile[pos_laser_y][pos_laser_x])
                 {
                 case Mirror_DR:
-                    std::cout << "Miroir DR" << std::endl;
                     if (dir_anti_tank == 'U') {
                         dir_anti_tank = 'R';
                     }
@@ -1119,13 +998,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'D';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Rotative_Mirror_DR:
-                    std::cout << "Miroir Tournant DR" << std::endl;
                     if (dir_anti_tank == 'U') {
                         dir_anti_tank = 'R';
                     }
@@ -1133,13 +1010,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'D';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Rotative_Mirror_DL;
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Mirror_DL:
-                    std::cout << "Miroir DL" << std::endl;
                     if (dir_anti_tank == 'U') {
                         dir_anti_tank = 'L';
                     }
@@ -1147,13 +1022,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'D';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Rotative_Mirror_DL:
-                    std::cout << "Miroir Tournant DL" << std::endl;
                     if (dir_anti_tank == 'U') {
                         dir_anti_tank = 'L';
                     }
@@ -1161,13 +1034,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'D';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Rotative_Mirror_UL;
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Mirror_UL:
-                    std::cout << "Miroir UL" << std::endl;
                     if (dir_anti_tank == 'D') {
                         dir_anti_tank = 'L';
                     }
@@ -1175,13 +1046,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'U';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Rotative_Mirror_UL:
-                    std::cout << "Miroir Tournant UL" << std::endl;
                     if (dir_anti_tank == 'D') {
                         dir_anti_tank = 'L';
                     }
@@ -1189,13 +1058,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'U';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Rotative_Mirror_UR;
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Mirror_UR:
-                    std::cout << "Miroir UR" << std::endl;
                     if (dir_anti_tank == 'D') {
                         dir_anti_tank = 'R';
                     }
@@ -1203,13 +1070,11 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'U';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Rotative_Mirror_UR:
-                    std::cout << "Miroir Tournant UR" << std::endl;
                     if (dir_anti_tank == 'D') {
                         dir_anti_tank = 'R';
                     }
@@ -1217,24 +1082,20 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                         dir_anti_tank = 'U';
                     }
                     else {
-                        std::cout << "Tir arrete" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Rotative_Mirror_DR;
                         dir_anti_tank = 'X';
                     }
                     break;
                 case Bricks:
                     partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Dirt;
-                    std::cout << "Tir arrete Bricks" << std::endl;
                     dir_anti_tank = 'X';
                     break;
                 case Anti_Tank_U:
                 case Anti_Tank_Dead_U:
                     if (dir_anti_tank == 'D') {
-                        std::cout << "Anti tank Up mort" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Anti_Tank_Dead_U;
                     }
                     else {
-                        std::cout << "Tir arrete Anti tank Up" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     }
                     dir_anti_tank = 'X';
@@ -1242,11 +1103,9 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                 case Anti_Tank_D:
                 case Anti_Tank_Dead_D:
                     if (dir_anti_tank == 'U') {
-                        std::cout << "Anti tank Down mort" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Anti_Tank_Dead_D;
                     }
                     else {
-                        std::cout << "Tir arrete Anti tank Down" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     }
                     dir_anti_tank = 'X';
@@ -1254,11 +1113,9 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                 case Anti_Tank_L:
                 case Anti_Tank_Dead_L:
                     if (dir_anti_tank == 'R') {
-                        std::cout << "Anti tank Left mort" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Anti_Tank_Dead_L;
                     }
                     else {
-                        std::cout << "Tir arrete Anti tank Left" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     }
                     dir_anti_tank = 'X';
@@ -1266,23 +1123,18 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
                 case Anti_Tank_R:
                 case Anti_Tank_Dead_R:
                     if (dir_anti_tank == 'L') {
-                        std::cout << "Anti tank Right mort" << std::endl;
                         partParams->matrice_mobile[pos_laser_y][pos_laser_x] = Anti_Tank_Dead_R;
                     }
                     else {
-                        std::cout << "Tir arrete Anti tank Right" << std::endl;
                         verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     }
                     dir_anti_tank = 'X';
                     break;
                 case Movable_Block:
-                    std::cout << "Tir arrete Bloc mobile" << std::endl;
-                    std::cout << "Laser avant deplacement bloc x : " << pos_laser_x << " y : " << pos_laser_y << std::endl;
                     verification_Bloc_Mobile(mapParams, &bloc_mobile, partParams);
                     dir_anti_tank = 'X';
                     break;
                 default:
-                    //std::cout << "Pas au bonne endroit" << std::endl;
                     break;
                 }
             }
@@ -1290,11 +1142,6 @@ void tir_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams, particleStruct*
             Deplacement(&dir_anti_tank, &pos_laser_x, &pos_laser_y);
             inverserDirection(&dir_anti_tank);
         }
-
-        //Vérification des limites si dépasse le laser disparait
-        /*if (pos_laser_x == 15 || pos_laser_x == 0 || pos_laser_y == 15 || pos_laser_y == 0) {
-            dir_anti_tank = 'X';
-        }*/
 
         if (dir_anti_tank == 'X') {
             premiere_case = true;
@@ -1338,29 +1185,21 @@ void verification_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, 
     mobileParams->Origine_x = mobileParams->depl_x;
     Deplacement(&(mobileParams->dir), &(mobileParams->depl_x), &(mobileParams->depl_y));
 
-    //std::cout << "Verification deplacement d'un bloc" << std::endl;
-    //std::cout << "Laser x : " << mobileParams->depl_x << " | y : " << mobileParams->depl_y << std::endl;
-
     //Vérification des limites si dépasse pas de mouvement enregistré
     if (mobileParams->depl_x > mapParams->nbr_colonnes - 1) {
-        std::cout << "Depassement limite 1" << std::endl;
         mobileParams->depl_x = mapParams->nbr_colonnes - 1;
     }
     else if (mobileParams->depl_x < 0) {
-        std::cout << "Depassement limite 2" << std::endl;
         mobileParams->depl_x = 0;
     }
     else if (mobileParams->depl_y > mapParams->nbr_lignes - 1) {
-        std::cout << "Depassement limite 3" << std::endl;
         mobileParams->depl_y = mapParams->nbr_lignes;
     }
     else if (mobileParams->depl_y < 0) {
-        std::cout << "Depassement limite 4" << std::endl;
         mobileParams->depl_y = 0;
     }
     //Vérifie une position valide
     else {
-        //std::cout << "Dans le else du switch" << std::endl;
         switch (partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x])
         {
         case Dirt:
@@ -1373,25 +1212,13 @@ void verification_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, 
             case Way_D:
             case Way_R:
             case Way_L:
-                std::cout << "Deplacement Bloc mobile OK" << std::endl;
                 partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x] = partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x];
                 partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
                 premiere_case = true;
-                /*if (premiere_case) {
-                    partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
-                }
-                else {
-                    partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Water;
-                    premiere_case = true;
-                }*/
                 break;
             case Water:
                 if (partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] == Movable_Block) {
                     partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x] = Bridge;
-                    std::cout << "Devenu un pont en (" << mobileParams->depl_x << "," << mobileParams->depl_y << ")" << std::endl;
-                }
-                else {
-                    std::cout << "Mort dans l'eau a la case (" << mobileParams->depl_x << "," << mobileParams->depl_y << ")" << std::endl;
                 }
                 partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
                 break;
@@ -1408,7 +1235,6 @@ void verification_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, 
             case Tunnel_Pink:
             case Tunnel_White:
             case Tunnel_Dark:
-                //std::cout << "OK j'essaie la teleportation" << std::endl;
                 portail_Bloc_Mobile(mapParams, mobileParams, partParams);
                 break;
             default:
@@ -1416,31 +1242,18 @@ void verification_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, 
             }
             break;
         case Bridge:
-            std::cout << "Deplacement Bloc mobile OK" << std::endl;
             partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x] = partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x];
             partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
             premiere_case = true;
-            /*if (premiere_case) {
-                partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
-            }
-            else {
-                partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Water;
-                premiere_case = true;
-            }*/
             break;
         case Water:
             if (partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] == Movable_Block) {
                 partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x] = Bridge;
-                std::cout << "Devenu un pont en (" << mobileParams->depl_x << "," << mobileParams->depl_y << ")" << std::endl;
-            }
-            else {
-                std::cout << "Mort dans l'eau a la case (" << mobileParams->depl_x << "," << mobileParams->depl_y << ")" << std::endl;
             }
             partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
             break;
 
         case Thin_Ice:
-            std::cout << "Glace fine" << std::endl;
             partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x] = partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x];
             partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
             if (premiere_case) {
@@ -1450,13 +1263,10 @@ void verification_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, 
             else {
                 partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Water;
             }
-            //Deplacement(&(mobileParams->dir), &(mobileParams->depl_x), &(mobileParams->depl_y));
             verification_Bloc_Mobile(mapParams, mobileParams, partParams);
             partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Water;
-            //partParams->matrice_mobile[mobileParams->depl_y][mobileParams->depl_x] = Water;
             break;
         default:
-            //std::cout << "Mince pas detect le bon truc" << std::endl;
             break;
         }
     }
@@ -1481,9 +1291,6 @@ void portail_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, parti
                 if ((partParams->matrice_mobile[i][j] == Dirt)) {
                     partParams->matrice_mobile[i][j] = partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x];
                     partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
-                    /*mobileParams->depl_y = i;
-                    mobileParams->depl_x = j;*/
-                    std::cout << "Bloc mobile sortie au portail situe en " << i << ", " << j << std::endl;
                 }
                 //sortie du parseur quand trouvé le premier portail correspondant
                 sortie = true;
@@ -1497,7 +1304,6 @@ void portail_Bloc_Mobile(mapStruct* mapParams, mobileStruct* mobileParams, parti
     }
     //Si pas sorti par un tunnel alors mort.
     if (sortie == false) {
-        std::cout << "Trou noir" << std::endl;
         partParams->matrice_mobile[mobileParams->Origine_y][mobileParams->Origine_x] = Dirt;
     }
 }
