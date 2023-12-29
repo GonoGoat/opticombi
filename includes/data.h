@@ -104,14 +104,14 @@ struct particleStruct {
 
     // Coordonnées de l'arrivée que la particule essaie de joindre
     int Finish_x, Finish_y;
-    char Direction_tank;
+    char Direction_tank, Direction_original_tank;
 
     // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
     int success;
 
     // Coordonnées de travail
     int posX,posY;
-    std::string Output, finish_Output;
+    std::string Output;
 
     // Algorithmie
     float vitX, vitY;

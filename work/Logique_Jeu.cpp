@@ -25,11 +25,11 @@ void getPositionsOfSequence (mapStruct* mapParams, svgStruct* svgParams, outputS
     particleStruct part;
     
     // Jusque dernier caractère de séquence
-    for(int i = 0;i<partParams->finish_Output.size();i++) {
+    for(int i = 0;i<partParams->Output.size();i++) {
 
         // Extraction de la séquence à jouer
         part = *partParams;
-        part.finish_Output = partParams->finish_Output.substr(0,i+1);
+        part.Output = partParams->Output.substr(0,i+1);
 
         // Remise à zéro
         part.Direction_tank = 'U';
@@ -59,7 +59,7 @@ void Engine(mapStruct* mapParams,  particleStruct* partParams) {
 
     //Traite la séquence d'entrée
     moveStruct move;
-    for (char dir_actuelle : partParams->finish_Output)
+    for (char dir_actuelle : partParams->Output)
     {
         //Logique de fonctionnement du jeu : 2 direction identiques pour effectuer le déplacement
         if (dir_actuelle == partParams->Direction_tank) {
