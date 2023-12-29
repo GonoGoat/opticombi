@@ -21,6 +21,10 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 	bool found_finish = false;
 	std::vector<std::string> finish_Output(*nbre_thread / *nbr_particule);
 	int succes;
+	
+	//Threads pour la parralélisation
+	std::thread* thread;
+	std::vector<std::thread*> threads;
 
 	n = *nbre_thread / *nbr_particule;
 	for (int i = 0; i < n; i++) {
@@ -146,10 +150,23 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 				directionTank[i] = directionOriginalTank[i];
 				posX_final[i] = posX[i];
 				posY_final[i] = posY[i];
-				Engine(matrice, Output[i], &posX_final[i], &posY_final[i], &directionTank[i], &succes);
+				//Engine(matrice, Output[i], &posX_final[i], &posY_final[i], &directionTank[i], &succes);
+				//Creation de threads pour chaque particules
+				thread = new std::thread(Engine, matrice, Output[i], &posX_final[i], &posY_final[i], &directionTank[i], &succes);
+				threads.push_back(thread);
 				//std::cout << "vitX = " << vitX[i] << "omega = " << omega << "c1 = " << c1 << "random1 = " << random_1 << "pBestX = " << p_bestX[i] << "posXfin = " << posX_final[i] << "c2 = " << c2 << "random2 = " << random_2 << "g_bestX" << g_bestX << std::endl;
 			}
 		}
+		//Attente les threads ont finis
+		for (int i = 0; i < threads.size(); i++) {
+			threads[i]->join();
+		}
+
+		for (int i = 0; i < threads.size(); i++) {
+			delete threads[i];
+		}
+
+		threads.resize(0);
 
 		std::cout << "Iteration " << nbr_iteration_t << std::endl;
 		std::cout << "Nombre de particules : " << *nbre_thread << std::endl;
