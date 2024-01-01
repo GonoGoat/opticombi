@@ -50,6 +50,9 @@ void getPositionsOfSequence(mapStruct* mapParams, svgStruct* svgParams, outputSt
  *
  * @param mapParams Les paramètres de la carte
  * @param partParams Les paramères de la particule
+ * 
+ * Donne la taille de la séquence exécutée. En cas de mort, la dernière séquence ayant amenée à la mort est comptabilisée.
+ * La position finale est toujours la position provenant de la dernière séquence exécutée (En cas de mort, c'est la case où nous sommes mort).
  */
 void Engine(mapStruct* mapParams, particleStruct* partParams) {
 
