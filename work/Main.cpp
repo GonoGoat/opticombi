@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
         map.nom_fichier = argv[1];
     }
     else {
-        map.nom_fichier = "./Maps/Beginner-I.lt4";
+        map.nom_fichier = "./Maps/Chemin_Anti_Tank.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
@@ -34,13 +34,13 @@ int main(int argc, char const *argv[])
     //Paramètres PSO
     psoStruct pso;
 
-    /*
+    
     std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
     std::cin >> pso.nbr_particule;
 
     std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
     std::cin >> pso.nbr_iteration_max;
-    */
+    
     
     // Parsage de la carte
     parsage(&map);

@@ -1,42 +1,42 @@
 #include "Algo_PSO.h"
 
-std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, int* nbr_iteration_max, int* Origine_x, int* Origine_y, std::vector<int>* Finish_x, std::vector<int>* Finish_y, int* nbr_particule) {
-	std::vector<int> posX(*nbre_thread); std::vector<int> posY(*nbre_thread);
-	std::vector<int> posX_final(*nbre_thread); std::vector<int> posY_final(*nbre_thread);
-	std::vector<float> vitX(*nbre_thread); std::vector<float> vitY(*nbre_thread);
-	std::vector<int> p_bestX(*nbre_thread); std::vector<int> p_bestY(*nbre_thread);
-	std::vector<int> score_p_best(*nbre_thread);
-	std::vector<int> g_bestX(*nbre_thread / *nbr_particule); std::vector<int> g_bestY(*nbre_thread / *nbr_particule);
-	std::vector<int> score_g_best(*nbre_thread / *nbr_particule);
+std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
+	std::vector<int> posX(psoParams->nbr_thread); std::vector<int> posY(psoParams->nbr_thread);
+	std::vector<int> posX_final(psoParams->nbr_thread); std::vector<int> posY_final(psoParams->nbr_thread);
+	std::vector<float> vitX(psoParams->nbr_thread); std::vector<float> vitY(psoParams->nbr_thread);
+	std::vector<int> p_bestX(psoParams->nbr_thread); std::vector<int> p_bestY(psoParams->nbr_thread);
+	std::vector<int> score_p_best(psoParams->nbr_thread);
+	std::vector<int> g_bestX(psoParams->nbr_thread / psoParams->nbr_particule); std::vector<int> g_bestY(psoParams->nbr_thread / psoParams->nbr_particule);
+	std::vector<int> score_g_best(psoParams->nbr_thread / psoParams->nbr_particule);
 	int n1 = 150;int n2 = 2;
 	float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
-	std::vector<float> distance_finish(*nbre_thread);
-	std::vector<int> score(*nbre_thread);
-	std::vector<char> directionTank(*nbre_thread);
-	std::vector<char> directionOriginalTank(*nbre_thread);
-	std::vector<std::string> Output(*nbre_thread);
+	std::vector<float> distance_finish(psoParams->nbr_thread);
+	std::vector<int> score(psoParams->nbr_thread);
+	std::vector<char> directionTank(psoParams->nbr_thread);
+	std::vector<char> directionOriginalTank(psoParams->nbr_thread);
+	std::vector<std::string> Output(psoParams->nbr_thread);
 	int nbr_iteration_t = 0;
 	int n;
-	std::vector<bool> become_finish(*nbre_thread);
+	std::vector<bool> become_finish(psoParams->nbr_thread);
 	bool found_finish = false;
-	std::vector<std::string> finish_Output(*nbre_thread / *nbr_particule);
+	std::vector<std::string> finish_Output(psoParams->nbr_thread / psoParams->nbr_particule);
 	int succes;
 	
 	//Threads pour la parral�lisation
 	std::thread* thread;
 	std::vector<std::thread*> threads;
 
-	n = *nbre_thread / *nbr_particule;
+	n = psoParams->nbr_thread / psoParams->nbr_particule;
 	for (int i = 0; i < n; i++) {
 		score_g_best[i] = -9999;
 		finish_Output[i] = "";
 	}
 
 	n = 0;
-	for (int i = 0; i < *nbre_thread; i++) {
-		if (i == n * *nbr_particule) {
-			posX[i] = *Origine_x;
-			posY[i] = *Origine_y;
+	for (int i = 0; i < psoParams->nbr_thread; i++) {
+		if (i == n * psoParams->nbr_particule) {
+			posX[i] = mapParams->Origine_x;
+			posY[i] = mapParams->Origine_y;
 			directionTank[i] = 'U';
 			n++;
 		}
@@ -59,8 +59,8 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 
 	while (nbr_iteration_t < *nbr_iteration_max) {
 		n = 0;
-		for (int i = 0; i < *nbre_thread; i++) {
-			if (i == (n+1) * *nbr_particule) {
+		for (int i = 0; i < psoParams->nbr_thread; i++) {
+			if (i == (n+1) * psoParams->nbr_particule) {
 				n++;
 			}
 			distance_finish[i] = sqrt((Finish_x[0][n] - posX_final[i]) * (Finish_x[0][n] - posX_final[i]) + (Finish_y[0][n] - posY_final[i]) * (Finish_y[0][n] - posY_final[i]));
@@ -70,7 +70,7 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 				std::cout << "PositionX = " << posX[i] << " PositionY = " << posY[i] << std::endl;
 				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;*/
 
-				*nbre_thread = *nbre_thread + *nbr_particule;
+				psoParams->nbr_thread = psoParams->nbr_thread + psoParams->nbr_particule;
 				Finish_x->push_back(posX[i]);
 				Finish_y->push_back(posY[i]);
 				become_finish[i] = true;
@@ -85,7 +85,7 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 				g_bestX.push_back(0);
 				g_bestY.push_back(0);
 				score_g_best.push_back(-9999);
-				for (int i = 0; i < *nbr_particule; i++) {
+				for (int i = 0; i < psoParams->nbr_particule; i++) {
 					posX.push_back(rand() % 16);
 					posY.push_back(rand() % 16);
 					vitX.push_back(rand() % 16 - 8);
@@ -99,18 +99,18 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 					Output.push_back("");
 					become_finish.push_back(false);
 				}
-				directionTank[*nbre_thread - *nbr_particule] = 'U';
-				posX[*nbre_thread - *nbr_particule] = *Origine_x;
-				posY[*nbre_thread - *nbr_particule] = *Origine_y;
-				for (int j = *nbr_particule; j > 0; j--) {
-					posX_final.push_back(posX[*nbre_thread - j]);
-					posY_final.push_back(posY[*nbre_thread - j]);
-					DeplacementVitesse(&vitX[*nbre_thread - j], &vitY[*nbre_thread - j], &directionTank[*nbre_thread - j], &Output[*nbre_thread - j]);
-					directionOriginalTank.push_back(directionTank[*nbre_thread - j]);
-					Engine(matrice, Output[*nbre_thread - j], &posX_final[*nbre_thread - j], &posY_final[*nbre_thread - j], &directionTank[*nbre_thread - j], &succes);
+				directionTank[psoParams->nbr_thread - psoParams->nbr_particule] = 'U';
+				posX[psoParams->nbr_thread - psoParams->nbr_particule] = mapParams->Origine_x;
+				posY[psoParams->nbr_thread - psoParams->nbr_particule] = mapParams->Origine_y;
+				for (int j = psoParams->nbr_particule; j > 0; j--) {
+					posX_final.push_back(posX[psoParams->nbr_thread - j]);
+					posY_final.push_back(posY[psoParams->nbr_thread - j]);
+					DeplacementVitesse(&vitX[psoParams->nbr_thread - j], &vitY[psoParams->nbr_thread - j], &directionTank[psoParams->nbr_thread - j], &Output[psoParams->nbr_thread - j]);
+					directionOriginalTank.push_back(directionTank[psoParams->nbr_thread - j]);
+					Engine(matrice, Output[psoParams->nbr_thread - j], &posX_final[psoParams->nbr_thread - j], &posY_final[psoParams->nbr_thread - j], &directionTank[psoParams->nbr_thread - j], &succes);
 				}
 			}
-			if (int(distance_finish[n * *nbr_particule]) == 0) {
+			if (int(distance_finish[n * psoParams->nbr_particule]) == 0) {
 				std::cout << "Chemin trouve!" << std::endl;
 				found_finish = true;
 				break;
@@ -131,15 +131,15 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 			}
 		}
 
-		if (int(distance_finish[n * *nbr_particule]) == 0) break;
+		if (int(distance_finish[n * psoParams->nbr_particule]) == 0) break;
 
 		random_1 = float(rand() % 100) / 100;
 		random_2 = float(rand() % 100) / 100;
 		//std::cout << random_1 << random_2 << std::endl;
 
 		n = 0;
-		for (int i = 0; i < *nbre_thread; i++) {
-			if (i == (n + 1) * *nbr_particule) {
+		for (int i = 0; i < psoParams->nbr_thread; i++) {
+			if (i == (n + 1) * psoParams->nbr_particule) {
 				n++;
 			}
 			if (become_finish[i] == false) {
@@ -169,7 +169,7 @@ std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, i
 		threads.resize(0);
 
 		std::cout << "Iteration " << nbr_iteration_t << std::endl;
-		std::cout << "Nombre de particules : " << *nbre_thread << std::endl;
+		std::cout << "Nombre de particules : " << psoParams->nbr_thread << std::endl;
 		nbr_iteration_t++;
 		omega = omega - 0.03;
 		if (omega < 0) omega = 0;

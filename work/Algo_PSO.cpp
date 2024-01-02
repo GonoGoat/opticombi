@@ -44,9 +44,10 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 	particleStruct part;
 	part.Direction_tank = '/';
 	part.matrice_mobile = mapParams->matrice_mobile;
-	part.success = 0;
+	part.success = En_vie;
 	part.score_p_best = -9999;
 	part.become_finish = false;
+	part.taille_sequence = 0;
 	// Adaptation de chaque particule
 	for (int i = 0; i<psoParams->nbr_thread;i++) {
 		particles.push_back(part);
@@ -66,8 +67,8 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 		particles[i].posX = particles[i].Origine_x;
 		particles[i].posY = particles[i].Origine_y;
 		if (mapParams->Finish_x.size() != 0 && mapParams->Finish_y.size() != 0) {
-			particles[i].Finish_x = mapParams->Finish_x[i-1];
-			particles[i].Finish_y = mapParams->Finish_y[i-1];
+			particles[i].Finish_x = mapParams->Finish_x[n-1];
+			particles[i].Finish_y = mapParams->Finish_y[n-1];
 		}
 		
 
@@ -93,9 +94,9 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 
 			// Passage d'une particule comme arrivée intermédiaire
 			if (int(particles[i].distance_finish) == 0 && particles[i].become_finish == false) {
-				/*std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
-				std::cout << "PositionX = " << posX[i] << " PositionY = " << posY[i] << std::endl;
-				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;*/
+				std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
+				std::cout << "PositionX = " << particles[i].Origine_x << " PositionY = " << particles[i].Origine_y << std::endl;
+				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;
 				// Actualisation des arrivées possibles
 				particles[i].become_finish = true;
 
@@ -125,6 +126,11 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 				newPart.Direction_tank = '/';
 				newPart.Output = "";
 				newPart.become_finish = false;
+				newPart.matrice_mobile = mapParams->matrice_mobile;
+				newPart.taille_sequence = 0;
+				newPart.success = En_vie;
+				newPart.Finish_x = mapParams->Finish_x.back();
+				newPart.Finish_y = mapParams->Finish_y.back();
 
 				// Adaptation de chaque particule
 				for (int k = 0; k < psoParams->nbr_particule; k++) {
