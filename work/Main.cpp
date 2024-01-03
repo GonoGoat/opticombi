@@ -70,8 +70,6 @@ int main(int argc, char const *argv[])
     }
     drawSVG(&map,&svg);*/
 
-    // Engine(&map, &part);
-
     create_ltr_file(&output);
     end = std::chrono::system_clock::now();
     long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
