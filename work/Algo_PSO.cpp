@@ -184,6 +184,7 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 				particles[i].Direction_tank = particles[i].Direction_original_tank;
 				particles[i].posX = particles[i].Origine_x;
 				particles[i].posY = particles[i].Origine_y;
+				particles[i].matrice_mobile = mapParams->matrice_mobile;
 				//Engine(mapParams, &particles[i]);
 				//Creation de threads pour chaque particules
 				thread = new std::thread(Engine, mapParams, &particles[i]);
