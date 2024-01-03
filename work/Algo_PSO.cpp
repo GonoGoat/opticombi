@@ -1,30 +1,15 @@
 #include "Algo_PSO.h"
 
-
-//std::string Algo_PSO(std::vector<std::vector<int>>* matrice, int* nbre_thread, int* nbr_iteration_max, int* Origine_x, int* Origine_y, std::vector<int>* Finish_x, std::vector<int>* Finish_y, int* nbr_particule) {
 std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
-
-	//std::vector<int> posX(*nbre_thread); std::vector<int> posY(*nbre_thread); ->  Origine_x/y
-	//std::vector<int> posX_final(*nbre_thread); std::vector<int> posY_final(*nbre_thread); -> posX/Y
-	//std::vector<float> vitX(*nbre_thread); std::vector<float> vitY(*nbre_thread);
-	//std::vector<int> p_bestX(*nbre_thread); std::vector<int> p_bestY(*nbre_thread);
-	//std::vector<int> score_p_best(*nbre_thread);
 	std::vector<int> g_bestX(mapParams->nbr_arrive); std::vector<int> g_bestY(mapParams->nbr_arrive);
 	std::vector<int> score_g_best(mapParams->nbr_arrive);
 	int n1 = 150;int n2 = 2;
 	float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
-	//std::vector<float> distance_finish(*nbre_thread);
-	//std::vector<int> score(*nbre_thread);
-	//std::vector<char> directionTank(psoParams->nbr_thread);
-	//std::vector<char> directionOriginalTank(psoParams->nbr_thread);
-	// std::vector<std::string> Output(psoParams->nbr_thread);
 	int nbr_iteration_t = 0;
 	// Identifiant d'arrivée
 	int n = 0;
-	//std::vector<bool> become_finish(*nbre_thread);
 	bool found_finish = false;
 	std::vector<std::string> finish_Output(mapParams->nbr_arrive);
-	//int succes;
 
 	//Threads pour la parral�lisation
 	std::thread* thread;
@@ -88,15 +73,14 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 			if (i == (n+1) * psoParams->nbr_particule) {
 				n++;
 			}
-			//particles[i].distance_finish = sqrt((Finish_x[0][n] - posX_final[i]) * (Finish_x[0][n] - posX_final[i]) + (Finish_y[0][n] - posY_final[i]) * (Finish_y[0][n] - posY_final[i]));
 			particles[i].distance_finish = sqrt((particles[i].Finish_x - particles[i].posX) * (particles[i].Finish_x - particles[i].posX) + (particles[i].Finish_y - particles[i].posY) * (particles[i].Finish_y - particles[i].posY));
 			//std::cout << "dist = " << distance_finish[i] << "finX = " << Finish_x[0] << "finY = " << Finish_y[0] << "posXfin = " << posX_final[i] << "posYfin = " << posY_final[i] << std::endl;
 
 			// Passage d'une particule comme arrivée intermédiaire
 			if (int(particles[i].distance_finish) == 0 && particles[i].become_finish == false) {
-				std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
+				/*std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
 				std::cout << "PositionX = " << particles[i].Origine_x << " PositionY = " << particles[i].Origine_y << std::endl;
-				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;
+				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;*/
 				// Actualisation des arrivées possibles
 				particles[i].become_finish = true;
 
@@ -230,6 +214,6 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 		return finish_Output.back();
 	}
 	else {
-		return "Rien trouve :(";
+		// TODO : Obtention de la meilleure solution
 	}
 }
