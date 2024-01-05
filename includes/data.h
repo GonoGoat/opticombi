@@ -75,6 +75,9 @@ struct psoStruct {
 
     // Durée de vie d'une particule en nombre d'itération
     int nbr_iteration_max;
+
+    // Pourcentage de particule démarrant à la base de la carte
+    int nbr_base;
 };
 
 struct svgStruct {
@@ -98,13 +101,6 @@ struct moveStruct {
     // Sens du tank
     char dir;
 };
-
-// TODO : particleStruct
-// matrice_mobile
-// start_posX/Y
-// success
-// finish_X/Y
-// dir
 
 struct particleStruct {
     std::vector<std::vector<int>> matrice_mobile;

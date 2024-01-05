@@ -34,9 +34,9 @@ int main(int argc, char const *argv[])
     //Paramètres PSO
     psoStruct pso;
 
-    
     std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
     std::cin >> pso.nbr_particule;
+    pso.nbr_base = floor(pso.nbr_particule*0.1);
 
     std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
     std::cin >> pso.nbr_iteration_max;

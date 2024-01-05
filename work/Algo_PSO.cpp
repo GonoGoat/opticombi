@@ -36,12 +36,15 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 	// Adaptation de chaque particule
 	for (int i = 0; i<psoParams->nbr_thread;i++) {
 		particles.push_back(part);
-		// 1 départ depuis origine de la carte
-		if (i == n * psoParams->nbr_particule) {
+
+		//Détection d'arrivée
+		if (i == n * psoParams->nbr_particule) n++;
+
+		// Adaptation des départs à la base
+		if (i % psoParams->nbr_particule < psoParams->nbr_base) {
 			particles[i].Origine_x = mapParams->Origine_x;
 			particles[i].Origine_y = mapParams->Origine_y;
 			particles[i].Direction_tank = mapParams->Direction_tank;
-			n++;
 		}
 		else {
 			particles[i].Origine_x = rand() % 16;
@@ -125,10 +128,12 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 					particles.back().vitY = rand() % 16 - 8;
 				}
 
-				// Adaptation de la particule pour démarrer à la base
-				particles[psoParams->nbr_thread - psoParams->nbr_particule].Direction_tank = 'U';
-				particles[psoParams->nbr_thread - psoParams->nbr_particule].Origine_x = mapParams->Origine_x;
-				particles[psoParams->nbr_thread - psoParams->nbr_particule].Origine_y = mapParams->Origine_y;
+				// Adaptation des particules démarrant à la base
+				for (int l = 0;l < psoParams->nbr_base;l++) {
+					particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Direction_tank = 'U';
+					particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Origine_x = mapParams->Origine_x;
+					particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Origine_y = mapParams->Origine_y;
+				}
 
 				// Direction et vitesse d'origine pour nouvelles particules
 				for (int j = psoParams->nbr_particule; j > 0; j--) {
@@ -216,5 +221,6 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 	}
 	else {
 		// TODO : Obtention de la meilleure solution
+		return "Rien trouvé :(";
 	}
 }
