@@ -39,6 +39,16 @@ void ParallelisationThreadsLogiques(psoStruct* pso_struct, std::vector<particleS
 			particles[0][(n * nbr_particules_thread) + i].posX = particles[0][(n * nbr_particules_thread) + i].Origine_x;
 			particles[0][(n * nbr_particules_thread) + i].posY = particles[0][(n * nbr_particules_thread) + i].Origine_y;
 			Engine(map_params, &(*particles)[(n * nbr_particules_thread) + i]);
+
+			//Gestion de la mort
+			if (particles[0][(n * nbr_particules_thread) + i].success == -1) {
+				if (particles[0][(n * nbr_particules_thread) + i].nbr_modifs == 2) {
+					particles[0][(n * nbr_particules_thread) + i].Output.pop_back();
+					particles[0][(n * nbr_particules_thread) + i].Output.pop_back();
+				}
+				else if (particles[0][(n * nbr_particules_thread) + i].nbr_modifs == 1) particles[0][(n * nbr_particules_thread) + i].Output.pop_back();
+				particles[0][(n * nbr_particules_thread) + i].Direction_tank = particles[0][(n * nbr_particules_thread) + i].Output.back();
+			}
 		}
 	}
 }

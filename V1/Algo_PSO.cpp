@@ -226,6 +226,16 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 				//Creation de threads pour chaque particules
 				//thread = new std::thread(Engine, mapParams, &particles[i]);
 				//threads.push_back(thread);
+
+				//Gestion de la mort
+				if (particles[i].success == -1) {
+					if (particles[i].nbr_modifs == 2) {
+						particles[i].Output.pop_back();
+						particles[i].Output.pop_back();
+					}
+					else if (particles[i].nbr_modifs == 1) particles[i].Output.pop_back();
+					particles[i].Direction_tank = particles[i].Output.back();
+				}
 			}
 		}*/
 
