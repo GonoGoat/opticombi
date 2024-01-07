@@ -9,10 +9,32 @@ void ParallelisationParUnivers(psoStruct* pso_struct, std::vector<particleStruct
 
 			particles[0][(n * pso_struct->nbr_particule) + i].nbr_modifs = 0;
 			DeplacementVitesse(&particles[0][(n * pso_struct->nbr_particule) + i].vitX, &particles[0][(n * pso_struct->nbr_particule) + i].vitY, &particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank, &particles[0][(n * pso_struct->nbr_particule) + i].Output, &particles[0][(n * pso_struct->nbr_particule) + i].nbr_modifs);
+			if (particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank == '/') {
+				particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank = particles[0][(n * pso_struct->nbr_particule) + i].Output.at(0);
+			}
 			particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank = particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank;
 			particles[0][(n * pso_struct->nbr_particule) + i].posX = particles[0][(n * pso_struct->nbr_particule) + i].Origine_x;
 			particles[0][(n * pso_struct->nbr_particule) + i].posY = particles[0][(n * pso_struct->nbr_particule) + i].Origine_y;
 			Engine(map_params, &(*particles)[(n * pso_struct->nbr_particule) + i]);
+
+			//Gestion de la mort
+			if (particles[0][(n * pso_struct->nbr_particule) + i].success == 1) {
+				if (particles[0][(n * pso_struct->nbr_particule) + i].nbr_modifs == 2) {
+					particles[0][(n * pso_struct->nbr_particule) + i].Output.pop_back();
+					particles[0][(n * pso_struct->nbr_particule) + i].Output.pop_back();
+				}
+				else if (particles[0][(n * pso_struct->nbr_particule) + i].nbr_modifs == 1) particles[0][(n * pso_struct->nbr_particule) + i].Output.pop_back();
+				if (particles[0][(n * pso_struct->nbr_particule) + i].Output == "") {
+					if (i == n * pso_struct->nbr_particule) particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank == 'U';
+					else {
+						particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank = '/';
+						particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank = '/';
+					}
+				}
+				else {
+					particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank = particles[0][(n * pso_struct->nbr_particule) + i].Output.back();
+				}
+			}
 		}
 	}
 }
@@ -35,19 +57,31 @@ void ParallelisationThreadsLogiques(psoStruct* pso_struct, std::vector<particleS
 
 			particles[0][(n * nbr_particules_thread) + i].nbr_modifs = 0;
 			DeplacementVitesse(&particles[0][(n * nbr_particules_thread) + i].vitX, &particles[0][(n * nbr_particules_thread) + i].vitY, &particles[0][(n * nbr_particules_thread) + i].Direction_tank, &particles[0][(n * nbr_particules_thread) + i].Output, &particles[0][(n * nbr_particules_thread) + i].nbr_modifs);
+			if (particles[0][(n * nbr_particules_thread) + i].Direction_original_tank == '/') {
+				particles[0][(n * nbr_particules_thread) + i].Direction_original_tank = particles[0][(n * nbr_particules_thread) + i].Output.at(0);
+			}
 			particles[0][(n * nbr_particules_thread) + i].Direction_tank = particles[0][(n * nbr_particules_thread) + i].Direction_original_tank;
 			particles[0][(n * nbr_particules_thread) + i].posX = particles[0][(n * nbr_particules_thread) + i].Origine_x;
 			particles[0][(n * nbr_particules_thread) + i].posY = particles[0][(n * nbr_particules_thread) + i].Origine_y;
 			Engine(map_params, &(*particles)[(n * nbr_particules_thread) + i]);
 
 			//Gestion de la mort
-			if (particles[0][(n * nbr_particules_thread) + i].success == -1) {
+			if (particles[0][(n * nbr_particules_thread) + i].success == 1) {
 				if (particles[0][(n * nbr_particules_thread) + i].nbr_modifs == 2) {
 					particles[0][(n * nbr_particules_thread) + i].Output.pop_back();
 					particles[0][(n * nbr_particules_thread) + i].Output.pop_back();
 				}
 				else if (particles[0][(n * nbr_particules_thread) + i].nbr_modifs == 1) particles[0][(n * nbr_particules_thread) + i].Output.pop_back();
-				particles[0][(n * nbr_particules_thread) + i].Direction_tank = particles[0][(n * nbr_particules_thread) + i].Output.back();
+				if (particles[0][(n * nbr_particules_thread) + i].Output == "") {
+					if (i == n * pso_struct->nbr_particule) particles[0][(n * nbr_particules_thread) + i].Direction_tank == 'U';
+					else {
+						particles[0][(n * nbr_particules_thread) + i].Direction_tank = '/';
+						particles[0][(n * nbr_particules_thread) + i].Direction_original_tank = '/';
+					}
+				}
+				else {
+					particles[0][(n * nbr_particules_thread) + i].Direction_tank = particles[0][(n * nbr_particules_thread) + i].Output.back();
+				}
 			}
 		}
 	}

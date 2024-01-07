@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
         map.nom_fichier = argv[1];
     }
     else {
-        map.nom_fichier = "../Maps/Now_with_walls.lt4";
+        map.nom_fichier = "../Maps/Water.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
@@ -21,10 +21,10 @@ int main(int argc, char const *argv[])
 
     // Paramètres Output
     outputStruct output;
-    output.name = "Now_with_walls";
+    output.name = "Water";
     output.solver = "PSO";
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
-    output.output_file = "../Output/Now_with_walls.ltr";
+    output.output_file = "../Output/Water.ltr";
 
     //std::string testSeq = "UUUUUUUUURR";
     // Paramètres particules

@@ -1,1 +1,15 @@
-﻿  V1.vcxproj -> C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\x64\Debug\V1.exe
+﻿  Algo_PSO.cpp
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(67,28): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(68,28): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(91,72): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(112,39): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(160,35): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(161,35): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(187,99): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(208,60): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Algo_PSO.cpp(305,39): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  Parall.cpp
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Parall.cpp(28,111): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\V1\Parall.cpp(76,107): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+  Génération de code en cours...
+  V1.vcxproj -> C:\Users\Cédric\Desktop\Cours_Master2\Opti_Combinatoire_Projet\V1_Cedric\V1\V1\x64\Debug\V1.exe

@@ -7,6 +7,9 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 	int n1 = 150;int n2 = 2;
 	int nbr_iteration_t = 0;
 
+	//Variable pour la verification de la veracite de la solution
+	int num_particule;
+
 	// Identifiant d'arrivée
 	int n = 0;
 	bool found_finish = false;
@@ -78,13 +81,22 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 		Engine(mapParams, &particles[i]);
 
 		//Gestion de la mort
-		if (particles[i].success == -1) {
+		if (particles[i].success == 1) {
 			if (particles[i].nbr_modifs == 2) {
 				particles[i].Output.pop_back();
 				particles[i].Output.pop_back();
 			}
 			else if (particles[i].nbr_modifs == 1) particles[i].Output.pop_back();
-			particles[i].Direction_tank = particles[i].Output.back();
+			if (particles[i].Output == "") {
+				if (i == n * psoParams->nbr_particule) particles[i].Direction_tank == 'U';
+				else {
+					particles[i].Direction_tank = '/';
+					particles[i].Direction_original_tank = '/';
+				}
+			}
+			else {
+				particles[i].Direction_tank = particles[i].Output.back();
+			}
 		}
 	}
 
@@ -165,13 +177,22 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 					Engine(mapParams, &particles[psoParams->nbr_thread - j]);
 
 					//Gestion de la mort
-					if (particles[i].success == -1) {
-						if (particles[i].nbr_modifs == 2) {
-							particles[i].Output.pop_back();
-							particles[i].Output.pop_back();
+					if (particles[psoParams->nbr_thread - j].success == 1) {
+						if (particles[psoParams->nbr_thread - j].nbr_modifs == 2) {
+							particles[psoParams->nbr_thread - j].Output.pop_back();
+							particles[psoParams->nbr_thread - j].Output.pop_back();
 						}
-						else if (particles[i].nbr_modifs == 1) particles[i].Output.pop_back();
-						particles[i].Direction_tank = particles[i].Output.back();
+						else if (particles[psoParams->nbr_thread - j].nbr_modifs == 1) particles[psoParams->nbr_thread - j].Output.pop_back();
+						if (particles[psoParams->nbr_thread - j].Output == "") {
+							if (i == n * psoParams->nbr_particule) particles[psoParams->nbr_thread - j].Direction_tank == 'U';
+							else {
+								particles[psoParams->nbr_thread - j].Direction_tank = '/';
+								particles[psoParams->nbr_thread - j].Direction_original_tank = '/';
+							}
+						}
+						else {
+							particles[psoParams->nbr_thread - j].Direction_tank = particles[psoParams->nbr_thread - j].Output.back();
+						}
 					}
 				}
 			}
@@ -180,6 +201,7 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 			if (int(particles[n * psoParams->nbr_particule].distance_finish) == 0) {
 				std::cout << "Chemin trouve!" << std::endl;
 				found_finish = true;
+				num_particule = n * psoParams->nbr_particule;
 				break;
 			}
 			if (particles[i].become_finish == false) {
@@ -201,7 +223,6 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 		// Fin du jeu si solution trouvée
 		if (int(particles[n * psoParams->nbr_particule].distance_finish) == 0) break;
 
-
 		psoParams->random_1 = float(dist100(rng100)) / 100;
 		psoParams->random_2 = float(dist100(rng100)) / 100;
 		//std::cout << random_1 << random_2 << std::endl;
@@ -219,6 +240,9 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 
 				particles[i].nbr_modifs = 0;
 				DeplacementVitesse(&particles[i].vitX, &particles[i].vitY, &particles[i].Direction_tank, &particles[i].Output, &particles[i].nbr_modifs);
+				if (particles[i].Direction_original_tank == '/') {
+					particles[i].Direction_original_tank = particles[i].Output.at(0);
+				}
 				particles[i].Direction_tank = particles[i].Direction_original_tank;
 				particles[i].posX = particles[i].Origine_x;
 				particles[i].posY = particles[i].Origine_y;
@@ -228,13 +252,22 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 				//threads.push_back(thread);
 
 				//Gestion de la mort
-				if (particles[i].success == -1) {
+				if (particles[i].success == 1) {
 					if (particles[i].nbr_modifs == 2) {
 						particles[i].Output.pop_back();
 						particles[i].Output.pop_back();
 					}
 					else if (particles[i].nbr_modifs == 1) particles[i].Output.pop_back();
-					particles[i].Direction_tank = particles[i].Output.back();
+					if (particles[i].Output == "") {
+						if (i == n * psoParams->nbr_particule) particles[i].Direction_tank == 'U';
+						else {
+							particles[i].Direction_tank = '/';
+							particles[i].Direction_original_tank = '/';
+						}
+					}
+					else {
+						particles[i].Direction_tank = particles[i].Output.back();
+					}
 				}
 			}
 		}*/
@@ -273,8 +306,17 @@ std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams) {
 		if (psoParams->omega < 0) psoParams->omega = 0;
 	}
 
+	//Verification de la veracite de la solution puis envoi de la reponse si celle-ci est bonne
 	if (found_finish == true) {
-		return finish_Output.back();
+
+		particles[num_particule].Direction_tank = particles[num_particule].Direction_original_tank;
+		particles[num_particule].posX = particles[num_particule].Origine_x;
+		particles[num_particule].posY = particles[num_particule].Origine_y;
+		particles[num_particule].Output = finish_Output.back();
+		Engine(mapParams, &particles[num_particule]);
+
+		if (particles[num_particule].success == 2) return finish_Output.back();
+		else return "Solution trouvee mais fausse :( " + finish_Output.back();
 	}
 	else {
 		return "Rien trouve :(";
