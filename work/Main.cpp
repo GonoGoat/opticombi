@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 
     // Paramètres Output
     outputStruct output;
-    output.name = "TEst tire";
+    output.name = "Test tire";
     output.solver = "PSO";
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
     output.output_file = "./Output/new.ltr";

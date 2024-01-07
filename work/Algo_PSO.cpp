@@ -65,7 +65,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 			particles[i].Finish_y = mapParams->Finish_y[n - 1];
 		}
 
-		DeplacementVitesse(&particles[i].vitX, &particles[i].vitY, &particles[i].Direction_tank, &particles[i].Output, IdentifierObstacle(&particles[i], influence));
+		DeplacementVitesse(&particles[i].vitX, &particles[i].vitY, &particles[i].Direction_tank, &particles[i].Output, IdentifierObstacle(&particles[i], influence,mapParams));
 
 		// Backup direction originale
 		particles[i].Direction_original_tank = particles[i].Direction_tank;
@@ -202,7 +202,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				particles[i].vitX = omega * particles[i].vitX + c1 * random_1 * (particles[i].p_bestX - particles[i].posX) + c2 * random_2 * (g_bestX[n] - particles[i].posX);
 				particles[i].vitY = omega * particles[i].vitY + c1 * random_1 * (particles[i].p_bestY - particles[i].posY) + c2 * random_2 * (g_bestY[n] - particles[i].posY);
 				// std::cout << vitX[i] << std::endl;
-				DeplacementVitesse(&particles[i].vitX, &particles[i].vitY, &particles[i].Direction_tank, &particles[i].Output, IdentifierObstacle(&particles[i], influence));
+				DeplacementVitesse(&particles[i].vitX, &particles[i].vitY, &particles[i].Direction_tank, &particles[i].Output, IdentifierObstacle(&particles[i], influence,mapParams));
 				particles[i].Direction_tank = particles[i].Direction_original_tank;
 				particles[i].posX = particles[i].Origine_x;
 				particles[i].posY = particles[i].Origine_y;
