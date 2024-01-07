@@ -19,12 +19,10 @@ bool IdentifierObstacle(particleStruct *partParams, double influence)
             if (partParams->matrice_mobile[i][partParams->posX] != 0)
             {
                 // std::cout << "Obstacle trouvé sur la ligne " << partParams->posX << ", colonne " << i << std::endl;
-                // std::cout << partParams->matrice_mobile[i][partParams->posX] << std::endl;
                 // Bloc détecté
                 if (faireChoix(influence))
                 {
                     // Choix de tirer
-                    // std::cout << partParams->matrice_mobile[i][partParams->posX] << std::endl;
                     // std::cout << "Obstacle trouvé sur la ligne " << partParams->posX << ", colonne " << i << std::endl;
                     return true;
                 }
@@ -40,11 +38,9 @@ bool IdentifierObstacle(particleStruct *partParams, double influence)
             if (partParams->matrice_mobile[i][partParams->posX] != 0)
             {
                 // std::cout << "Obstacle trouvé sur la ligne " << partParams->posX << ", colonne " << i << std::endl;
-                // std::cout << partParams->matrice_mobile[i][partParams->posX] << std::endl;
                 if (faireChoix(influence))
                 {
                     // Choix de tirer
-                    // std::cout << partParams->matrice_mobile[i][partParams->posX] << std::endl;
                     // std::cout << "Obstacle trouvé sur la ligne " << partParams->posX << ", colonne " << i << std::endl;
                     return true;
                 }
@@ -60,11 +56,9 @@ bool IdentifierObstacle(particleStruct *partParams, double influence)
             if (partParams->matrice_mobile[partParams->posY][i] != 0)
             {
                 // std::cout << "Obstacle trouvé sur la colonne " << partParams->posY << ", ligne " << i << std::endl;
-                // std::cout << partParams->matrice_mobile[partParams->posX][i] << std::endl;
                 if (faireChoix(influence))
                 {
                     // Choix de tirer
-                    // std::cout << partParams->matrice_mobile[partParams->posY][partParams->posY] << std::endl;
                     // std::cout << "Obstacle trouvé sur la ligne " << i << ", colonne " << partParams->posY << std::endl;
                     return true;
                 }
@@ -81,11 +75,9 @@ bool IdentifierObstacle(particleStruct *partParams, double influence)
             if (partParams->matrice_mobile[partParams->posY][i] != 0)
             {
                 // std::cout << "Obstacle trouvé sur la colonne " << partParams->posY << ", ligne " << i << std::endl;
-                // std::cout << partParams->matrice_mobile[partParams->posX][i] << std::endl;
                 if (faireChoix(influence))
                 {
                     // Choix de tirer
-                    // std::cout << partParams->matrice_mobile[partParams->posY][i] << std::endl;
                     // std::cout << "Obstacle trouvé sur la ligne " << i << ", colonne " << partParams->posY << std::endl;
 
                     return true;
@@ -107,7 +99,6 @@ bool faireChoix(double influence)
 {
     // Génération d'un nombre aléatoire entre 0 et 1
     double randomValue = (double)rand() / RAND_MAX;
-    // std::cout << randomValue << std::endl;
     //  Condition pour choisir en fonction de l'influence
     if (randomValue < influence)
     {

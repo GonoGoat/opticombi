@@ -10,7 +10,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 	float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
 	int nbr_iteration_t = 0;
 	// influence tirer ou bouger (plus cette valeur se rapproche de 1, plus il va avoir tendance à tirer)
-	double influence = 0.5;
+	double influence = 0.7;
 	// Identifiant d'arrivée
 	int n = 0;
 	bool found_finish = false;

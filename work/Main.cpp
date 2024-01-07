@@ -57,18 +57,18 @@ int main(int argc, char const *argv[])
     pso.nbr_thread = pso.nbr_particule * map.nbr_arrive;
     output.sequence = Algo_PSO(&map, &pso);
     std::cout << output.sequence << std::endl;
-    /*
+
     // Paramètres dessin SVG
     svgStruct svg;
     svg.trajSuccess = 0;
     svg.output_file = "./Output/test.svg";
     svg.svgHeight = 40;
 
-    getPositionsOfSequence(&map,&svg,&output);
-    for(int i = 0;i<svg.trajX.size();i++) {
-        std::cout << svg.trajX[i] << ":" << svg.trajY[i] << std::endl;
-    }
-    drawSVG(&map,&svg);*/
+    // getPositionsOfSequence(&map,&svg,&output);
+    // for(int i = 0;i<svg.trajX.size();i++) {
+    //     std::cout << svg.trajX[i] << ":" << svg.trajY[i] << std::endl;
+    // }
+    // drawSVG(&map,&svg);
 
     create_ltr_file(&output);
     end = std::chrono::system_clock::now();
