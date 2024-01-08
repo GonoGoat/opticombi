@@ -1,6 +1,7 @@
 #include <unordered_map>
 #include <string>
 #include <vector>
+#include <regex>
 
 #ifndef DATA_H
 #define DATA_H
@@ -39,6 +40,7 @@ enum Success {
 // A splitter avec particleStruct quand parallèle
 struct mapStruct {
     std::string nom_fichier;
+    std::string nom_map;
 	std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
     int nbr_arrive;
     int nbr_lignes;

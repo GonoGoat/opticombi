@@ -78,7 +78,9 @@
         "numbers": "cpp",
         "semaphore": "cpp",
         "span": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "bitset": "cpp",
+        "regex": "cpp"
     },
     "cmake.configureOnOpen": false
 }

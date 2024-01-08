@@ -1,0 +1,23 @@
+Rows: 16
+Cols: 16
+Name: Sokoban Unlimited
+Author: Simeon
+Hint: Use the blocks.
+Difficulty: 2
+
+b w Bs Bs Bs Bs D D D D Wl D D D w w
+Bs w i D D D D C C D D D C D w w
+Bs w Bs C Bs Bs Bs w D D w D Bm D w w
+Bs w Bs D i D i D D w w w D w w w
+Bs w Bs D Bs Bm Bs D w w D D D w w w
+Bs Wd Bs D D Bm D D I I D Bs D D D Bs
+Bs D I D D Bs Bs D D w D D D w D w
+Bs D C Bm Bm Al Bs Bs Bs w Bs Bs Bs Bs D D
+Bs w Bs Bs C Bs D D D Bs D D D Bs Bs Wd
+Bs Au w Bm D Bs D D D Bs D D D Bs Tr Wl
+Bs C Bs Bm D D Bs D D Bs D D Bs Bs Wd Bs
+D Wd D D w D Bs Bm Bm Bm Bm Bm C D D Bs
+D D Bs Bs w Bs Bs D D Bm D D Bs D D D
+D Bs D D w w i D Bs Mdr D D Bm D D D
+D Bs D D w w i D D Mul Bs D Bm D Bm Mul
+D Tr Bs Bs Bs Au Mur D Tu D D D Bs Bs Bs Bs

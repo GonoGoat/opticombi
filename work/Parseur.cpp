@@ -45,6 +45,14 @@ void parsage(mapStruct* mapParams) {
                 throw std::runtime_error("Nombres de colonnes non detectees sur le fichier .lt4");
             }
 
+            // Détection nom de la carte
+            if (lignes[2].find("Name: ") != std::string::npos) {
+                mapParams->nom_map =lignes[2].substr(6, lignes.size());
+            }
+            else {
+                throw std::runtime_error("Nom de carte non detecte sur le fichier .lt4");
+            }
+
             for (int i = 0; i < mapParams->nbr_lignes; i++) {
                 ligne = lignes[index_saut_ligne + i];
                 // Supprime les espaces et les caract�res de nouvelle ligne �ventuels

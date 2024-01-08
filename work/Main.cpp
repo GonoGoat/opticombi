@@ -22,14 +22,10 @@ int main(int argc, char const *argv[])
 
     // Paramètres Output
     outputStruct output;
-    output.name = "One block into the water";
     output.solver = "PSO";
     // output.sequence = "UURRRRRRRRRRRRRRRRRDD"; // Temporaire
-    output.output_file = "./Output/new.ltr";
 
     //std::string testSeq = "UUUUUUUUURR";
-    // Paramètres particules
-    std::vector<particleStruct> particles;
     
     //Paramètres PSO
     psoStruct pso;
@@ -44,6 +40,16 @@ int main(int argc, char const *argv[])
     
     // Parsage de la carte
     parsage(&map);
+    output.name = map.nom_map;
+    std::regex rgx(R"([/\\][a-zA-Z_-]+\.lt4)");
+    std::smatch match;
+
+    if (std::regex_search(map.nom_fichier, match, rgx))
+         output.output_file = "./Output/" + match[0].str().substr(1,match[0].str().size()-5) + ".ltr";
+    else {
+        throw std::runtime_error("Pas possible d'extraire nom de fichier.");
+    }
+   
     
     // Détection des arrivées et du départ de la carte
     detection(&map);
