@@ -5,5 +5,6 @@
 #include "LogiqueDeplacementVitesse.h"
 #include "Logique_jeu.h"
 #include "IdentifierObstacle.h"
+#include "Parall.h"
 
 std::string Algo_PSO(mapStruct* mapParams, psoStruct* psoParams);

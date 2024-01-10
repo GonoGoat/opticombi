@@ -63,7 +63,6 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
     {
         //Logique de fonctionnement du jeu : 2 direction identiques pour effectuer le déplacement
         if (dir_actuelle == partParams->Direction_tank) {
-
             move.depl_x = partParams->posX;
             move.depl_y = partParams->posY;
             move.dir = dir_actuelle;
@@ -137,7 +136,7 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
         moveParams->depl_x = 0;
     }
     else if (moveParams->depl_y > mapParams->nbr_lignes - 1) {
-        moveParams->depl_y = mapParams->nbr_lignes;
+        moveParams->depl_y = mapParams->nbr_lignes - 1;
     }
     else if (moveParams->depl_y < 0) {
         moveParams->depl_y = 0;

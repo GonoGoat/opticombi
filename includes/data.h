@@ -80,6 +80,12 @@ struct psoStruct {
 
     // Pourcentage de particule démarrant à la base de la carte
     int nbr_base;
+
+    //Parametres PSO
+    float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
+
+    // Influence tirer ou bouger (plus cette valeur se rapproche de 1, plus il va avoir tendance à tirer)
+	double influence;
 };
 
 struct svgStruct {
@@ -131,6 +137,7 @@ struct particleStruct {
     int score;
     bool become_finish;
     float distance_finish;
+    int nbr_modifs;
 };
 
 struct mobileStruct {

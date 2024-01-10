@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        map.nom_fichier = "./Maps/Test_tire.lt4";
+        map.nom_fichier = "./Maps/prev/Chemin_Anti_Tank.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
@@ -30,6 +30,7 @@ int main(int argc, char const *argv[])
     
     //Paramètres PSO
     psoStruct pso;
+    pso.influence = 0.7;
 
     std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
     std::cin >> pso.nbr_particule;
