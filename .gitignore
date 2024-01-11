@@ -3,3 +3,6 @@ PSO/x64
 .vscode
 bin/*
 Output/*
+work/
+includes/
+Maps/
