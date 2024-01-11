@@ -1,6 +1,7 @@
 #include <unordered_map>
 #include <string>
 #include <vector>
+#include <regex>
 
 #ifndef DATA_H
 #define DATA_H
@@ -39,16 +40,17 @@ enum Success {
 // A splitter avec particleStruct quand parallèle
 struct mapStruct {
     std::string nom_fichier;
-    std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
+    std::string nom_map;
+	std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
     int nbr_arrive;
     int nbr_lignes;
     int nbr_colonnes;
-
+    
     // Coordonnées du point de départ du tank sur la carte
-    int Origine_x, Origine_y;
-
+    int Origine_x,Origine_y;
+    
     // Ensemble des coordonnées d'arrivées possibles sur la carte
-    std::vector<int> Finish_x, Finish_y;
+    std::vector<int> Finish_x, Finish_y; 
     char Direction_tank;
 };
 
@@ -57,13 +59,13 @@ struct outputStruct {
     std::string name;
 
     // Nom du solver
-    std::string solver;
+    std::string solver; 
 
     // Séquence 
     std::string sequence;
 
     // Nom du fichier de sortie (extension .lt4)
-    std::string output_file;
+    std::string output_file; 
 };
 
 struct psoStruct {
@@ -75,11 +77,20 @@ struct psoStruct {
 
     // Durée de vie d'une particule en nombre d'itération
     int nbr_iteration_max;
+
+    // Pourcentage de particule démarrant à la base de la carte
+    int nbr_base;
+
+    //Parametres PSO
+    float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
+
+    // Influence tirer ou bouger (plus cette valeur se rapproche de 1, plus il va avoir tendance à tirer)
+	double influence;
 };
 
 struct svgStruct {
     // Historique des coordonnées
-    std::vector<int> trajX, trajY;
+    std::vector<int> trajX, trajY; 
 
     // Etat du tank
     int trajSuccess;
@@ -99,13 +110,6 @@ struct moveStruct {
     char dir;
 };
 
-// TODO : particleStruct
-// matrice_mobile
-// start_posX/Y
-// success
-// finish_X/Y
-// dir
-
 struct particleStruct {
     std::vector<std::vector<int>> matrice_mobile;
 
@@ -114,14 +118,14 @@ struct particleStruct {
 
     // Coordonnées de l'arrivée que la particule essaie de joindre
     int Finish_x, Finish_y;
-    char Direction_tank;
+    char Direction_tank, Direction_original_tank;
 
     // Indique si tank est arrivée à la fin(1), est en vie(0) ou est mort 
     int success;
 
     // Coordonnées de travail
-    int posX, posY;
-    std::string Output, finish_Output;
+    int posX,posY;
+    std::string Output;
 
     //Taille séquence exécuté
     int taille_sequence;
@@ -133,9 +137,8 @@ struct particleStruct {
     int score;
     bool become_finish;
     float distance_finish;
+    int nbr_modifs;
 };
-
-extern std::unordered_map<std::string, Matrice> conversionToEnum;
 
 struct mobileStruct {
     // Position envisagée
@@ -147,5 +150,7 @@ struct mobileStruct {
     // Sens du laser
     char dir;
 };
+
+extern std::unordered_map<std::string, Matrice> conversionToEnum;
 
 #endif

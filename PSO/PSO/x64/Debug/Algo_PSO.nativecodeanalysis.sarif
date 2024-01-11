@@ -1,0 +1,1629 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::Origine_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::Origine_y"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::Origine_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::Origine_x"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::Finish_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::Finish_x"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::Finish_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::Finish_y"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::Direction_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::Direction_tank"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::Direction_original_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::Direction_original_tank"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::success' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::success"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::posX' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::posX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::posY' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::posY"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::taille_sequence' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::taille_sequence"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::vitX' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::vitX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::vitY' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::vitY"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::p_bestX' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::p_bestX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::p_bestY' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::p_bestY"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::score_p_best' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::score_p_best"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::score' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::score"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::become_finish' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::become_finish"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::distance_finish' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::distance_finish"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'particleStruct::nbr_modifs' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 1,
+                  "endLine": 141,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "particleStruct::{ctor}",
+                  "decoratedName": "??0particleStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "particleStruct::nbr_modifs"
+          }
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 48,
+                  "endLine": 80,
+                  "endColumn": 52
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 48,
+                  "endLine": 81,
+                  "endColumn": 52
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 176,
+                  "startColumn": 16,
+                  "endLine": 176,
+                  "endColumn": 67
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 176,
+                  "startColumn": 16,
+                  "endLine": 176,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 16,
+                  "endLine": 177,
+                  "endColumn": 67
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 16,
+                  "endLine": 177,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 178,
+                  "startColumn": 16,
+                  "endLine": 178,
+                  "endColumn": 67
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 178,
+                  "startColumn": 16,
+                  "endLine": 178,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 16,
+                  "endLine": 184,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 60,
+                  "endLine": 184,
+                  "endColumn": 84
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 16,
+                  "endLine": 185,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 60,
+                  "endLine": 185,
+                  "endColumn": 84
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 231,
+                  "endLine": 187,
+                  "endColumn": 255
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 178,
+                  "endLine": 187,
+                  "endColumn": 202
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 124,
+                  "endLine": 187,
+                  "endColumn": 148
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 80,
+                  "endLine": 187,
+                  "endColumn": 104
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 187,
+                  "startColumn": 36,
+                  "endLine": 187,
+                  "endColumn": 60
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 16,
+                  "endLine": 188,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 188,
+                  "startColumn": 79,
+                  "endLine": 188,
+                  "endColumn": 103
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 189,
+                  "startColumn": 35,
+                  "endLine": 189,
+                  "endColumn": 59
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 192,
+                  "startColumn": 20,
+                  "endLine": 192,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 193,
+                  "startColumn": 21,
+                  "endLine": 193,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 194,
+                  "startColumn": 18,
+                  "endLine": 194,
+                  "endColumn": 42
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 195,
+                  "startColumn": 18,
+                  "endLine": 195,
+                  "endColumn": 42
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 197,
+                  "startColumn": 26,
+                  "endLine": 197,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 197,
+                  "startColumn": 80,
+                  "endLine": 197,
+                  "endColumn": 104
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 198,
+                  "startColumn": 21,
+                  "endLine": 198,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 199,
+                  "startColumn": 57,
+                  "endLine": 199,
+                  "endColumn": 81
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 201,
+                  "startColumn": 19,
+                  "endLine": 201,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 202,
+                  "startColumn": 19,
+                  "endLine": 202,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 206,
+                  "startColumn": 18,
+                  "endLine": 206,
+                  "endColumn": 42
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 206,
+                  "startColumn": 72,
+                  "endLine": 206,
+                  "endColumn": 96
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 213,
+                  "startColumn": 22,
+                  "endLine": 213,
+                  "endColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+                },
+                "region": {
+                  "startLine": 236,
+                  "startColumn": 21,
+                  "endLine": 236,
+                  "endColumn": 34
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Algo_PSO",
+                  "decoratedName": "?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "f7870116d78f5c5a8d45122f05dd3219d10d7bff42e09bcf0dc4055e9165bdd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Algo_PSO.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "5d1a5733e9e9f1f86066f16f263ace9814afa5edfb6dc2ce8bc27a6b34facdf6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/algo_pso.h"
+          },
+          "hashes": {
+            "sha-256": "d9de913be70d283714dd32ecb15c0105782a84e9757c4ca42d6d64a12a17cdea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logiquedeplacementvitesse.h"
+          },
+          "hashes": {
+            "sha-256": "4aa9bffc0820e195be7599ce35ecdc5a6f4b4860a67f3ead0682bdcab965370c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logique_jeu.h"
+          },
+          "hashes": {
+            "sha-256": "c30f02dccf05cc1a85da08a64ca1cda4afef78470f939cc7d726bd1fc42a908f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/identifierobstacle.h"
+          },
+          "hashes": {
+            "sha-256": "d79251d535dbab4418de87a568aeb725e1956fcb6e191846983e6e29757a1d58"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/parall.h"
+          },
+          "hashes": {
+            "sha-256": "9ca1e3a5f7b07d54db6ecd5219a393f0ac54da96ebeb69ec4bd73b725168ce1a"
+          }
+        }
+      ]
+    }
+  ]
+}

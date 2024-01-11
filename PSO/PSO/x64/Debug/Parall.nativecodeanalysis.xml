@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>6</LINE>
+      <COLUMN>51</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>6</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>125</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>96</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>223</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>194</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>283</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>254</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>398</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>369</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>125</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>96</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>223</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>194</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>283</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>254</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>398</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>369</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>10</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>10</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>414</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>385</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>327</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>298</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>249</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>220</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>182</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>153</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>125</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>96</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>68</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>12</LINE>
+      <COLUMN>52</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>12</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>49</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>125</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>96</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>115</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>86</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>105</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>76</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>105</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>76</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>18</LINE>
+      <COLUMN>68</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>18</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>21</LINE>
+      <COLUMN>52</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>21</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>22</LINE>
+      <COLUMN>53</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>22</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>23</LINE>
+      <COLUMN>50</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>23</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>24</LINE>
+      <COLUMN>50</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>24</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>58</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>125</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>96</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>27</LINE>
+      <COLUMN>53</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>27</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>28</LINE>
+      <COLUMN>90</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>28</LINE>
+      <COLUMN>61</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>51</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>31</LINE>
+      <COLUMN>51</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>31</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>50</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>117</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>88</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationParUnivers</FUNCTION>
+    <DECORATED>?ParallelisationParUnivers@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>53</LINE>
+      <COLUMN>47</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>53</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>117</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>211</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>186</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>267</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>242</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>386</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>361</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>117</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>211</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>186</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>267</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>242</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>386</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>361</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>58</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>58</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>394</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>369</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>311</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>282</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>233</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>208</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>170</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>145</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>117</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>64</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>60</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>60</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>45</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>117</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>61</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>63</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>63</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>63</LINE>
+      <COLUMN>107</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>63</LINE>
+      <COLUMN>82</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>97</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>65</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>65</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>65</LINE>
+      <COLUMN>97</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>65</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>66</LINE>
+      <COLUMN>64</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>66</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>67</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>67</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>67</LINE>
+      <COLUMN>130</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>67</LINE>
+      <COLUMN>105</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>72</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>72</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>49</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>74</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>74</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>75</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>75</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>54</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>117</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>78</LINE>
+      <COLUMN>49</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>78</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>86</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>61</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>81</LINE>
+      <COLUMN>47</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>81</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>82</LINE>
+      <COLUMN>47</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>82</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>109</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Parall.cpp</FILENAME>
+      <LINE>86</LINE>
+      <COLUMN>84</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>ParallelisationThreadsLogiques</FUNCTION>
+    <DECORATED>?ParallelisationThreadsLogiques@@YAXPEAUpsoStruct@@PEAV?$vector@UparticleStruct@@V?$allocator@UparticleStruct@@@std@@@std@@PEAUmapStruct@@HPEAV?$vector@HV?$allocator@H@std@@@3@3@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

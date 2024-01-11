@@ -1,0 +1,133 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/sequenceToSVG.cpp"
+                },
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 199,
+                  "endLine": 95,
+                  "endColumn": 201
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "drawSVG",
+                  "decoratedName": "?drawSVG@@YAXPEAUmapStruct@@PEAUsvgStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/sequenceToSVG.cpp"
+                },
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 149,
+                  "endLine": 95,
+                  "endColumn": 151
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "drawSVG",
+                  "decoratedName": "?drawSVG@@YAXPEAUmapStruct@@PEAUsvgStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/sequenceToSVG.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "fdd6a0a5b0c2e742634ea637eecd4bb480c0624811b52460daa57da6383853bc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/sequencetosvg.h"
+          },
+          "hashes": {
+            "sha-256": "a12464fefbec1943317bc5c7c3bde752b0db244715933077d0649d358eaac350"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/parseur.h"
+          },
+          "hashes": {
+            "sha-256": "de2bdc45835183acb37389772f584ccba1864a63c2776fbffbc0612646ac8073"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/data.h"
+          },
+          "hashes": {
+            "sha-256": "f7870116d78f5c5a8d45122f05dd3219d10d7bff42e09bcf0dc4055e9165bdd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/detection_start_end.h"
+          },
+          "hashes": {
+            "sha-256": "73e570f26ddcb71fe43279702e97d0a3af7ded09083ba0c1237b3427de860f00"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logique_jeu.h"
+          },
+          "hashes": {
+            "sha-256": "c30f02dccf05cc1a85da08a64ca1cda4afef78470f939cc7d726bd1fc42a908f"
+          }
+        }
+      ]
+    }
+  ]
+}

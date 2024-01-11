@@ -25,11 +25,11 @@ void getPositionsOfSequence(mapStruct* mapParams, svgStruct* svgParams, outputSt
     particleStruct part;
 
     // Jusque dernier caractère de séquence
-    for (int i = 0; i < partParams->finish_Output.size(); i++) {
+    for (int i = 0; i < partParams->Output.size(); i++) {
 
         // Extraction de la séquence à jouer
         part = *partParams;
-        part.finish_Output = partParams->finish_Output.substr(0, i + 1);
+        part.Output = partParams->Output.substr(0, i + 1);
 
         // Remise à zéro
         part.Direction_tank = 'U';
@@ -50,9 +50,6 @@ void getPositionsOfSequence(mapStruct* mapParams, svgStruct* svgParams, outputSt
  *
  * @param mapParams Les paramètres de la carte
  * @param partParams Les paramères de la particule
- * 
- * Donne la taille de la séquence exécutée. En cas de mort, la dernière séquence ayant amenée à la mort est comptabilisée.
- * La position finale est toujours la position provenant de la dernière séquence exécutée (En cas de mort, c'est la case où nous sommes mort).
  */
 void Engine(mapStruct* mapParams, particleStruct* partParams) {
 
@@ -62,11 +59,10 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
 
     //Traite la séquence d'entrée
     moveStruct move;
-    for (char dir_actuelle : partParams->finish_Output)
+    for (char dir_actuelle : partParams->Output)
     {
         //Logique de fonctionnement du jeu : 2 direction identiques pour effectuer le déplacement
         if (dir_actuelle == partParams->Direction_tank) {
-
             move.depl_x = partParams->posX;
             move.depl_y = partParams->posY;
             move.dir = dir_actuelle;
@@ -140,7 +136,7 @@ void Verification_deplacement(mapStruct* mapParams, moveStruct* moveParams, part
         moveParams->depl_x = 0;
     }
     else if (moveParams->depl_y > mapParams->nbr_lignes - 1) {
-        moveParams->depl_y = mapParams->nbr_lignes;
+        moveParams->depl_y = mapParams->nbr_lignes - 1;
     }
     else if (moveParams->depl_y < 0) {
         moveParams->depl_y = 0;

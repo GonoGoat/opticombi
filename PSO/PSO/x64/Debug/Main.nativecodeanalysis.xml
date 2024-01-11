@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'mapStruct::nbr_arrive' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>mapStruct::{ctor}</FUNCTION>
+    <DECORATED>??0mapStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>55</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>mapStruct::nbr_arrive</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'mapStruct::nbr_lignes' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>mapStruct::{ctor}</FUNCTION>
+    <DECORATED>??0mapStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>55</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>mapStruct::nbr_lignes</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'mapStruct::nbr_colonnes' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>mapStruct::{ctor}</FUNCTION>
+    <DECORATED>??0mapStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>55</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>mapStruct::nbr_colonnes</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'mapStruct::Origine_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>mapStruct::{ctor}</FUNCTION>
+    <DECORATED>??0mapStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>55</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>mapStruct::Origine_x</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'mapStruct::Origine_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>mapStruct::{ctor}</FUNCTION>
+    <DECORATED>??0mapStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>55</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>mapStruct::Origine_y</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'mapStruct::Direction_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>mapStruct::{ctor}</FUNCTION>
+    <DECORATED>??0mapStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>55</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>mapStruct::Direction_tank</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::influence' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::influence</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::random_2' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::random_2</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::random_1' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::random_1</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::nbr_base' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::nbr_base</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::nbr_iteration_max' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::nbr_iteration_max</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::nbr_thread' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::nbr_thread</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'psoStruct::nbr_particule' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>psoStruct::{ctor}</FUNCTION>
+    <DECORATED>??0psoStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>psoStruct::nbr_particule</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>103</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'svgStruct::trajSuccess' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>svgStruct::{ctor}</FUNCTION>
+    <DECORATED>??0svgStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>103</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>svgStruct::trajSuccess</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>103</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'svgStruct::svgHeight' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>svgStruct::{ctor}</FUNCTION>
+    <DECORATED>??0svgStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>103</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>svgStruct::svgHeight</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

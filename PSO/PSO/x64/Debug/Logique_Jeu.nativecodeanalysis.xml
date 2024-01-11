@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Origine_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Origine_y</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Origine_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Origine_x</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Finish_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Finish_x</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Finish_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Finish_y</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Direction_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Direction_tank</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Direction_original_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Direction_original_tank</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::success' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::success</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::posX' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::posX</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::posY' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::posY</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::taille_sequence' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::taille_sequence</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::vitX' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::vitX</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::vitY' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::vitY</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::p_bestX' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::p_bestX</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::p_bestY' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::p_bestY</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::score_p_best' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::score_p_best</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::score' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::score</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::become_finish' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::become_finish</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::distance_finish' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::distance_finish</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::nbr_modifs' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::nbr_modifs</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>53</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>getPositionsOfSequence</FUNCTION>
+    <DECORATED>?getPositionsOfSequence@@YAXPEAUmapStruct@@PEAUsvgStruct@@PEAUoutputStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>16</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>88</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Utilisation de la mémoire non initialisée 'move'.</DESCRIPTION>
+    <FUNCTION>Engine</FUNCTION>
+    <DECORATED>?Engine@@YAXPEAUmapStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>61</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'move' n'est pas initialisé</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>39</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>65</LINE>
+        <COLUMN>25</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Ignorer cette branche, (supposer que '&lt;condition de branche&gt;' a la valeur false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>75</LINE>
+        <COLUMN>30</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Ignorer cette branche, (supposer que 'dir_actuelle==70' a la valeur false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>83</LINE>
+        <COLUMN>39</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>85</LINE>
+        <COLUMN>35</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>87</LINE>
+        <COLUMN>32</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Entrer dans cette branche, (supposer 'partParams-&gt;success==Mort')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>88</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>89</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+        <FILENAME>Logique_Jeu.cpp</FILENAME>
+        <LINE>88</LINE>
+        <COLUMN>31</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'move' est utilisé, mais n'a peut-être pas été initialisé</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>263</LINE>
+      <COLUMN>87</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>264</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>276</LINE>
+      <COLUMN>87</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>277</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>290</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>291</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>303</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>304</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>344</LINE>
+      <COLUMN>87</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>345</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>362</LINE>
+      <COLUMN>87</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>363</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>381</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>382</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>394</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>395</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_vertical</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_vertical@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>328</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>431</LINE>
+      <COLUMN>87</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>432</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>444</LINE>
+      <COLUMN>87</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>445</LINE>
+      <COLUMN>92</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>459</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>460</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>478</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Logique_Jeu.cpp</FILENAME>
+      <LINE>479</LINE>
+      <COLUMN>72</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Verification_Anti_Tank_parcour_horizontal</FUNCTION>
+    <DECORATED>?Verification_Anti_Tank_parcour_horizontal@@YAXPEAUmapStruct@@PEAUmoveStruct@@PEAUparticleStruct@@@Z</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

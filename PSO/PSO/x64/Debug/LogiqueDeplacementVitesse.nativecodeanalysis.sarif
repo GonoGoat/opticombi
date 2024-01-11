@@ -1,0 +1,157 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6282",
+          "message": {
+            "text": "Opérateur incorrect."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/LogiqueDeplacementVitesse.cpp"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 14,
+                  "endLine": 28,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DeplacementVitesse",
+                  "decoratedName": "?DeplacementVitesse@@YAXPEAM0PEADPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_NPEAH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6282",
+          "message": {
+            "text": "Opérateur incorrect."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/LogiqueDeplacementVitesse.cpp"
+                },
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 14,
+                  "endLine": 38,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DeplacementVitesse",
+                  "decoratedName": "?DeplacementVitesse@@YAXPEAM0PEADPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_NPEAH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6282",
+          "message": {
+            "text": "Opérateur incorrect."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/LogiqueDeplacementVitesse.cpp"
+                },
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 14,
+                  "endLine": 49,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DeplacementVitesse",
+                  "decoratedName": "?DeplacementVitesse@@YAXPEAM0PEADPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_NPEAH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6282",
+          "message": {
+            "text": "Opérateur incorrect."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/LogiqueDeplacementVitesse.cpp"
+                },
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 14,
+                  "endLine": 59,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DeplacementVitesse",
+                  "decoratedName": "?DeplacementVitesse@@YAXPEAM0PEADPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_NPEAH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/LogiqueDeplacementVitesse.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "3afccb543523cd0d84f482cae184077d53ce47b0d22a83f8afc241a2b76cf837"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logiquedeplacementvitesse.h"
+          },
+          "hashes": {
+            "sha-256": "4aa9bffc0820e195be7599ce35ecdc5a6f4b4860a67f3ead0682bdcab965370c"
+          }
+        }
+      ]
+    }
+  ]
+}

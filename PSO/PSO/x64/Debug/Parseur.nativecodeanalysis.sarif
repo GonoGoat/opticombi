@@ -1,0 +1,81 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Parseur.cpp"
+                },
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 32,
+                  "endLine": 57,
+                  "endColumn": 51
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "parsage",
+                  "decoratedName": "?parsage@@YAXPEAUmapStruct@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/Parseur.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "3a5dc133e2bb7ade1173d103513a60d82134311b964246bf6a0de2d3841dcf36"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/parseur.h"
+          },
+          "hashes": {
+            "sha-256": "de2bdc45835183acb37389772f584ccba1864a63c2776fbffbc0612646ac8073"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/data.h"
+          },
+          "hashes": {
+            "sha-256": "f7870116d78f5c5a8d45122f05dd3219d10d7bff42e09bcf0dc4055e9165bdd7"
+          }
+        }
+      ]
+    }
+  ]
+}

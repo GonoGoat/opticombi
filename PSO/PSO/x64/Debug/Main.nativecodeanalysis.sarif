@@ -1,0 +1,600 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'mapStruct::nbr_arrive' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 1,
+                  "endLine": 55,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "mapStruct::{ctor}",
+                  "decoratedName": "??0mapStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "mapStruct::nbr_arrive"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'mapStruct::nbr_lignes' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 1,
+                  "endLine": 55,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "mapStruct::{ctor}",
+                  "decoratedName": "??0mapStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "mapStruct::nbr_lignes"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'mapStruct::nbr_colonnes' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 1,
+                  "endLine": 55,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "mapStruct::{ctor}",
+                  "decoratedName": "??0mapStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "mapStruct::nbr_colonnes"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'mapStruct::Origine_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 1,
+                  "endLine": 55,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "mapStruct::{ctor}",
+                  "decoratedName": "??0mapStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "mapStruct::Origine_x"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'mapStruct::Origine_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 1,
+                  "endLine": 55,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "mapStruct::{ctor}",
+                  "decoratedName": "??0mapStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "mapStruct::Origine_y"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'mapStruct::Direction_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 1,
+                  "endLine": 55,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "mapStruct::{ctor}",
+                  "decoratedName": "??0mapStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "mapStruct::Direction_tank"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::influence' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::influence"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::random_2' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::random_2"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::random_1' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::random_1"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::nbr_base' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::nbr_base"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::nbr_iteration_max' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::nbr_iteration_max"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::nbr_thread' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::nbr_thread"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'psoStruct::nbr_particule' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 1,
+                  "endLine": 89,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "psoStruct::{ctor}",
+                  "decoratedName": "??0psoStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "psoStruct::nbr_particule"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'svgStruct::trajSuccess' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 1,
+                  "endLine": 103,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "svgStruct::{ctor}",
+                  "decoratedName": "??0svgStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "svgStruct::trajSuccess"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable 'svgStruct::svgHeight' n'est pas initialisée. Initialisez toujours une variable membre (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+                },
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 1,
+                  "endLine": 103,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "svgStruct::{ctor}",
+                  "decoratedName": "??0svgStruct@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "svgStruct::svgHeight"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Thoma/OneDrive - Haute Ecole en Hainaut/Bureau/Q1(2023-2024)/Optimisation Combinatoire/Labo/opticombi/PSO/PSO/data.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "f7870116d78f5c5a8d45122f05dd3219d10d7bff42e09bcf0dc4055e9165bdd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/main.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "c54780215c0726a2ca5cd54b824209c70725c954937073499b942a708a003a2f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/main.h"
+          },
+          "hashes": {
+            "sha-256": "0d1be759bbb81c6ee4f6a09db1a7d7817a0a90ee3a4c441586ca6074359febbe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/parseur.h"
+          },
+          "hashes": {
+            "sha-256": "de2bdc45835183acb37389772f584ccba1864a63c2776fbffbc0612646ac8073"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/ltrcreator.h"
+          },
+          "hashes": {
+            "sha-256": "7f7ad08cb578de0b3012d4e1536fcba008e0bf33664de58bfcd18ee9649f8810"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/detection_start_end.h"
+          },
+          "hashes": {
+            "sha-256": "73e570f26ddcb71fe43279702e97d0a3af7ded09083ba0c1237b3427de860f00"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/sequencetosvg.h"
+          },
+          "hashes": {
+            "sha-256": "a12464fefbec1943317bc5c7c3bde752b0db244715933077d0649d358eaac350"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logique_jeu.h"
+          },
+          "hashes": {
+            "sha-256": "c30f02dccf05cc1a85da08a64ca1cda4afef78470f939cc7d726bd1fc42a908f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logiquedeplacement.h"
+          },
+          "hashes": {
+            "sha-256": "d12247b63a47a086c270ce64fd0fc9707d8dadd2930040b0d8012503fda0f10a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/algo_pso.h"
+          },
+          "hashes": {
+            "sha-256": "d9de913be70d283714dd32ecb15c0105782a84e9757c4ca42d6d64a12a17cdea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/logiquedeplacementvitesse.h"
+          },
+          "hashes": {
+            "sha-256": "4aa9bffc0820e195be7599ce35ecdc5a6f4b4860a67f3ead0682bdcab965370c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/identifierobstacle.h"
+          },
+          "hashes": {
+            "sha-256": "d79251d535dbab4418de87a568aeb725e1956fcb6e191846983e6e29757a1d58"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/thoma/onedrive - haute ecole en hainaut/bureau/q1(2023-2024)/optimisation combinatoire/labo/opticombi/pso/pso/parall.h"
+          },
+          "hashes": {
+            "sha-256": "9ca1e3a5f7b07d54db6ecd5219a393f0ac54da96ebeb69ec4bd73b725168ce1a"
+          }
+        }
+      ]
+    }
+  ]
+}

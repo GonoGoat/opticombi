@@ -12,6 +12,7 @@ void create_ltr_file(outputStruct* outputParams) {
     // Ouvrir le fichier en mode écriture
     std::ofstream fichier(outputParams->output_file);
     if (fichier.is_open()) {
+        fichier << "Level: 1\n";
         fichier << "Name: " << outputParams->name << "\n";
         fichier << "Solver: " << outputParams->solver << "\n";
         fichier << "Score: " << score << "\n";

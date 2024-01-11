@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Origine_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Origine_y</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Origine_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Origine_x</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Finish_x' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Finish_x</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Finish_y' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Finish_y</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Direction_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Direction_tank</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::Direction_original_tank' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::Direction_original_tank</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::success' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::success</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::posX' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::posX</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::posY' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::posY</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::taille_sequence' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::taille_sequence</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::vitX' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::vitX</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::vitY' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::vitY</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::p_bestX' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::p_bestX</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::p_bestY' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::p_bestY</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::score_p_best' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::score_p_best</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::score' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::score</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::become_finish' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::become_finish</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::distance_finish' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::distance_finish</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>data.h</FILENAME>
+      <LINE>141</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable 'particleStruct::nbr_modifs' n'est pas initialisée. Initialisez toujours une variable membre (type.6).</DESCRIPTION>
+    <FUNCTION>particleStruct::{ctor}</FUNCTION>
+    <DECORATED>??0particleStruct@@QEAA@XZ</DECORATED>
+    <FUNCLINE>141</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>particleStruct::nbr_modifs</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>80</LINE>
+      <COLUMN>49</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>81</LINE>
+      <COLUMN>49</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>176</LINE>
+      <COLUMN>64</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>176</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>177</LINE>
+      <COLUMN>64</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>177</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>178</LINE>
+      <COLUMN>64</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '+' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '+' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>178</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>184</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>184</LINE>
+      <COLUMN>81</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>185</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>185</LINE>
+      <COLUMN>81</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>252</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>199</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>145</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>101</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>187</LINE>
+      <COLUMN>57</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>188</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>188</LINE>
+      <COLUMN>100</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>189</LINE>
+      <COLUMN>56</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>192</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>193</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>194</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>195</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>197</LINE>
+      <COLUMN>47</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>197</LINE>
+      <COLUMN>101</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>198</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>199</LINE>
+      <COLUMN>78</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>201</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>202</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>206</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>206</LINE>
+      <COLUMN>93</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '-' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '-' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>213</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\</FILEPATH>
+      <FILENAME>Algo_PSO.cpp</FILENAME>
+      <LINE>236</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Dépassement arithmétique : utilisation de l'opérateur '*' sur une valeur de 4 octets, puis cast du résultat vers une valeur de 8 octets. Castez la valeur vers le type plus large avant d'appeler l'opérateur '*' pour évider un dépassement (io.2).</DESCRIPTION>
+    <FUNCTION>Algo_PSO</FUNCTION>
+    <DECORATED>?Algo_PSO@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUmapStruct@@PEAUpsoStruct@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
