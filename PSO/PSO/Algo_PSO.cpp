@@ -70,7 +70,6 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		{
 			particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
 			particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
-			std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 		}
 		particles[i].vitX = dist8(rng8);
 		particles[i].vitY = dist8(rng8);
@@ -168,10 +167,10 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 					particles.push_back(newPart);
 					particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
 					particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
-					std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 					particles.back().vitX = dist8(rng8);
 					particles.back().vitY = dist8(rng8);
 				}
+				
 
 				// Adaptation des particules démarrant à la base
 				for (int l = 0;l < psoParams->nbr_base;l++) {
