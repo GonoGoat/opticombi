@@ -28,7 +28,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 
 	std::random_device rd16;
 	std::mt19937 rng16(rd16());
-	std::uniform_int_distribution<int> dist16(0, mapParams->nbr_colonnes-1);
+	std::uniform_int_distribution<int> dist16(0, mapParams->nbr_case_ok-1);
 
 	std::random_device rd100;
 	std::mt19937 rng100(rd100());
@@ -68,8 +68,9 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		}
 		else
 		{
-			particles[i].Origine_x = dist16(rng16);
-			particles[i].Origine_y = dist16(rng16);
+			particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+			particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+			std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 		}
 		particles[i].vitX = dist8(rng8);
 		particles[i].vitY = dist8(rng8);
@@ -165,8 +166,9 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				// Adaptation de chaque particule
 				for (int k = 0; k < psoParams->nbr_particule; k++) {
 					particles.push_back(newPart);
-					particles.back().Origine_x = dist16(rng16);
-					particles.back().Origine_y = dist16(rng16);
+					particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+					particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+					std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 					particles.back().vitX = dist8(rng8);
 					particles.back().vitY = dist8(rng8);
 				}

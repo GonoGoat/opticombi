@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        map.nom_fichier = "./Maps/prev/Chemin_Anti_Tank.lt4";
+        map.nom_fichier = "..\\..\\/Maps/prev/Chemin_Anti_Tank.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
