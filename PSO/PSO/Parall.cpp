@@ -12,7 +12,7 @@ void ParallelisationParUnivers(psoStruct* pso_struct, std::vector<particleStruct
 			if (particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank == '/') {
 				particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank = particles[0][(n * pso_struct->nbr_particule) + i].Output.at(0);
 			}
-			particles[0][(n * pso_struct->nbr_particule) + i].matrice_mobile = map_params->matrice_mobile;
+			//particles[0][(n * pso_struct->nbr_particule) + i].matrice_mobile = map_params->matrice_mobile;
 			particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank = particles[0][(n * pso_struct->nbr_particule) + i].Direction_original_tank;
 			particles[0][(n * pso_struct->nbr_particule) + i].posX = particles[0][(n * pso_struct->nbr_particule) + i].Origine_x;
 			particles[0][(n * pso_struct->nbr_particule) + i].posY = particles[0][(n * pso_struct->nbr_particule) + i].Origine_y;
