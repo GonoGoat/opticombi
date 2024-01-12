@@ -1,5 +1,6 @@
 #include "Main.h"
 
+
 int main(int argc, char const* argv[])
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
@@ -15,7 +16,7 @@ int main(int argc, char const* argv[])
     }
     else
     {
-        map.nom_fichier = "..\\..\\/Maps/sample/Beginner-I.lt4";
+        map.nom_fichier = "..\\..\\/Maps/prev/Chemin.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';

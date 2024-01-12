@@ -86,13 +86,13 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
         partParams->taille_sequence++;
 
         if (partParams->success == Mort) {
-            //std::cout << "Mort apres "<< partParams->taille_sequence << std::endl;
+            std::cout << "Mort apres "<< partParams->taille_sequence << std::endl;
             partParams->posX = move.depl_x;
             partParams->posY = move.depl_y;
             break;
         }
         else if (partParams->success == Base_atteinte) {
-            //std::cout << "Base atteinte" << std::endl;
+            std::cout << "Base atteinte" << std::endl;
             break;
         }
     }
@@ -736,7 +736,7 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
         }
         position_fixe = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x];
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
-        if (moveParams->depl_x < 0 || moveParams->depl_x>mapParams->nbr_colonnes - 1 || moveParams->depl_y < 0 || moveParams->depl_y>mapParams->nbr_lignes - 1 || position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_fixe <= Rotative_Mirror_DL)) {
+        if (moveParams->depl_x < 0 || moveParams->depl_x > mapParams->nbr_colonnes - 1 || moveParams->depl_y < 0 || moveParams->depl_y > mapParams->nbr_lignes - 1 || position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Rotative_Mirror_DL)) {
             partParams->success = Position_non_valide;
             inverserDirection(&(moveParams->dir));
             Deplacement(&(moveParams->dir), &(moveParams->depl_x), &(moveParams->depl_y));
@@ -778,6 +778,7 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
         }
     }
     else if (partParams->success == Position_non_valide) {
+        std::cout << "Rentre dans le else if" << std::endl;
         partParams->posX = moveParams->depl_x;
         partParams->posY = moveParams->depl_y;
     }
@@ -791,6 +792,8 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
  * @param partParams Les paramères de la particule
  */
 void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
+
+    std::cout << "Passage glace fine" << std::endl;
 
     int position_fixe;
     int position_mobile;
