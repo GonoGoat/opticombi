@@ -28,6 +28,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 
 	std::random_device rd16;
 	std::mt19937 rng16(rd16());
+	//std::uniform_int_distribution<int> dist16(0, mapParams->nbr_colonnes - 1);
 	std::uniform_int_distribution<int> dist16(0, mapParams->nbr_case_ok-1);
 
 	std::random_device rd100;
@@ -68,8 +69,11 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		}
 		else
 		{
+			/*particles[i].Origine_x = dist16(rng16);
+			particles[i].Origine_y = dist16(rng16);*/
 			particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
 			particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+			std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 		}
 		particles[i].vitX = dist8(rng8);
 		particles[i].vitY = dist8(rng8);
@@ -106,6 +110,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				particles[i].Direction_tank = particles[i].Output.back();
 			}
 		}
+		particles[i].success = 0;
 	}
 
 	// Ittération PSO
@@ -129,10 +134,6 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;*/
 				// Actualisation des arrivées possibles
 				particles[i].become_finish = true;
-
-				if (particles[i].Origine_y >= 12 && particles[i].Origine_x > 4) {
-					std::cout << particles[i].Origine_x << " " <<  particles[i].Origine_y << " vers " << particles[i].Finish_x << " " <<  particles[i].Finish_y << " : " << particles[i].Output;
-				}
 
 				mapParams->nbr_arrive += 1;
 				psoParams->nbr_thread += psoParams->nbr_particule;
@@ -169,6 +170,8 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				// Adaptation de chaque particule
 				for (int k = 0; k < psoParams->nbr_particule; k++) {
 					particles.push_back(newPart);
+					/*particles[i].Origine_x = dist16(rng16);
+					particles[i].Origine_y = dist16(rng16);*/
 					particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
 					particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
 					particles.back().vitX = dist8(rng8);
@@ -211,6 +214,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 							particles[psoParams->nbr_thread - j].Direction_tank = particles[psoParams->nbr_thread - j].Output.back();
 						}
 					}
+					particles[psoParams->nbr_thread - j].success = 0;
 				}
 			}
 
@@ -292,13 +296,8 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		particles[num_particule].Output = finish_Output.back();
 		Engine(mapParams, &particles[num_particule]);
 
-		if (particles[num_particule].success == 2)  {
-			std::cout << "Solution valide\n";
-		}
-		else {
-			std::cout << "Solution trouvee mais fausse :(\n";
-		}
-		return finish_Output.back();
+		if (particles[num_particule].success == 2) return finish_Output.back();
+		else return "Solution trouvee mais fausse :( " + finish_Output.back();
 	}
 	else {
 		return "Rien trouve :(";

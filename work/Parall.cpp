@@ -36,6 +36,7 @@ void ParallelisationParUnivers(psoStruct* pso_struct, std::vector<particleStruct
 					particles[0][(n * pso_struct->nbr_particule) + i].Direction_tank = particles[0][(n * pso_struct->nbr_particule) + i].Output.back();
 				}
 			}
+			particles[0][(n * pso_struct->nbr_particule) + i].success = 0;
 		}
 	}
 }

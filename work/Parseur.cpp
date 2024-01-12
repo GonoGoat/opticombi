@@ -124,6 +124,7 @@ void parsage(mapStruct* mapParams) {
 
             /*long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
             std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/
+
             position_valide(mapParams);
         }
         else {
