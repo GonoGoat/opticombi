@@ -127,96 +127,96 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 			particles[i].distance_finish = sqrt((particles[i].Finish_x - particles[i].posX) * (particles[i].Finish_x - particles[i].posX) + (particles[i].Finish_y - particles[i].posY) * (particles[i].Finish_y - particles[i].posY));
 
 			// Passage d'une particule comme arrivée intermédiaire
-		//	if (int(particles[i].distance_finish) == 0 && particles[i].become_finish == false)
-		//	{
-		//		/*std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
-		//		std::cout << "PositionX = " << particles[i].Origine_x << " PositionY = " << particles[i].Origine_y << std::endl;
-		//		std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;*/
-		//		// Actualisation des arrivées possibles
-		//		particles[i].become_finish = true;
+			if (int(particles[i].distance_finish) == 0 && particles[i].become_finish == false)
+			{
+				/*std::cout << "Nouveau chemin vers finish trouve !" << std::endl;
+				std::cout << "PositionX = " << particles[i].Origine_x << " PositionY = " << particles[i].Origine_y << std::endl;
+				std::cout << "Particule " << i << " + " << "Finish " << n << std::endl;*/
+				// Actualisation des arrivées possibles
+				particles[i].become_finish = true;
 
-		//		mapParams->nbr_arrive += 1;
-		//		psoParams->nbr_thread += psoParams->nbr_particule;
-		//		mapParams->Finish_x.push_back(particles[i].Origine_x);
-		//		mapParams->Finish_y.push_back(particles[i].Origine_y);
-		//		g_bestX.push_back(0);
-		//		g_bestY.push_back(0);
-		//		score_g_best.push_back(-9999);
+				mapParams->nbr_arrive += 1;
+				psoParams->nbr_thread += psoParams->nbr_particule;
+				mapParams->Finish_x.push_back(particles[i].Origine_x);
+				mapParams->Finish_y.push_back(particles[i].Origine_y);
+				g_bestX.push_back(0);
+				g_bestY.push_back(0);
+				score_g_best.push_back(-9999);
 
-		//		/*std::cout << "= Finish " << finish_Output.size() << std::endl;
-		//		std::cout << Output[i] << " + " << finish_Output[n] << std::endl;
-		//		std::cout << std::endl;*/
+				/*std::cout << "= Finish " << finish_Output.size() << std::endl;
+				std::cout << Output[i] << " + " << finish_Output[n] << std::endl;
+				std::cout << std::endl;*/
 
-		//		// Si le trajet ajouté se finit avec position différente que celle de départ du trajet initial
-		//		if (particles[i].Output.back() != finish_Output[n][0]) particles[i].Output += finish_Output[n][0];
-		//		finish_Output.push_back(particles[i].Output + finish_Output[n]);
+				// Si le trajet ajouté se finit avec position différente que celle de départ du trajet initial
+				if (particles[i].Output.back() != finish_Output[n][0]) particles[i].Output += finish_Output[n][0];
+				finish_Output.push_back(particles[i].Output + finish_Output[n]);
 
-		//		// Regénération de particule pour nouvelle arrivée
-		//		particleStruct newPart;
-		//		newPart.p_bestX = NULL;
-		//		newPart.p_bestY = NULL;
-		//		newPart.score_p_best = -9999;
-		//		newPart.distance_finish = NULL;
-		//		newPart.score = NULL;
-		//		newPart.Direction_tank = '/';
-		//		newPart.Output = "";
-		//		newPart.become_finish = false;
-		//		newPart.matrice_mobile = mapParams->matrice_mobile;
-		//		newPart.taille_sequence = 0;
-		//		newPart.success = En_vie;
-		//		newPart.Finish_x = mapParams->Finish_x.back();
-		//		newPart.Finish_y = mapParams->Finish_y.back();
+				// Regénération de particule pour nouvelle arrivée
+				particleStruct newPart;
+				newPart.p_bestX = NULL;
+				newPart.p_bestY = NULL;
+				newPart.score_p_best = -9999;
+				newPart.distance_finish = NULL;
+				newPart.score = NULL;
+				newPart.Direction_tank = '/';
+				newPart.Output = "";
+				newPart.become_finish = false;
+				newPart.matrice_mobile = mapParams->matrice_mobile;
+				newPart.taille_sequence = 0;
+				newPart.success = En_vie;
+				newPart.Finish_x = mapParams->Finish_x.back();
+				newPart.Finish_y = mapParams->Finish_y.back();
 
-		//		// Adaptation de chaque particule
-		//		for (int k = 0; k < psoParams->nbr_particule; k++) {
-		//			particles.push_back(newPart);
-		//			/*particles[i].Origine_x = dist16(rng16);
-		//			particles[i].Origine_y = dist16(rng16);*/
-		//			particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
-		//			particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
-		//			particles.back().vitX = dist8(rng8);
-		//			particles.back().vitY = dist8(rng8);
-		//		}
-		//		
+				// Adaptation de chaque particule
+				for (int k = 0; k < psoParams->nbr_particule; k++) {
+					particles.push_back(newPart);
+					/*particles[i].Origine_x = dist16(rng16);
+					particles[i].Origine_y = dist16(rng16);*/
+					particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+					particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+					particles.back().vitX = dist8(rng8);
+					particles.back().vitY = dist8(rng8);
+				}
+				
 
-		//		// Adaptation des particules démarrant à la base
-		//		for (int l = 0;l < psoParams->nbr_base;l++) {
-		//			particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Direction_tank = 'U';
-		//			particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Origine_x = mapParams->Origine_x;
-		//			particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Origine_y = mapParams->Origine_y;
-		//		}
+				// Adaptation des particules démarrant à la base
+				for (int l = 0;l < psoParams->nbr_base;l++) {
+					particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Direction_tank = 'U';
+					particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Origine_x = mapParams->Origine_x;
+					particles[psoParams->nbr_thread - psoParams->nbr_particule + l].Origine_y = mapParams->Origine_y;
+				}
 
-		//		// Direction et vitesse d'origine pour nouvelles particules
-		//		for (int j = psoParams->nbr_particule; j > 0; j--)
-		//		{
-		//			particles[psoParams->nbr_thread - j].posX = particles[psoParams->nbr_thread - j].Origine_x;
-		//			particles[psoParams->nbr_thread - j].posY = particles[psoParams->nbr_thread - j].Origine_y;
+				// Direction et vitesse d'origine pour nouvelles particules
+				for (int j = psoParams->nbr_particule; j > 0; j--)
+				{
+					particles[psoParams->nbr_thread - j].posX = particles[psoParams->nbr_thread - j].Origine_x;
+					particles[psoParams->nbr_thread - j].posY = particles[psoParams->nbr_thread - j].Origine_y;
 
-		//			DeplacementVitesse(&particles[psoParams->nbr_thread - j].vitX, &particles[psoParams->nbr_thread - j].vitY, &particles[psoParams->nbr_thread - j].Direction_tank, &particles[psoParams->nbr_thread - j].Output, false, &particles[psoParams->nbr_thread - j].nbr_modifs);
-		//			particles[psoParams->nbr_thread - j].Direction_original_tank = particles[psoParams->nbr_thread - j].Direction_tank;
-		//			Engine(mapParams, &particles[psoParams->nbr_thread - j]);
+					DeplacementVitesse(&particles[psoParams->nbr_thread - j].vitX, &particles[psoParams->nbr_thread - j].vitY, &particles[psoParams->nbr_thread - j].Direction_tank, &particles[psoParams->nbr_thread - j].Output, false, &particles[psoParams->nbr_thread - j].nbr_modifs);
+					particles[psoParams->nbr_thread - j].Direction_original_tank = particles[psoParams->nbr_thread - j].Direction_tank;
+					Engine(mapParams, &particles[psoParams->nbr_thread - j]);
 
-		//			//Gestion de la mort
-		//			if (particles[psoParams->nbr_thread - j].success == 1) {
-		//				if (particles[psoParams->nbr_thread - j].nbr_modifs == 2) {
-		//					particles[psoParams->nbr_thread - j].Output.pop_back();
-		//					particles[psoParams->nbr_thread - j].Output.pop_back();
-		//				}
-		//				else if (particles[psoParams->nbr_thread - j].nbr_modifs == 1) particles[psoParams->nbr_thread - j].Output.pop_back();
-		//				if (particles[psoParams->nbr_thread - j].Output == "") {
-		//					if (i == n * psoParams->nbr_particule) particles[psoParams->nbr_thread - j].Direction_tank == 'U';
-		//					else {
-		//						particles[psoParams->nbr_thread - j].Direction_tank = '/';
-		//						particles[psoParams->nbr_thread - j].Direction_original_tank = '/';
-		//					}
-		//				}
-		//				else {
-		//					particles[psoParams->nbr_thread - j].Direction_tank = particles[psoParams->nbr_thread - j].Output.back();
-		//				}
-		//			}
-		//			particles[psoParams->nbr_thread - j].success = 0;
-		//		}
-		//	}
+					//Gestion de la mort
+					if (particles[psoParams->nbr_thread - j].success == 1) {
+						if (particles[psoParams->nbr_thread - j].nbr_modifs == 2) {
+							particles[psoParams->nbr_thread - j].Output.pop_back();
+							particles[psoParams->nbr_thread - j].Output.pop_back();
+						}
+						else if (particles[psoParams->nbr_thread - j].nbr_modifs == 1) particles[psoParams->nbr_thread - j].Output.pop_back();
+						if (particles[psoParams->nbr_thread - j].Output == "") {
+							if (i == n * psoParams->nbr_particule) particles[psoParams->nbr_thread - j].Direction_tank == 'U';
+							else {
+								particles[psoParams->nbr_thread - j].Direction_tank = '/';
+								particles[psoParams->nbr_thread - j].Direction_original_tank = '/';
+							}
+						}
+						else {
+							particles[psoParams->nbr_thread - j].Direction_tank = particles[psoParams->nbr_thread - j].Output.back();
+						}
+					}
+					particles[psoParams->nbr_thread - j].success = 0;
+				}
+			}
 
 			// Vérification de jonction avec une particule démarrant à la base
 			if (int(particles[n * psoParams->nbr_particule].distance_finish) == 0) {

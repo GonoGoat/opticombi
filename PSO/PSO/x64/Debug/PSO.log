@@ -1,8 +1,4 @@
-﻿  Logique_Jeu.cpp
-C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Logique_Jeu.cpp(24,10): warning C4101: 'dir' : variable locale non référencée
-C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Logique_Jeu.cpp(57,9): warning C4101: 'deplacement_x' : variable locale non référencée
-C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Logique_Jeu.cpp(57,24): warning C4101: 'deplacement_y' : variable locale non référencée
-  Main.cpp
-C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Main.cpp(37,25): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
-  Génération de code en cours...
+﻿  Parall.cpp
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Parall.cpp(29,111): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Parall.cpp(81,107): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
   PSO.vcxproj -> C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\x64\Debug\PSO.exe
