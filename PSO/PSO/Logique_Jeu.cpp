@@ -86,13 +86,13 @@ void Engine(mapStruct* mapParams, particleStruct* partParams) {
         partParams->taille_sequence++;
 
         if (partParams->success == Mort) {
-            std::cout << "Mort apres "<< partParams->taille_sequence << std::endl;
+            //std::cout << "Mort apres "<< partParams->taille_sequence << std::endl;
             partParams->posX = move.depl_x;
             partParams->posY = move.depl_y;
             break;
         }
         else if (partParams->success == Base_atteinte) {
-            std::cout << "Base atteinte" << std::endl;
+            //std::cout << "Base atteinte" << std::endl;
             break;
         }
     }
@@ -792,8 +792,6 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
  * @param partParams Les paramères de la particule
  */
 void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partParams) {
-
-    std::cout << "Passage glace fine" << std::endl;
 
     int position_fixe;
     int position_mobile;
