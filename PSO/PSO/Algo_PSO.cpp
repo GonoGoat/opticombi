@@ -109,6 +109,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				particles[i].Direction_tank = particles[i].Output.back();
 			}
 		}
+		particles[i].success = 0;
 	}
 
 	// Ittération PSO
@@ -212,6 +213,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 							particles[psoParams->nbr_thread - j].Direction_tank = particles[psoParams->nbr_thread - j].Output.back();
 						}
 					}
+					particles[psoParams->nbr_thread - j].success = 0;
 				}
 			}
 
