@@ -52,6 +52,10 @@ struct mapStruct {
     // Ensemble des coordonnées d'arrivées possibles sur la carte
     std::vector<int> Finish_x, Finish_y; 
     char Direction_tank;
+
+    // Ensemble des positions possibles sur la carte
+    std::vector<int> pos_OK_x, pos_OK_y;
+    int nbr_case_ok;
 };
 
 struct outputStruct {

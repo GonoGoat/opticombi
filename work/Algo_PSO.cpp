@@ -28,7 +28,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 
 	std::random_device rd16;
 	std::mt19937 rng16(rd16());
-	std::uniform_int_distribution<int> dist16(0, mapParams->nbr_colonnes-1);
+	std::uniform_int_distribution<int> dist16(0, mapParams->nbr_case_ok-1);
 
 	std::random_device rd100;
 	std::mt19937 rng100(rd100());
@@ -68,8 +68,8 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		}
 		else
 		{
-			particles[i].Origine_x = dist16(rng16);
-			particles[i].Origine_y = dist16(rng16);
+			particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+			particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
 		}
 		particles[i].vitX = dist8(rng8);
 		particles[i].vitY = dist8(rng8);
@@ -130,6 +130,10 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				// Actualisation des arrivées possibles
 				particles[i].become_finish = true;
 
+				if (particles[i].Origine_y >= 12 && particles[i].Origine_x > 4) {
+					std::cout << particles[i].Origine_x << " " <<  particles[i].Origine_y << " vers " << particles[i].Finish_x << " " <<  particles[i].Finish_y << " : " << particles[i].Output;
+				}
+
 				mapParams->nbr_arrive += 1;
 				psoParams->nbr_thread += psoParams->nbr_particule;
 				mapParams->Finish_x.push_back(particles[i].Origine_x);
@@ -165,11 +169,12 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 				// Adaptation de chaque particule
 				for (int k = 0; k < psoParams->nbr_particule; k++) {
 					particles.push_back(newPart);
-					particles.back().Origine_x = dist16(rng16);
-					particles.back().Origine_y = dist16(rng16);
+					particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+					particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
 					particles.back().vitX = dist8(rng8);
 					particles.back().vitY = dist8(rng8);
 				}
+				
 
 				// Adaptation des particules démarrant à la base
 				for (int l = 0;l < psoParams->nbr_base;l++) {
@@ -280,15 +285,20 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 
 	//Verification de la veracite de la solution puis envoi de la reponse si celle-ci est bonne
 	if (found_finish == true) {
-
+		particles[num_particule].matrice_mobile = mapParams->matrice_mobile;
 		particles[num_particule].Direction_tank = particles[num_particule].Direction_original_tank;
 		particles[num_particule].posX = particles[num_particule].Origine_x;
 		particles[num_particule].posY = particles[num_particule].Origine_y;
 		particles[num_particule].Output = finish_Output.back();
 		Engine(mapParams, &particles[num_particule]);
 
-		if (particles[num_particule].success == 2) return finish_Output.back();
-		else return "Solution trouvee mais fausse :( " + finish_Output.back();
+		if (particles[num_particule].success == 2)  {
+			std::cout << "Solution valide\n";
+		}
+		else {
+			std::cout << "Solution trouvee mais fausse :(\n";
+		}
+		return finish_Output.back();
 	}
 	else {
 		return "Rien trouve :(";
