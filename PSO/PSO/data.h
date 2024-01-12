@@ -86,7 +86,7 @@ struct psoStruct {
     int nbr_base;
 
     //Parametres PSO
-    float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
+    float omega = 0, c1 = 1, c2 = 1, random_1, random_2;
 
     // Influence tirer ou bouger (plus cette valeur se rapproche de 1, plus il va avoir tendance à tirer)
 	double influence;

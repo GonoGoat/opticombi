@@ -120,8 +120,12 @@ bool IdentifierObstacle(particleStruct *partParams, double influence,mapStruct* 
 
 bool faireChoix(double influence)
 {
+    // Création et initialisation des générateurs de nombres aléatoires
+    std::random_device rd10;
+    std::mt19937 rng10(rd10());
+    std::uniform_int_distribution<int> dist10(0, 10);
     // Génération d'un nombre aléatoire entre 0 et 1
-    double randomValue = (double)rand() / RAND_MAX;
+    double randomValue = dist10(rng10) / 10;
     // std::cout << randomValue << std::endl;
     //  Condition pour choisir en fonction de l'influence
     if (randomValue < influence)

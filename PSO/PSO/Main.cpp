@@ -1,6 +1,6 @@
 #include "Main.h"
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
