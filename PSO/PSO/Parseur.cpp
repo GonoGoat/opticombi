@@ -124,6 +124,8 @@ void parsage(mapStruct* mapParams) {
 
             /*long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
             std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/
+
+            position_valide(mapParams);
         }
         else {
             std::cerr << "Le fichier " << mapParams->nom_fichier << " n'a pas ete trouve." << std::endl;
@@ -146,4 +148,95 @@ Matrice conversion(const std::string& caractere)
         return conversionToEnum[caractere];
     }
     return Matrice(-1);
+}
+
+/**
+ * @brief Recherche de case pouvant etre utilise comme depart
+ *
+ * @param mapParams Données de la carte
+ */
+void position_valide(mapStruct* mapParams)
+{
+    int case_verif;
+    moveStruct verif_case;
+    mapParams->nbr_case_ok = 0;
+
+    for (int i = 0; i < mapParams->nbr_lignes; i++) {
+        for (int j = 0; j < mapParams->nbr_colonnes; j++) {
+            case_verif = mapParams->matrice_mobile[i][j] + mapParams->matrice_fixe[i][j];
+            if (case_verif == Dirt) {
+                verif_case.depl_y = i;
+                verif_case.depl_x = j;
+                Verification_Anti_Tank(mapParams, &verif_case);
+            }
+        }
+    }
+}
+
+/**
+ * @brief Verification que la case n'est pas situe dans la ligne de tire d'un anti tank
+ *
+ * @param mapParams Données de la carte
+ * @param moveParams Données de la position sur la carte
+ */
+void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams)
+{
+    int position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
+    bool case_ok = 1;
+    //Verification horizontal
+        //A droite de la position en cours
+    for (int i = 1; i < mapParams->nbr_colonnes - moveParams->depl_x && case_ok == 1; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x + i] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x + i];
+        if (position == Sollid_Block || position == Crystal_Block || (position >= Movable_Block && position <= Anti_Tank_R) || (position >= Anti_Tank_Dead_U && position <= Rotative_Mirror_DL)) {
+            break;
+        }
+        else if (position == Anti_Tank_L) {
+            case_ok = 0;
+            break;
+        }
+    }
+
+    //A gauche de la position en cours
+    for (int i = 1; i < moveParams->depl_x + 1 && case_ok == 1; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x - i] + mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x - i];
+        if (position == Sollid_Block || position == Crystal_Block || (position >= Movable_Block && position <= Anti_Tank_D) || (position >= Anti_Tank_L && position <= Rotative_Mirror_DL)) {
+            break;
+        }
+        else if (position == Anti_Tank_R) {
+            case_ok = 0;
+            break;
+        }
+    }
+
+    //Verification vertical
+        //En dessous de la position en cours
+    for (int i = 1; i < mapParams->nbr_colonnes - moveParams->depl_y && case_ok == 1; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y + i][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y + i][moveParams->depl_x];
+        if (position == Sollid_Block || position == Crystal_Block || (position >= Movable_Block && position <= Bricks) || (position >= Anti_Tank_D && position <= Rotative_Mirror_DL)) {
+            break;
+        }
+        else if (position == Anti_Tank_U) {
+            case_ok = 0;
+            break;
+        }
+    }
+
+    //Au dessus de la position en cours
+    for (int i = 1; i < moveParams->depl_y + 1 && case_ok == 1; i++) {
+        position = mapParams->matrice_fixe[moveParams->depl_y - i][moveParams->depl_x] + mapParams->matrice_mobile[moveParams->depl_y - i][moveParams->depl_x];
+        if (position == Sollid_Block || position == Crystal_Block || (position >= Movable_Block && position <= Anti_Tank_U) || (position >= Anti_Tank_R && position <= Rotative_Mirror_DL)) {
+            break;
+        }
+        else if (position == Anti_Tank_D) {
+            case_ok = 0;
+            break;
+        }
+    }
+
+    //Si encore en vie alors deplacement effectué
+    if (case_ok == 1) {
+        mapParams->nbr_case_ok += 1;
+        mapParams->pos_OK_x.push_back(moveParams->depl_x);
+        mapParams->pos_OK_y.push_back(moveParams->depl_y);
+    }
 }

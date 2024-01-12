@@ -37,7 +37,7 @@ bool IdentifierObstacle(particleStruct *partParams, double influence,mapStruct* 
         }
         break;
     case 'D':
-        for (int i = partParams->posY; i < partParams->matrice_mobile[0].size(); i++)
+        for (int i = partParams->posY; i < mapParams->nbr_lignes; i++)
         {
             // Bloc solide detecté
             if (mapParams->matrice_fixe[i][partParams->posX] == Sollid_Block)
@@ -87,7 +87,7 @@ bool IdentifierObstacle(particleStruct *partParams, double influence,mapStruct* 
 
         break;
     case 'R':
-        for (int i = partParams->posX; i < partParams->matrice_mobile.size(); i++)
+        for (int i = partParams->posX; i < mapParams->nbr_colonnes; i++)
         {
             if (mapParams->matrice_fixe[partParams->posY][i] == Sollid_Block)
             {

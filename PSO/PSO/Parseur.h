@@ -10,3 +10,5 @@
 
 void parsage(mapStruct* mapParams);
 Matrice conversion(const std::string& caractere);
+void position_valide(mapStruct* mapParams);
+void Verification_Anti_Tank(mapStruct* mapParams, moveStruct* moveParams);
