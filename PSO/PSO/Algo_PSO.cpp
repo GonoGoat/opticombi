@@ -71,8 +71,10 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		{
 			/*particles[i].Origine_x = dist16(rng16);
 			particles[i].Origine_y = dist16(rng16);*/
-			particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
-			particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+			do {
+				particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+				particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+			} while (particles[i].Origine_x == particles[i].Finish_x && particles[i].Origine_y == particles[i].Finish_y);
 			//std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 		}
 		particles[i].vitX = dist8(rng8);
@@ -172,8 +174,10 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 					particles.push_back(newPart);
 					/*particles[i].Origine_x = dist16(rng16);
 					particles[i].Origine_y = dist16(rng16);*/
-					particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
-					particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+					do {
+						particles.back().Origine_x = mapParams->pos_OK_x[dist16(rng16)];
+						particles.back().Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+					} while (particles.back().Origine_x == particles.back().Finish_x && particles.back().Origine_y == particles.back().Finish_y);
 					particles.back().vitX = dist8(rng8);
 					particles.back().vitY = dist8(rng8);
 				}
@@ -297,9 +301,29 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 		Engine(mapParams, &particles[num_particule]);
 
 		if (particles[num_particule].success == 2) return finish_Output.back();
-		else return "Solution trouvee mais fausse :( " + finish_Output.back();
+		else {
+			std::cout << "Solution trouvee mais fausse :(";
+			int best_part = -1;
+			int best_score = NULL;
+			for (int i = 0; i < psoParams->nbr_base; i++) {
+				if ((best_score == NULL || particles[i].score > best_score) && particles[i].success != Mort) {
+					best_part = i;
+					best_score = particles[i].score;
+				}
+			}
+			return particles[best_part].Output;
+		}
 	}
 	else {
-		return "Rien trouve :(";
+		int best_part = -1;
+		int best_score = NULL;
+		for (int i = 0; i < psoParams->nbr_base; i++) {
+			if ((best_score == NULL || particles[i].score > best_score) && particles[i].success != Mort) {
+				best_part = i;
+				best_score = particles[i].score;
+			}
+		}
+		std::cout << "Rien trouve :(\n";
+		return particles[best_part].Output;
 	}
 }

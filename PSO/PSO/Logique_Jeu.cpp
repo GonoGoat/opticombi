@@ -704,6 +704,7 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
 
     int position_fixe;
     int position_mobile;
+    //std::cout << "rentre dans la glace" << std::endl;
 
     do {
         if ((moveParams->dir == 'U' || moveParams->dir == 'D') && dir_anti_tank == 'X') {
@@ -746,9 +747,11 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
         else if ((position_fixe == Way_U && moveParams->dir == 'D') || (position_fixe == Way_D && moveParams->dir == 'U') || (position_fixe == Way_L && moveParams->dir == 'R') || (position_fixe == Way_R && moveParams->dir == 'L')) {
             inverserDirection(&(moveParams->dir));
             Deplacement(&(moveParams->dir), &(moveParams->depl_x), &(moveParams->depl_y));
+            glace(mapParams, moveParams, partParams);
             inverserDirection(&(moveParams->dir));
             break;
         }
+        //std::cout << "Boucle while glace" << std::endl;
     } while (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice && partParams->success != Mort);
 
     if (partParams->success != Mort && partParams->success != Position_non_valide) {
@@ -762,6 +765,7 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
             path(mapParams, moveParams, partParams);
         }
         else if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice) {
+            //std::cout << "Passage else if glace" << std::endl;
             partParams->success = Passage_chemin;
             glace(mapParams, moveParams, partParams);
         }
@@ -778,9 +782,10 @@ void glace(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPar
         }
     }
     else if (partParams->success == Position_non_valide) {
-        std::cout << "Rentre dans le else if" << std::endl;
+        //std::cout << "Rentre dans le else if" << std::endl;
         partParams->posX = moveParams->depl_x;
         partParams->posY = moveParams->depl_y;
+        partParams->success = En_vie;
     }
 }
 
@@ -795,6 +800,7 @@ void glace_fine(mapStruct* mapParams, moveStruct* moveParams, particleStruct* pa
 
     int position_fixe;
     int position_mobile;
+    //std::cout << "rentre dans la glace fine" << std::endl;
 
     do {
         partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] = Water;
@@ -871,7 +877,7 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
     char dir_way;
     int position_fixe;
     int position_mobile;
-
+    //std::cout << "rentre dans le tapis" << std::endl;
     do {
         switch (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x])
         {
@@ -925,6 +931,7 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
         position_mobile = partParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x];
         
         if (position_fixe == Sollid_Block || position_fixe == Crystal_Block || (position_mobile >= Movable_Block && position_mobile <= Rotative_Mirror_DL)) {
+            //std::cout << "Position non valide du a matrice fixe " << position_fixe << " | matrice mobile " << position_mobile << std::endl;
             partParams->success = Position_non_valide;
             inverserDirection(&dir_way);
             Deplacement(&dir_way, &(moveParams->depl_x), &(moveParams->depl_y));
@@ -933,18 +940,22 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
     } while (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] >= Way_U && mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] <= Way_L);  //Matrice.path --> 15--18
 
     if (partParams->success != Mort && partParams->success != Position_non_valide) {
+        //std::cout << "if du tapis" << std::endl;
         char dir_backup = moveParams->dir;
         moveParams->dir = dir_way;
         if (mapParams->matrice_fixe[moveParams->depl_y][moveParams->depl_x] == Ice) {
+            //std::cout << "if glace" << std::endl;
             partParams->success = Passage_chemin;
             glace(mapParams, moveParams, partParams);
         }
         else if (mapParams->matrice_mobile[moveParams->depl_y][moveParams->depl_x] == Thin_Ice) {
+            //std::cout << "else if glace fine" << std::endl;
             partParams->success = Passage_chemin;
             glace_fine(mapParams, moveParams, partParams);
         }
         moveParams->dir = dir_backup;
         if (partParams->success == En_vie) {
+            //std::cout << "if en vie" << std::endl;
             premiere_case = true;
             if (dir_anti_tank != 'X') {
                 tir_Anti_Tank(mapParams, moveParams, partParams);
@@ -956,8 +967,10 @@ void path(mapStruct* mapParams, moveStruct* moveParams, particleStruct* partPara
         }
     }
     else if (partParams->success == Position_non_valide) {
+        //std::cout << "else if position non_valide" << std::endl;
         partParams->posX = moveParams->depl_x;
         partParams->posY = moveParams->depl_y;
+        partParams->success = En_vie;
     }
 }
 

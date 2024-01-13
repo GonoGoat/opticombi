@@ -1,7 +1,77 @@
 #include "Main.h"
 
-
 int main(int argc, char const* argv[])
+{
+    std::chrono::time_point<std::chrono::system_clock> start, end;
+    start = std::chrono::system_clock::now();
+
+
+    // Paramètres processing
+    mapStruct map;
+    if (argc == 2) {
+        map.nom_fichier = argv[1];
+    }
+    else {
+        map.nom_fichier = "..\\..\\/Maps/prev/Chemin.lt4";
+    }
+    map.nbr_arrive = 0;
+    map.Direction_tank = 'R';
+    std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
+
+    // Paramètres Output
+    outputStruct output;
+    output.name = "One block into the water";
+    output.solver = "PSO";
+    output.output_file = "./Output/new.ltr";
+
+    std::string testSeq = "R";
+    // Paramètres particules
+    std::vector<particleStruct> particles;
+
+    //Paramètres PSO
+    psoStruct pso;
+
+    // Parsage de la carte
+    parsage(&map);
+
+    // Détection des arrivées et du départ de la carte
+    detection(&map);
+
+    // Préparation particules
+    particleStruct part;
+    part.Direction_tank = map.Direction_tank;
+    part.matrice_mobile = map.matrice_mobile;
+    part.success = En_vie;
+    part.Origine_x = 1;
+    part.Origine_y = 14;
+    part.posX = 1;
+    part.posY = 14;
+    if (map.Finish_x.size() != 0 && map.Finish_y.size() != 0) {
+        part.Finish_x = map.Finish_x[0];
+        part.Finish_y = map.Finish_y[0];
+    }
+    part.Output = testSeq; // Temporaire
+
+    particles.push_back(part);
+
+
+    std::cout << "Depart x : " << part.posX << "   Depart y : " << part.posY << std::endl;
+
+    for (int i = 0; i < map.nbr_arrive; i++) {
+        std::cout << "Position : " << i << " x =" << map.Finish_x[i] << " | y =" << map.Finish_y[i] << std::endl;
+    }
+
+    Engine(&map, &part);
+
+    //create_ltr_file(&output);
+    end = std::chrono::system_clock::now();
+    long long int microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;
+
+    return 0;
+}
+
+/*int main(int argc, char const* argv[])
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
@@ -86,4 +156,4 @@ int main(int argc, char const* argv[])
               << std::endl;
 
     return 0;
-}
+}*/
