@@ -142,6 +142,14 @@ struct particleStruct {
     bool become_finish;
     float distance_finish;
     int nbr_modifs;
+
+    //Variables pour tir laser Anti_tank
+    int pos_laser_x, pos_laser_y = -1;
+    bool premiere_case = true;
+    char dir_anti_tank = 'X';
+
+    //Variable anti boucle
+    int boucle = 0;
 };
 
 struct mobileStruct {

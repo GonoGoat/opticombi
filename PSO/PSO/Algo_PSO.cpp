@@ -8,6 +8,7 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 	int n1 = 150;
 	int n2 = 2;
 	int nbr_iteration_t = 0;
+	int nbr_aleatoire_pos = 0;
 
 	//Variable pour la verification de la veracite de la solution
 	int num_particule;
@@ -72,8 +73,9 @@ std::string Algo_PSO(mapStruct *mapParams, psoStruct *psoParams)
 			/*particles[i].Origine_x = dist16(rng16);
 			particles[i].Origine_y = dist16(rng16);*/
 			do {
-				particles[i].Origine_x = mapParams->pos_OK_x[dist16(rng16)];
-				particles[i].Origine_y = mapParams->pos_OK_y[dist16(rng16)];
+				nbr_aleatoire_pos = dist16(rng16);
+				particles[i].Origine_x = mapParams->pos_OK_x[nbr_aleatoire_pos];
+				particles[i].Origine_y = mapParams->pos_OK_y[nbr_aleatoire_pos];
 			} while (particles[i].Origine_x == particles[i].Finish_x && particles[i].Origine_y == particles[i].Finish_y);
 			//std::cout << "Particule a la position x : " << particles[i].Origine_x << " | y :" << particles[i].Origine_y << std::endl;
 		}

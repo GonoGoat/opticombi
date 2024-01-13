@@ -1,6 +1,6 @@
 #include "Main.h"
 
-int main(int argc, char const* argv[])
+/*int main(int argc, char const* argv[])
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
@@ -12,10 +12,10 @@ int main(int argc, char const* argv[])
         map.nom_fichier = argv[1];
     }
     else {
-        map.nom_fichier = "..\\..\\/Maps/prev/Chemin.lt4";
+        map.nom_fichier = "..\\..\\/Maps/prev/Trajectoire_Anti_Tank.lt4";
     }
     map.nbr_arrive = 0;
-    map.Direction_tank = 'R';
+    map.Direction_tank = 'L';
     std::vector<std::vector<int>> matrice_fixe, matrice_mobile;
 
     // Paramètres Output
@@ -24,7 +24,7 @@ int main(int argc, char const* argv[])
     output.solver = "PSO";
     output.output_file = "./Output/new.ltr";
 
-    std::string testSeq = "R";
+    std::string testSeq = "DDLLFLFLLUUULLUULLUUUUUUUUUUDDRRRRRUUUDDDDDLLDDUURRRRDDFFFFFFFFFFFFRRDD";
     // Paramètres particules
     std::vector<particleStruct> particles;
 
@@ -42,10 +42,10 @@ int main(int argc, char const* argv[])
     part.Direction_tank = map.Direction_tank;
     part.matrice_mobile = map.matrice_mobile;
     part.success = En_vie;
-    part.Origine_x = 1;
-    part.Origine_y = 14;
-    part.posX = 1;
-    part.posY = 14;
+    part.Origine_x = 7;
+    part.Origine_y = 15;
+    part.posX = 7;
+    part.posY = 15;
     if (map.Finish_x.size() != 0 && map.Finish_y.size() != 0) {
         part.Finish_x = map.Finish_x[0];
         part.Finish_y = map.Finish_y[0];
@@ -69,9 +69,9 @@ int main(int argc, char const* argv[])
     std::cout << "Temp d'execution du code " << microseconde << " microsec" << std::endl << std::endl;
 
     return 0;
-}
+}*/
 
-/*int main(int argc, char const* argv[])
+int main(int argc, char const* argv[])
 {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
@@ -86,7 +86,7 @@ int main(int argc, char const* argv[])
     }
     else
     {
-        map.nom_fichier = "..\\..\\/Maps/prev/Chemin.lt4";
+        map.nom_fichier = "..\\..\\/Maps/prev/Beginner-I.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
@@ -117,7 +117,7 @@ int main(int argc, char const* argv[])
     std::smatch match;
 
     if (std::regex_search(map.nom_fichier, match, rgx))
-         output.output_file = "./Output/" + match[0].str().substr(1,match[0].str().size()-5) + ".ltr";
+         output.output_file = "..\\..\\/Output/" + match[0].str().substr(1,match[0].str().size()-5) + ".ltr";
     else {
         throw std::runtime_error("Pas possible d'extraire nom de fichier.");
     }
@@ -156,4 +156,4 @@ int main(int argc, char const* argv[])
               << std::endl;
 
     return 0;
-}*/
+}

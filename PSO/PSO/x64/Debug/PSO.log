@@ -1,2 +1,3 @@
-﻿  Parseur.cpp
+﻿  Main.cpp
+C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\PSO\Main.cpp(108,25): warning C4244: '=' : conversion de 'double' en 'int', perte possible de données
   PSO.vcxproj -> C:\Users\Thoma\OneDrive - Haute Ecole en Hainaut\Bureau\Q1(2023-2024)\Optimisation Combinatoire\Labo\opticombi\PSO\x64\Debug\PSO.exe
