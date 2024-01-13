@@ -80,7 +80,9 @@
         "span": "cpp",
         "variant": "cpp",
         "bitset": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "list": "cpp",
+        "xhash": "cpp"
     },
     "cmake.configureOnOpen": false
 }
