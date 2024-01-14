@@ -12,7 +12,7 @@
             ],
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64",
+            "intelliSenseMode": "${default}",
             "compilerPath": "C:/msys64/ucrt64/bin/g++.exe"
         }
     ],

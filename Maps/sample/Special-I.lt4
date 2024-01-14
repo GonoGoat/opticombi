@@ -1,0 +1,23 @@
+Rows: 16
+Cols: 16
+Name: Water = Bad II
+Author: Al'Kair Dar
+Hint: 
+Difficulty: 2
+
+w w D D D w w w w D D D D D D D
+D D D w D D D D D D D w w w w w
+D w w D D w w w w w D D w w w w
+D w D D w D D D D D w D D w w w
+D w D w D D w w w D D w D w w w
+D w D w D w w b w w D w D D w w
+D w D w D w w w Tu w D D w D D w
+D w D w D D D w D D w D D w D D
+D w D D w w D D w D D w D D D D
+D w w D D D w D D w D D w w w D
+D D D w w D D w D D w D D w w D
+w w D D D w D D w D D w D D w D
+w w w w D D w D D w D D w D D D
+w w w w w D D w D D w D D w D D
+w w w w w w D D w Bm w w D D D w
+w w w w w w w D D D w w w D D w
