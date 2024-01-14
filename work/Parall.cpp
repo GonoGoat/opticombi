@@ -1,8 +1,15 @@
 #include "Parall.h"
 
-void ParallelisationParUnivers(psoStruct* pso_struct, std::vector<particleStruct>* particles, mapStruct* map_params, int n, std::vector<int>* g_bestX, std::vector<int>* g_bestY) {
+void ParallelisationParUnivers(psoStruct* pso_struct, std::vector<particleStruct>* particles, mapStruct* map_params, int n, std::vector<int>* g_bestX, std::vector<int>* g_bestY, std::chrono::time_point<std::chrono::system_clock>* start, int* deadline) {
 
+	std::chrono::time_point<std::chrono::system_clock> end;
+	long long int microseconde;
 	for (int i = 0; i < pso_struct->nbr_particule; i++) {
+
+		end = std::chrono::system_clock::now();
+		microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - *start).count();
+		if (microseconde / (*deadline*1000000) >= 1) break;
+		
 		if (particles[0][(n * pso_struct->nbr_particule) + i].become_finish == false) {
 			particles[0][(n * pso_struct->nbr_particule) + i].vitX = pso_struct->omega * particles[0][(n * pso_struct->nbr_particule) + i].vitX + pso_struct->c1 * pso_struct->random_1 * (particles[0][(n * pso_struct->nbr_particule) + i].p_bestX - particles[0][(n * pso_struct->nbr_particule) + i].posX) + pso_struct->c2 * pso_struct->random_2 * (g_bestX[0][n] - particles[0][(n * pso_struct->nbr_particule) + i].posX);
 			particles[0][(n * pso_struct->nbr_particule) + i].vitY = pso_struct->omega * particles[0][(n * pso_struct->nbr_particule) + i].vitY + pso_struct->c1 * pso_struct->random_1 * (particles[0][(n * pso_struct->nbr_particule) + i].p_bestY - particles[0][(n * pso_struct->nbr_particule) + i].posY) + pso_struct->c2 * pso_struct->random_2 * (g_bestY[0][n] - particles[0][(n * pso_struct->nbr_particule) + i].posY);
@@ -41,12 +48,19 @@ void ParallelisationParUnivers(psoStruct* pso_struct, std::vector<particleStruct
 	}
 }
 
-void ParallelisationThreadsLogiques(psoStruct* pso_struct, std::vector<particleStruct>* particles, mapStruct* map_params, int n, std::vector<int>* g_bestX, std::vector<int>* g_bestY) {
+void ParallelisationThreadsLogiques(psoStruct* pso_struct, std::vector<particleStruct>* particles, mapStruct* map_params, int n, std::vector<int>* g_bestX, std::vector<int>* g_bestY, std::chrono::time_point<std::chrono::system_clock>* start, int* deadline) {
+
+	std::chrono::time_point<std::chrono::system_clock> end;
+	long long int microseconde;
+
 	int nbr_particules_thread = pso_struct->nbr_thread / 4;
 	int nbre = pso_struct->nbr_particule;
 	int n_univers = 0;
 
 	for (int i = 0; i < nbr_particules_thread; i++) {
+		end = std::chrono::system_clock::now();
+		microseconde = std::chrono::duration_cast<std::chrono::microseconds>(end - *start).count();
+		if (microseconde / (*deadline*1000000) >= 1) break;
 		while (((n * nbr_particules_thread + nbr_particules_thread) - 1) > nbre) {
 			n_univers++;
 			nbre += nbre;
@@ -66,9 +80,6 @@ void ParallelisationThreadsLogiques(psoStruct* pso_struct, std::vector<particleS
 			particles[0][(n * nbr_particules_thread) + i].posX = particles[0][(n * nbr_particules_thread) + i].Origine_x;
 			particles[0][(n * nbr_particules_thread) + i].posY = particles[0][(n * nbr_particules_thread) + i].Origine_y;
 			Engine(map_params, &(*particles)[(n * nbr_particules_thread) + i]);
-			if ((*particles)[(n * nbr_particules_thread) + i].posX >= map_params->nbr_colonnes || (*particles)[(n * nbr_particules_thread) + i].posY >= map_params->nbr_lignes)  {
-                std::cout << "Dépassement !\n" ;
-            }
 
 			//Gestion de la mort
 			if (particles[0][(n * nbr_particules_thread) + i].success == 1) {

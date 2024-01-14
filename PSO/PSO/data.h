@@ -86,13 +86,10 @@ struct psoStruct {
     int nbr_base;
 
     //Parametres PSO
-    float omega = 1, c1 = 1, c2 = 1, random_1, random_2;
+    float omega = 0, c1 = 1, c2 = 1, random_1, random_2;
 
     // Influence tirer ou bouger (plus cette valeur se rapproche de 1, plus il va avoir tendance à tirer)
 	double influence;
-
-    // Deadline en seconde pour effectuer l'algorithme principal et secondaire
-    int deadline_prim,deadline_bis;
 };
 
 struct svgStruct {
@@ -146,7 +143,6 @@ struct particleStruct {
     float distance_finish;
     int nbr_modifs;
 
-    
     //Variables pour tir laser Anti_tank
     int pos_laser_x, pos_laser_y = -1;
     bool premiere_case = true;

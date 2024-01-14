@@ -126,6 +126,9 @@ void parsage(mapStruct* mapParams) {
             std::cout << "Temp du parsage " << microseconde << " microsec" << std::endl << std::endl;*/
 
             position_valide(mapParams);
+            /*for (int i = 0; i < mapParams->nbr_case_ok; i++) {
+                std::cout << "Position n " << i << " (" << mapParams->pos_OK_x[i] << "; " << mapParams->pos_OK_y[i] << ")" << std::endl;
+            }*/
         }
         else {
             std::cerr << "Le fichier " << mapParams->nom_fichier << " n'a pas ete trouve." << std::endl;

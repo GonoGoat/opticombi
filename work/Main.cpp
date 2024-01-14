@@ -3,6 +3,7 @@
 
 int main(int argc, char const* argv[])
 {
+    int nbr_particule;
     std::chrono::time_point<std::chrono::system_clock> start, end;
     start = std::chrono::system_clock::now();
 
@@ -16,7 +17,7 @@ int main(int argc, char const* argv[])
     }
     else
     {
-        map.nom_fichier = "./Maps/prev/Chemin_Anti_Tank.lt4";
+        map.nom_fichier = "./Maps/prev/Chemin.lt4";
     }
     map.nbr_arrive = 0;
     map.Direction_tank = 'U';
@@ -32,9 +33,12 @@ int main(int argc, char const* argv[])
     //Paramètres PSO
     psoStruct pso;
     pso.influence = 0.7;
+    pso.deadline_prim = 30;
+    pso.deadline_bis = 30;
 
     std::cout << "Combien de particules voulez-vous par arrivees ? : \n";
-    std::cin >> pso.nbr_particule;
+    std::cin >> nbr_particule;
+    pso.nbr_particule = nbr_particule;
     pso.nbr_base = floor(pso.nbr_particule*0.1);
 
     std::cout << "Combien d'iterations maximum voulez-vous faire par solution ? : \n";
@@ -47,7 +51,7 @@ int main(int argc, char const* argv[])
     std::smatch match;
 
     if (std::regex_search(map.nom_fichier, match, rgx))
-         output.output_file = "./Output/" + match[0].str().substr(1,match[0].str().size()-5) + ".ltr";
+        output.output_file = "./Output/" + match[0].str().substr(1,match[0].str().size()-5) + ".ltr";
     else {
         throw std::runtime_error("Pas possible d'extraire nom de fichier.");
     }
@@ -62,10 +66,28 @@ int main(int argc, char const* argv[])
     {
         std::cout << "Position : " << i << " x =" << map.Finish_x[i] << " | y =" << map.Finish_y[i] << std::endl;
     }
-
     pso.nbr_thread = pso.nbr_particule * map.nbr_arrive;
-    output.sequence = Algo_PSO(&map, &pso);
-    std::cout << output.sequence << std::endl;
+
+    std::cout << "------Ittération principale\n";
+    particleStruct endPart = Algo_PSO(&map, &pso);
+    output.sequence = endPart.Output;
+
+    if (endPart.success != Base_atteinte) {
+        std::cout << "------Ittération bis\n";
+        
+        map.matrice_mobile = endPart.matrice_mobile;
+        map.Finish_x = {endPart.Finish_x};
+        map.Finish_y = {endPart.Finish_y};
+        map.nbr_arrive = 1;
+
+        pso.nbr_particule = nbr_particule;
+        pso.nbr_thread = nbr_particule;
+        pso.omega = 1;
+
+        particleStruct finalPart = Algo_PSO_bis(&map, &pso, &endPart);
+        output.sequence += finalPart.Output;
+        
+    }
 
     // Paramètres dessin SVG
     svgStruct svg;
